@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DemandeService} from "../../../controller/service/demande/demande.service";
-import {Demande} from "../../../controller/model/demande/demande.model";
+import {Demande} from "../../../controller/model/demande/demande";
+
 
 @Component({
   selector: 'app-demande-create',
