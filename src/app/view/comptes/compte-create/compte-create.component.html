@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="center">
+    <h1>Login</h1>
+    <form method="post">
+      <div class="txt_field">
+        <input type="text"value="votre Email" [(ngModel)] = "compte.email">
+        <span></span>
+        <label>Email</label>
+      </div>
+      <div class="txt_field">
+        <input type="password" value="password" [(ngModel)] = "compte.motDePasse">
+        <span></span>
+        <label>Password</label>
+      </div>
+      <input class="btn" type="submit" value="Login"  (click)="save()">
+      <div class="signup_link">
+        Not a member? <a href="src/app/view/clients/client-create/client-create.component.html">Signup</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
