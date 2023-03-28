@@ -1,4 +1,5 @@
-import { Produit } from '../produit/produit.model';
+import {Produit} from "../produit/produit";
+
 
 export class CategorieProduit {
 
@@ -7,3 +8,5 @@ export class CategorieProduit {
   public produits!: Array<Produit>;
 
 }
+
+

@@ -1,5 +1,5 @@
-import { Magasin } from '../magasin/magasin.model';
-import { Produit } from '../produit/produit.model';
+import { Magasin } from '../magasin/magasin';
+import { Produit } from '../produit/produit';
 export class Stock {
 
   public id!: number;

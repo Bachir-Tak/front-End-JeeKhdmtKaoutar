@@ -1,4 +1,4 @@
-import { CategorieProduit } from '../categorieProduit/categorie-produit.model';
+import { CategorieProduit } from '../categorieProduit/categorie-produit';
 
 export class Produit {
   public id!: number;

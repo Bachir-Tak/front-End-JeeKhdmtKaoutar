@@ -1,4 +1,4 @@
-import { ReceptionProduit } from '../receptionProduit/reception-produit.model';
+import { ReceptionProduit } from '../receptionProduit/reception-produitl';
 import { Stock } from '../stock/stock.model';
 export class Reception {
   public id!: number;

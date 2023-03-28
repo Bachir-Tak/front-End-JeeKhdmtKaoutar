@@ -1,5 +1,6 @@
-import { Demande } from '../demande/demande.model';
-import { Produit } from '../produit/produit.model';
+
+import { Produit } from '../produit/produit';
+import {Demande} from "../demande/demande";
 export class DemandeProduit {
 
 

@@ -1,5 +1,5 @@
-import { Reception } from '../reception/reception.model';
-import { Produit } from '../produit/produit.model';
+import { Reception } from '../reception/reception';
+import { Produit } from '../produit/produit';
 export class ReceptionProduit {
 
 
