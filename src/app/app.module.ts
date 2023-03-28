@@ -11,6 +11,9 @@ import { CompteCreateComponent } from './view/comptes/compte-create/compte-creat
 import { CompteListComponent } from './view/comptes/compte-list/compte-list.component';
 import { VilleCreateComponent } from './view/villes/ville-create/ville-create.component';
 import { VilleListComponent } from './view/villes/ville-list/ville-list.component';
+import { RemboursementCreateComponent } from './view/remboursement/remboursement-create/remboursement-create.component';
+import {FormsModule} from "@angular/forms";
+import { RecuRemboursementCreateComponent } from './view/recuRemboursement/recu-remboursement-create/recu-remboursement-create.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { VilleListComponent } from './view/villes/ville-list/ville-list.componen
     CompteCreateComponent,
     CompteListComponent,
     VilleCreateComponent,
-    VilleListComponent
+    VilleListComponent,
+    RemboursementCreateComponent,
+    RecuRemboursementCreateComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
