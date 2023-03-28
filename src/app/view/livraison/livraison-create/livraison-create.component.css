@@ -1,0 +1,64 @@
+
+
+.container {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  width: 40%;
+  font-size: 12px;
+}
+.mycla{
+  font-size: small;
+  top: 70px;
+  width: 470px;
+  padding: 0px;
+  box-sizing: border-box;
+  margin-top: 15px;
+  color: #fff;
+}
+.myfr{
+  margin-right: 25px;
+  background-color: #003459;
+}
+
+h1 {
+  font-size: 18px;
+  margin-right: 300px;
+  margin-top: 20px;
+  text-align:right;
+  color: #fff;
+}
+
+.form-control {
+  border-radius: 0;
+  font-size: 20px;
+}
+.btn-primary {
+  border-radius: 0;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 380px;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #00A7E1;
+  border-color: #0062cc;
+}
+
+.form-check-input {
+  margin-right: 5px;
+}
+
+.form-check-label {
+  font-weight: normal;
+}
+
+
+
+
