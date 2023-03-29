@@ -1,0 +1,43 @@
+/* Définition des couleurs personnalisées */
+:root {
+  --couleur-principale: #00A7E1;
+  --couleur-secondaire: #00171F;
+  --couleur-texte: #FFFFFF;
+  --couleur-fond: #003459;
+  --couleur-lien: #007EA7;
+}
+
+/* Application de la charte graphique aux éléments */
+.recu-remboursement {
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.recu-remboursement h2 {
+  color: var(--couleur-principale);
+}
+
+.recu-remboursement p {
+  margin: 10px 0;
+}
+
+.recu-remboursement .remboursement {
+  border: 1px solid var(--couleur-secondaire);
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Animation CSS */
+.remboursement {
+  animation-name: apparition;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes apparition {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

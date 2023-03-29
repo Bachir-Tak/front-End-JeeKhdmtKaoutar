@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #00171F;
+  color: #fff;
+  padding: 20px;
+}
+
+header img {
+  height: 50px;
+}
+
+main {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid white
+}
+
+input[type="submit"] {
+  background-color: #007EA7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #00A7E1;
+}
+
+footer {
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #007EA7;
+}
+fieldset{
+  margin-top: 70px;
+  width: 50%;
+  background-color: #318CE7;
+  box-shadow: 5px 5px 20px 1px;
+  border: 0px;
+  padding-left: 10px;
+  border-radius: 10px;
+  color: white;
+  height: 460px;
+
+
+}
+td{letter-spacing: 1px;}
+ul li{margin-left: 20px; color: #fff;}
+#submit{
+  margin: 20px 35px ;
+  color: #318CE7;
+  background-color: white;
+  width: 80%;
+  font-size: 17px;
+  border-radius: 20px;
+  border: 1px solid white;
+  padding: 10px;
+}
+#submit:hover{
+  color: white;
+  background-color: #318CE7;
+}
+input{
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid white;
+  color: white;
+  width: 100%;
+}
+
+
