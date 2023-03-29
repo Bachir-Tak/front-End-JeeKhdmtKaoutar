@@ -42,6 +42,9 @@ import {
 import {
   LivraisonCommandeListComponent
 } from "./view/livraisonCommande/livraison-commande-list/livraison-commande-list.component";
+import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
+import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-list.component";
+import {IonicModule} from "@ionic/angular";
 
 @NgModule({
   declarations: [
@@ -64,14 +67,17 @@ import {
     CommandeProduitListComponent,
     RecapulatifAchatCreateComponent,
     RecapulatifAchatListComponent,
+    LivraisonCreateComponent,
+    LivraisonListComponent,
     LivraisonCommandeCreateComponent,
     LivraisonCommandeListComponent
   ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    IonicModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

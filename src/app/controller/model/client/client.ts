@@ -9,9 +9,13 @@ public id!: number;
 
   public prenom !: string;
 
+  public rib !: string;
+
+  public adresse!: string;
+
   public ville !: Ville;
 
-  public  comptes !: Array<Compte>;
+  public  compte!: Compte;
 
 
 }

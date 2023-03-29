@@ -11,20 +11,20 @@ import {Observable} from "rxjs";
 export class LivraisonService {
   private _livraison !: Livraison;
   private _livraisons !: Array<Livraison>;
-  private _url ="http://localhost:8033/GestionCommertiale/Livraison";
+  private _url="http://localhost:8033/GestionCommertiale/Livraison";
 
-  public save():Observable<number>{
-    return this.http.post<number>(this._url,this.livraison);
+  public save():Observable<Livraison>{
+    return this._http.post<Livraison>(this._url,this.livraison);
   }
 
   public deleteByRef(ref:string):Observable<number>{
-    return this.http.delete<number>(this._url + 'livraison/' + ref);
+    return this._http.delete<number>(this._url + 'livraison/' + ref);
   }
 
   public findAll():Observable<Array<Livraison>>{
-    return this.http.get<Array<Livraison>>(this._url);
+    return this._http.get<Array<Livraison>>(this._url);
   }
-  constructor(private http: HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
 
   get livraison(): Livraison {
