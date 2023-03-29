@@ -45,6 +45,14 @@ import {
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
 import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-list.component";
 import {IonicModule} from "@ionic/angular";
+import { CategorieProduitCreateComponent } from './view/categorieProduit/categorie-produit-create/categorie-produit-create.component';
+import { CategorieProduitListComponent } from './view/categorieProduit/categorie-produit-list/categorie-produit-list.component';
+import { VenteCreateComponent } from './view/vente/vente-create/vente-create.component';
+import { VenteListComponent } from './view/vente/vente-list/vente-list.component';
+import { ProduitCreateComponent } from './view/produit/produit-create/produit-create.component';
+import { ProduitListComponent } from './view/produit/produit-list/produit-list.component';
+import { FournisseurCreateComponent } from './view/fournisseur/fournisseur-create/fournisseur-create.component';
+import { FournisseurListComponent } from './view/fournisseur/fournisseur-list/fournisseur-list.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +78,15 @@ import {IonicModule} from "@ionic/angular";
     LivraisonCreateComponent,
     LivraisonListComponent,
     LivraisonCommandeCreateComponent,
-    LivraisonCommandeListComponent
+    LivraisonCommandeListComponent,
+    CategorieProduitCreateComponent,
+    CategorieProduitListComponent,
+    VenteCreateComponent,
+    VenteListComponent,
+    ProduitCreateComponent,
+    ProduitListComponent,
+    FournisseurCreateComponent,
+    FournisseurListComponent
   ],
   imports: [
     BrowserModule,
