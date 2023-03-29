@@ -12,7 +12,7 @@ export class ClientService {
 
   private url ="http://localhost:8033/GestionCommertiale/Client";
 
-  constructor(private http:HttpClient) { }
+  constructor(private _http:HttpClient) { }
 
   get client(): Client {
     if(this._client == null){
@@ -35,9 +35,9 @@ export class ClientService {
   set clients(value: Array<Client>) {
     this._clients = value;
   }
-  public  save (client: Client):Observable<number>{
-    return this.http.post<number>(this.url, this.client);
+  public  save ():Observable<Client>{
+    return this._http.post<Client>(this.url, this.client);
   }public  findAll(): Observable<Array<Client>>{
-    return this.http.get<Array<Client>>(this.url);
+    return this._http.get<Array<Client>>(this.url);
   }
 }

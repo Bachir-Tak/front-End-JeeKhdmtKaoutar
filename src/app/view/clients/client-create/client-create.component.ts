@@ -13,7 +13,7 @@ export class ClientCreateComponent implements OnInit{
   ngOnInit(): void {
   }
   public save(): void{
-    this.clientService.save(this.client).subscribe(data =>{
+    this.clientService.save().subscribe(data =>{
       if(data != null){
         alert('SAVE SUCCESS');
       }else{

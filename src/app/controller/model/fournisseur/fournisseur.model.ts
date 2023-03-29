@@ -5,4 +5,5 @@ export class Fournisseur {
   public code!: string;
   public nom!: string;
   public ville!: Ville;
+  public adresse!: string;
 }
