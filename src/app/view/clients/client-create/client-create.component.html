@@ -1,1 +1,30 @@
-<p>client-create works!</p>
+<div class="container">
+  <form id="signup-form">
+    <h1>Sign Up</h1>
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input type="text" id="firstname" name="firstname" [(ngModel)] = "client.nom">
+    </div>
+    <div class="form-group">
+      <label for="lastname">last Name</label>
+      <input type="text" id="lastname" name="lastname" [(ngModel)] = "client.prenom">
+    </div>
+    <div class="form-group">
+      <label for="cin"> Cin</label>
+      <input type="text" id="cin" name="cin" [(ngModel)] = "client.cin">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)] = "client.compte.email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)] = "client.compte.motDePasse">
+    </div>
+    <div class="form-group">
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" [(ngModel)] = "client.compte.motDePasse" >
+    </div>
+    <button type="submit"> sign up</button>
+  </form>
+</div>

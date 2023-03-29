@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <title></title>
+</head>
+<body>
+
+<table class="table table-bordered table-hover" *ngIf="livraisons.length != 0 ">
+    <thead>
+
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Email</th>
+      <th>Adresse</th>
+      <th>Ville</th>
+    <th>Action</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let liv of livraisons ; index as i">
+      <td>{{ liv.achat.client.nom}}</td>
+      <td>{{ liv.achat.client.prenom}}</td>
+      <td>{{ liv.achat.client.compte.email}}</td>
+      <td>{{ liv.achat.client.adresse}}</td>
+      <td>{{ liv.achat.client.ville }}</td>
+      <td><span (click)="deleteByRef(liv,i)" class="fa fa-trash btn btn-sm"></span>Supprimer</td>
+    </tr>
+    </tbody>
+  </table>
+
+
+</body>
+</html>
+
+

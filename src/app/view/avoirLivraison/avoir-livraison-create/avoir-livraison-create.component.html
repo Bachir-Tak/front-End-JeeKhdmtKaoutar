@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="avoir-livraison-create.component.css">
+  <title></title>
+</head>
+<body>
+
+<div class="my-5 page" size="A4">
+  <div class="p-5">
+    <section class="top-content bb d-flex justify-content-between">
+      <div class="logo">
+        <img src="logo.png" alt="" class="img-fluid">
+      </div>
+      <div class="top-left">
+        <div class="liv">
+          <p>Livraison</p>
+        </div>
+        <div class="position-relative">
+          <p>N° de livraison. <span>{{ avoirLivraison.livraison.id }}</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="store-user mt-5">
+      <div class="col-10">
+        <div class="row bb pb-3">
+          <div class="col-5">
+            <p>Client,</p>
+            <h2>{{ avoirLivraison.livraison.achat.client.nom }}</h2>
+            <p class="address">{{ avoirLivraison.livraison.achat.client.adresse }}</p>
+          </div>
+        </div>
+        <div class="row extra-info pt-3">
+          <div class="col-7">
+            <p>Mode de paiement: <span>{{ avoirLivraison.livraison.achat.client.rib }}</span></p>
+            <p>Numéro de commande: <span>{{ avoirLivraison.livraison.livraisonCommande.commande.id }}</span></p>
+          </div>
+          <div class="col-5">
+            <p>Date de livraison: <span>{{ avoirLivraison.livraison.date }}</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-area mt-4">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <td>Description de l'article</td>
+          <td>Prix</td>
+          <td>Quantité</td>
+          <td>Total</td>
+        </tr>
+        </thead>
+        <!--<tbody>
+        <tr *ngFor="">
+          <td>
+            <div class="media">
+              <img class="mr-3 img-fluid" [src]="pr.image" alt="Product">
+              <div class="media-body">
+                <p class="mt-0 title">{{ pr.nom }}</p>
+                {{ pr.description }}
+              </div>
+            </div>
+          </td>
+          <td>{{ avoirLivraison.livraison.livraisonCommande.commande.commandeProduits }}DH</td>
+          <td>{{ avoirLivraison.livraison.livraisonCommande.commande.commandeProduits }}</td>
+          <td>{{ avoirLivraison.livraison.produit.prix * produit.quantite }}DH</td>
+        </tr>
+        </tbody> -->
+      </table>
+    </section>
+
+    <section class="balance-info">
+      <div class="row">
+        <div class="col-8">
+          <p class="m-0 font-weight-bold">Note:</p>
+          <p>note</p>
+        </div>
+        <div class="col-4">
+          <table class="table border-0 table-hover">
+            <tr>
+              <td>Sub Total:</td>
+            <!-- <td>{{ subTotal }}DH</td> -->
+            </tr>
+            <tr>
+              <td>Tax:</td>
+             <!-- <td>{{ tax }}DH</td> -->
+            </tr>
+            <tr>
+              <td>Livraison:</td>
+             <!-- <td>{{ livraison }}DH</td> -->
+            </tr>
+            <tr>
+              <td>Total:</td>
+             <!-- <td>{{ total }}DH</td> -->
+            </tr>
+            <div class="col-12">
+              <img src="signature.png" class="img-fluid" alt="">
+              <p class="text-center m-0"> Director Signature </p>
+            </div>
+          </table>
+        </div>
+      </div>
+    </section>
+    <img src="cart.jpg" class="img-fluid cart-bg" alt="">
+
+  </div>
+
+</div>
+</body>
+</html>
+
+
+

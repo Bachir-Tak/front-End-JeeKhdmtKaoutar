@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+}
+.big-img{
+  width: 400px;
+  height: 400px;
+}
+.big-img img{
+  width: inherit;
+}
+
+.images{
+  display: flex;
+  width: 60%;
+  margin-top: 15px;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+.img-smal{
+  margin-left: 20px;
+  width: 45px;
+  overflow: hidden;
+  border: 1.5px solid black;
+}
+.img-smal img{
+  width: inherit;
+  cursor: pointer;
+}
+.img-smal:hover img{
+  transform: scale(1.2);
+}
+
+.product-details {
+  flex: 1 1 500px;
+  margin-left: 300px;
+}
+
+.product-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.product-rating i {
+  color: #ffc107;
+  margin-right: 5px;
+}
+
+.product-rating-count {
+  font-size: 14px;
+  color: #555;
+  margin-left: 10px;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.product-features {
+  margin-top: 70px;
+
+  margin-left: 0px;
+  list-style: none;
+  padding: 0;
+}
+
+.product-features li {
+  margin-bottom: 5px;
+  margin-left: 100px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.product-price {
+  font-size: 20px;
+  color: #0d0c0c;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+
+
+.add-to-cart {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add-to-cart:hover {
+  background-color: #0069d9;
+}
+.favorite{
+  background-color: #007EA7;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.favorite:hover {
+  background-color: #003459;
+}

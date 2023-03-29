@@ -10,9 +10,9 @@ import {Compte} from "../../model/compte/compte";
   providedIn: 'root'
 })
 export class CompteService {
-  private _compte = new Compte;
-  private _comptes = new Array<Compte>;
-  private url= '';
+  private _compte !: Compte;
+  private _comptes !: Array<Compte>;
+  private url= "http://localhost:8033/GestionCommertiale/Compte";
   constructor(private http:HttpClient) {}
 
   get compte(): Compte {

@@ -14,8 +14,7 @@ export class CompteCreateComponent  implements OnInit{
   ngOnInit(): void {
   }
   public save(): void{
-    // @ts-ignore
-    this.compteService.save().subscribe(data =>{
+    this.compteService.save(this.compte).subscribe(data =>{
       if(data != null){
         alert('SAVE SUCCESS');
       }else{
