@@ -1,4 +1,4 @@
-<!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,8 +10,8 @@
   <title></title>
 </head>
 <body>
-
-<table class="table table-bordered table-hover" *ngIf="livraisonscommandes.length != 0">
+<h1>La liste des Livraisons Commandes </h1>
+<table class="table table-bordered table-hover" >
   <thead>
   <tr>
     <th>Nom</th>
@@ -21,9 +21,16 @@
     <th>Ville</th>
     <th>Action</th>
   </tr>
+  <tr>
+    <td>Dupont</td>
+    <td>Marie</td>
+    <td>marie.dupont@gmail.com</td>
+    <td>EE2345</td>
+    <td>
+    <td><button class="btn btn-sm fa fa-trash">Supprimer</button></td>
   </thead>
   <tbody>
-  <tr *ngFor="let lc of livraisonscommandes ; index as i">
+   <tr *ngFor="let lc of livraisonscommandes ; index as i">
     <td>{{ lc.livraison.achat.client.nom }}</td>
     <td>{{ lc.livraison.achat.client.prenom }}</td>
     <td>{{ lc.livraison.achat.client.compte.email }}</td>

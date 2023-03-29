@@ -45,14 +45,16 @@ import {
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
 import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-list.component";
 import {IonicModule} from "@ionic/angular";
-import { CategorieProduitCreateComponent } from './view/categorieProduit/categorie-produit-create/categorie-produit-create.component';
-import { CategorieProduitListComponent } from './view/categorieProduit/categorie-produit-list/categorie-produit-list.component';
-import { VenteCreateComponent } from './view/vente/vente-create/vente-create.component';
-import { VenteListComponent } from './view/vente/vente-list/vente-list.component';
-import { ProduitCreateComponent } from './view/produit/produit-create/produit-create.component';
-import { ProduitListComponent } from './view/produit/produit-list/produit-list.component';
-import { FournisseurCreateComponent } from './view/fournisseur/fournisseur-create/fournisseur-create.component';
-import { FournisseurListComponent } from './view/fournisseur/fournisseur-list/fournisseur-list.component';
+
+import { AvoirLivraisonCreateComponent} from "./view/avoirLivraison/avoir-livraison-create/avoir-livraison-create.component";
+import {AvoirLivraisonListComponent} from "./view/avoirLivraison/avoir-livraison-list/avoir-livraison-list.component";
+import { FournisseurCreateComponent } from './view/fournisseurs/fournisseur-create/fournisseur-create.component';
+import { FournisseurListComponent } from './view/fournisseurs/fournisseur-list/fournisseur-list.component';
+import { FournisseurProduitCreateComponent } from './view/fournisseurProduits/fournisseur-produit-create/fournisseur-produit-create.component';
+import { FournisseurProduitListComponent } from './view/fournisseurProduits/fournisseur-produit-list/fournisseur-produit-list.component';
+import { ProduitCreateComponent } from './view/produits/produit-create/produit-create.component';
+import { ProduitListComponent } from './view/produits/produit-list/produit-list.component';
+
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { FournisseurListComponent } from './view/fournisseur/fournisseur-list/fo
     VilleListComponent,
     AchatCreateComponent,
     AchatListComponent,
+    AvoirLivraisonCreateComponent,
+    AvoirLivraisonListComponent,
     AchatCommandeCreateComponent,
     AchatCommandeListComponent,
     HistoriqueAchatCreateComponent,
@@ -83,10 +87,13 @@ import { FournisseurListComponent } from './view/fournisseur/fournisseur-list/fo
     CategorieProduitListComponent,
     VenteCreateComponent,
     VenteListComponent,
-    ProduitCreateComponent,
-    ProduitListComponent,
     FournisseurCreateComponent,
-    FournisseurListComponent
+    FournisseurListComponent,
+    FournisseurProduitCreateComponent,
+    FournisseurProduitListComponent,
+    ProduitCreateComponent,
+    ProduitListComponent
+
   ],
   imports: [
     BrowserModule,

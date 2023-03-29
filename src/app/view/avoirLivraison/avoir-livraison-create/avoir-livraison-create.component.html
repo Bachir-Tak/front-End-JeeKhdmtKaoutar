@@ -30,11 +30,6 @@
     <section class="store-user mt-5">
       <div class="col-10">
         <div class="row bb pb-3">
-          <div class="col-7">
-            <p>Fournisseur,</p>
-            <h2>{{ avoirLivraison.fournisseur.nom }}</h2>
-            <p class="address">{{ avoirLivraison.fournisseur.adresse }}</p>
-          </div>
           <div class="col-5">
             <p>Client,</p>
             <h2>{{ avoirLivraison.livraison.achat.client.nom }}</h2>
@@ -43,7 +38,7 @@
         </div>
         <div class="row extra-info pt-3">
           <div class="col-7">
-            <p>Mode de paiement: <span>{{ avoirLivraison.livraison.achat.client.compte.paiement }}</span></p>
+            <p>Mode de paiement: <span>{{ avoirLivraison.livraison.achat.client.rib }}</span></p>
             <p>Numéro de commande: <span>{{ avoirLivraison.livraison.livraisonCommande.commande.id }}</span></p>
           </div>
           <div class="col-5">
@@ -63,8 +58,8 @@
           <td>Total</td>
         </tr>
         </thead>
-        <tbody>
-        <tr *ngFor="let pr of produits">
+        <!--<tbody>
+        <tr *ngFor="">
           <td>
             <div class="media">
               <img class="mr-3 img-fluid" [src]="pr.image" alt="Product">
@@ -74,11 +69,11 @@
               </div>
             </div>
           </td>
-          <td>{{ avoirLivraison.livraison.produit.prix }}DH</td>
-          <td>{{ avoirLivraison.livraison.produit.quantite }}</td>
+          <td>{{ avoirLivraison.livraison.livraisonCommande.commande.commandeProduits }}DH</td>
+          <td>{{ avoirLivraison.livraison.livraisonCommande.commande.commandeProduits }}</td>
           <td>{{ avoirLivraison.livraison.produit.prix * produit.quantite }}DH</td>
         </tr>
-        </tbody>
+        </tbody> -->
       </table>
     </section>
 
@@ -92,19 +87,19 @@
           <table class="table border-0 table-hover">
             <tr>
               <td>Sub Total:</td>
-              <td>{{ subTotal }}DH</td>
+            <!-- <td>{{ subTotal }}DH</td> -->
             </tr>
             <tr>
               <td>Tax:</td>
-              <td>{{ tax }}DH</td>
+             <!-- <td>{{ tax }}DH</td> -->
             </tr>
             <tr>
               <td>Livraison:</td>
-              <td>{{ livraison }}DH</td>
+             <!-- <td>{{ livraison }}DH</td> -->
             </tr>
             <tr>
               <td>Total:</td>
-              <td>{{ total }}DH</td>
+             <!-- <td>{{ total }}DH</td> -->
             </tr>
             <div class="col-12">
               <img src="signature.png" class="img-fluid" alt="">
