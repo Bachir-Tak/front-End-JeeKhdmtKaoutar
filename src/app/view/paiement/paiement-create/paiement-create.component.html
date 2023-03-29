@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="./paiement-create.component.css">
+
+</head>
+<body>
+
+<div class="container">
+
+  <form action="">
+
+    <div class="row">
+
+      <div class="col">
+
+        <h3 class="title">billing address</h3>
+
+        <div class="inputBox">
+          <span>nom :</span>
+          <input type="text" placeholder="john " [(ngModel)]="paiement.achat.client.nom">
+        </div>
+        <div class="inputBox">
+          <span>prenom :</span>
+          <input type="text" placeholder=" deo" [(ngModel)]="paiement.achat.client.prenom">
+        </div>
+        <div class="inputBox">
+          <span>cin :</span>
+          <input type="text" placeholder="EE287536"  [(ngModel)]="paiement.achat.client.cin">
+        </div>
+        <div class="inputBox">
+          <span>id :</span>
+          <input type="text" placeholder="A65F39GB" [(ngModel)]="paiement.id">
+        </div>
+
+        <div class="flex">
+          <div class="inputBox">
+            <span>Ville :</span>
+            <input type="text" placeholder="Morocco" [(ngModel)]="paiement.achat.client.ville">
+          </div>
+          <div class="inputBox">
+            <span>paiementEffectue:</span>
+            <input type="text" placeholder="" [(ngModel)]="paiement.paiementEffectue">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col">
+
+        <h3 class="title">payment</h3>
+
+        <div class="inputBox">
+          <span>cards accepted :</span>
+          <img src="../../../../assets/imagePaiement/card_img.png" alt="">
+        </div>
+        <div class="inputBox">
+          <span>Compte :</span>
+          <input type="text" placeholder="mr. john deo" [(ngModel)]="paiement.compte">
+        </div>
+        <div class="inputBox">
+          <span>Achat :</span>
+          <input type="text" placeholder="EA678T435" [(ngModel)]="paiement.achat.code">
+        </div>
+        <div class="inputBox">
+          <span>credit card number :</span>
+          <input type="number" placeholder="1111-2222-3333-4444" [(ngModel)]="paiement.achat.client.rib">
+        </div>
+
+
+        <div class="flex">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <input type="submit" value="Save" class="submit-btn" (click)="save()">
+
+  </form>
+
+</div>
+
+</body>
+</html>

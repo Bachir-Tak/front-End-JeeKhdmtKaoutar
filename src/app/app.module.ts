@@ -68,6 +68,11 @@ import {
 } from "./view/categorieProduit/categorie-produit-list/categorie-produit-list.component";
 import {VenteCreateComponent} from "./view/vente/vente-create/vente-create.component";
 import {VenteListComponent} from "./view/vente/vente-list/vente-list.component";
+import { PaiementCreateComponent } from './view/paiement/paiement-create/paiement-create.component';
+import { PaiementListComponent } from './view/paiement/paiement-list/paiement-list.component';
+import { RecuCreateComponent } from './view/recu/recu-create/recu-create.component';
+import { RecuListComponent } from './view/recu/recu-list/recu-list.component';
+import { RecapitulatifAchatCreateComponent } from './view/recapitulatifAchat/recapitulatif-achat-create/recapitulatif-achat-create.component';
 
 
 @NgModule({
@@ -104,7 +109,12 @@ import {VenteListComponent} from "./view/vente/vente-list/vente-list.component";
     CategorieProduitCreateComponent,
     CategorieProduitListComponent,
     VenteCreateComponent,
-    VenteListComponent
+    VenteListComponent,
+    PaiementCreateComponent,
+    PaiementListComponent,
+    RecuCreateComponent,
+    RecuListComponent,
+    RecapitulatifAchatCreateComponent
 
   ],
   imports: [
