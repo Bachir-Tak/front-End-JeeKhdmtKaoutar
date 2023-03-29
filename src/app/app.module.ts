@@ -45,6 +45,16 @@ import {
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
 import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-list.component";
 import {IonicModule} from "@ionic/angular";
+import {
+  AvoirLivraisonCreateComponent
+} from "./view/avoirLivraison/avoir-livraison-create/avoir-livraison-create.component";
+import {AvoirLivraisonListComponent} from "./view/avoirLivraison/avoir-livraison-list/avoir-livraison-list.component";
+import { FournisseurCreateComponent } from './view/fournisseurs/fournisseur-create/fournisseur-create.component';
+import { FournisseurListComponent } from './view/fournisseurs/fournisseur-list/fournisseur-list.component';
+import { FournisseurProduitCreateComponent } from './view/fournisseurProduits/fournisseur-produit-create/fournisseur-produit-create.component';
+import { FournisseurProduitListComponent } from './view/fournisseurProduits/fournisseur-produit-list/fournisseur-produit-list.component';
+import { ProduitCreateComponent } from './view/produits/produit-create/produit-create.component';
+import { ProduitListComponent } from './view/produits/produit-list/produit-list.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +67,8 @@ import {IonicModule} from "@ionic/angular";
     VilleListComponent,
     AchatCreateComponent,
     AchatListComponent,
+    AvoirLivraisonCreateComponent,
+    AvoirLivraisonListComponent,
     AchatCommandeCreateComponent,
     AchatCommandeListComponent,
     HistoriqueAchatCreateComponent,
@@ -70,7 +82,13 @@ import {IonicModule} from "@ionic/angular";
     LivraisonCreateComponent,
     LivraisonListComponent,
     LivraisonCommandeCreateComponent,
-    LivraisonCommandeListComponent
+    LivraisonCommandeListComponent,
+    FournisseurCreateComponent,
+    FournisseurListComponent,
+    FournisseurProduitCreateComponent,
+    FournisseurProduitListComponent,
+    ProduitCreateComponent,
+    ProduitListComponent
   ],
   imports: [
     BrowserModule,
