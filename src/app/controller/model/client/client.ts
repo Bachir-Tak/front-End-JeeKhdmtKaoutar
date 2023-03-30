@@ -15,7 +15,7 @@ public id!: number;
 
   public ville !: Ville;
 
-  public  compte!: Compte;
+
 
 
 }

@@ -20,15 +20,15 @@
 
         <div class="inputBox">
           <span>nom :</span>
-          <input type="text" placeholder="john " [(ngModel)]="paiement.achat.client.nom">
+          <input type="text" placeholder="john " [(ngModel)]="paiement.achat.compte.client.nom">
         </div>
         <div class="inputBox">
           <span>prenom :</span>
-          <input type="text" placeholder=" deo" [(ngModel)]="paiement.achat.client.prenom">
+          <input type="text" placeholder=" deo" [(ngModel)]="paiement.achat.compte.client.prenom">
         </div>
         <div class="inputBox">
           <span>cin :</span>
-          <input type="text" placeholder="EE287536"  [(ngModel)]="paiement.achat.client.cin">
+          <input type="text" placeholder="EE287536"  [(ngModel)]="paiement.achat.compte.client.cin">
         </div>
         <div class="inputBox">
           <span>id :</span>
@@ -37,7 +37,7 @@
 
         <div class="flex">
           <div class="inputBox">
-            <app-ville-list [(ngModel)]="paiement.achat.client.ville" ></app-ville-list>
+            <app-ville-list [(ngModel)]="paiement.achat.compte.client.ville" ></app-ville-list>
           <!-- <span>Ville :</span>
             <input type="text" placeholder="Morocco" [(ngModel)]="paiement.achat.client.ville"> -->
           </div>
@@ -59,7 +59,7 @@
         </div>
         <div class="inputBox">
           <span>Compte :</span>
-          <input type="text" placeholder="mr. john deo" [(ngModel)]="paiement.achat.client.compte">
+          <input type="text" placeholder="mr. john deo" [(ngModel)]="paiement.achat.compte">
         </div>
         <div class="inputBox">
           <span>Achat :</span>
@@ -67,7 +67,7 @@
         </div>
         <div class="inputBox">
           <span>credit card number :</span>
-          <input type="number" placeholder="1111-2222-3333-4444" [(ngModel)]="paiement.achat.client.rib">
+          <input type="number" placeholder="1111-2222-3333-4444" [(ngModel)]="paiement.achat.compte.client.rib">
         </div>
       </div>
     </div>

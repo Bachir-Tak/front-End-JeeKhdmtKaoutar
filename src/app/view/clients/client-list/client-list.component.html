@@ -4,49 +4,21 @@
   <tr>
     <th>Nom</th>
     <th>Prénom</th>
-    <th>Email</th>
     <th>Cin</th>
-    <th>Ville</th>
+    <th>Adress</th>
     <th> Action</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>Dupont</td>
-    <td>Marie</td>
-    <td>marie.dupont@gmail.com</td>
-    <td>EE2345</td>
-    <td>
-      <button class="delete"><i class="fa fa-trash"></i>Supprimer</button>
-      <button class="admin"><i class="fa fa-crown"></i>Rendre admin</button>
-    </td>
-  </tr>
-  <tr>
-    <td>Leclerc</td>
-    <td>Antoine</td>
-    <td>antoine.leclerc@hotmail.com</td>
-    <td>E151413</td>
-    <td>
-      <button class="delete"><i class="fa fa-trash"></i>Supprimer</button>
-      <button class="admin"><i class="fa fa-crown"></i>Rendre admin</button>
-    </td>
-  </tr>
-  <tr>
-    <td>Dubois</td>
-    <td>Lucie</td>
-    <td>lucie.dubois@yahoo.fr</td>
-    <td>A15613</td>
-    <td>
-      <button class="delete"><i class="fa fa-trash"></i>Supprimer</button>
-      <button class="admin"><i class="fa fa-crown"></i>Rendre admin</button>
-    </td>
-  </tr>
   <tr *ngFor="let client of clients">
     <td>{{ client.nom }}</td>
     <td>{{ client.prenom }}</td>
-    <td>{{ client.compte.email}}</td>
     <td>{{ client.cin}}</td>
-    <td>{{ client.ville}}</td>
+    <td>{{client.adresse}}</td>
+    <td>
+      <button class="delete"><i class="fa fa-trash"></i>Supprimer</button>
+      <button class="admin"><i class="fa fa-crown"></i>Rendre admin</button>
+    </td>
   </tr>
   </tbody>
 </table>

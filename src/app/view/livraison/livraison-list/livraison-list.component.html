@@ -10,11 +10,11 @@
     </thead>
     <tbody>
     <tr *ngFor="let liv of livraisons ; index as i">
-      <td>{{ liv.achat.client.nom}}</td>
-      <td>{{ liv.achat.client.prenom}}</td>
-      <td>{{ liv.achat.client.compte.email}}</td>
-      <td>{{ liv.achat.client.adresse}}</td>
-      <td>{{ liv.achat.client.ville }}</td>
+      <td>{{ liv.achat.compte.client.nom}}</td>
+      <td>{{ liv.achat.compte.client.prenom}}</td>
+      <td>{{ liv.achat.compte.client}}</td>
+      <td>{{ liv.achat.compte.client.adresse}}</td>
+      <td>{{ liv.achat.compte.client.ville }}</td>
       <td><span (click)="deleteByRef(liv,i)" class="fa fa-trash btn btn-sm"></span>Supprimer</td>
     </tr>
     </tbody>

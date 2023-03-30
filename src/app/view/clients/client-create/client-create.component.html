@@ -16,18 +16,18 @@
     </div>
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" [(ngModel)] = "client.compte.email">
+      <input type="email" id="email" name="email"  >
     </div>
     <div class="form-group">
       <app-ville-list [(ngModel)] = "client.ville"></app-ville-list>
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" [(ngModel)] = "client.compte.motDePasse">
+      <input type="password" id="password" name="password" >
     </div>
     <div class="form-group">
       <label for="confirm-password">Confirm Password</label>
-      <input type="password" id="confirm-password" name="confirm-password" [(ngModel)] = "client.compte.motDePasse" >
+      <input type="password" id="confirm-password" name="confirm-password" >
     </div>
     <button type="submit" (click)="save()"> sign up</button>
   </form>

@@ -12,6 +12,7 @@ export class VilleListComponent  implements OnInit{
   constructor(private villeService: VilleService) {
   }
   ngOnInit(): void {
+  this.findAll();
   }
 
   get ville(): Ville {
