@@ -2,13 +2,11 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
 th, td {
-  text-align: left;
-  padding: 8px;
-  border-bottom: 1px solid #00a7e1;
-}
-
+   text-align: left;
+   padding: 8px;
+   border-bottom: 1px solid #00a7e1;
+ }
 tr:hover {
   background-color: #ad62d7;
 }
@@ -17,7 +15,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 .btn {
   background-color: #00171f;
   color: #ffffff;
@@ -38,12 +35,6 @@ img {
 .remove-btn {
   background-color: #00a7e1;
 }
-
-
-
-
-
-
 
 .btn-validate {
   background-color: #003459;
@@ -72,7 +63,7 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
-.btn-validate:hover:before {
+.btn-validate:hover {
   left: 0;
 }
 

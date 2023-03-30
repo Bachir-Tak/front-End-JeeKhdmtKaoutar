@@ -1,5 +1,6 @@
 import {CommandeProduit} from "../commandeProduit/commande-produit";
-import {RecapulatifAchat} from "../recapulatifAchat/recapulatif-achat";
+import {RecapitulatifAchat} from "../recapitulatifAchat/recapitulatifAchat.model";
+
 
 export class Commande {
   public id!: number;
@@ -9,5 +10,5 @@ export class Commande {
 
   public commandeProduits !: Array<CommandeProduit>;
 
-  public  recapitulatifAchat !: RecapulatifAchat;
+  public  recapitulatifAchat !: RecapitulatifAchat;
 }

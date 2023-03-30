@@ -15,7 +15,7 @@ export class RecapitulatifService {
   public findAll():Observable<Array<RecapitulatifAchat>>{
     return this._http.get<Array<RecapitulatifAchat>>(this.url);
   }
-  public save(recapitulatifAchat: RecapitulatifAchat):Observable<RecapitulatifAchat>{
+  public save():Observable<RecapitulatifAchat>{
     return this._http.post<RecapitulatifAchat>(this.url , this.recapitulatifAchat);
   }
   public  deleteByCode(code: string): Observable<number>{

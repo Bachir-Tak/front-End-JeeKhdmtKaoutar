@@ -5,15 +5,16 @@ import {RecapitulatifService} from "../../../controller/service/recapitulatifAch
 
 @Component({
   selector: 'app-recapitulatif-create',
-  templateUrl: './recapitulatifAchat-create.component.html',
-  styleUrls: ['./recapitulatifAchat-create.component.css']
+  templateUrl: 'recapitulatif-achat-create.component.html',
+  styleUrls: ['./recapitulatif-achat-create.component.css']
 })
 export class RecapitulatifAchatCreateComponent implements OnInit{
+
   ngOnInit(): void {
   }
 
   public save(): void{
-    this.recapitulatifAchatService.save(this.recapitulatifAchat).subscribe(
+    this.recapitulatifAchatService.save().subscribe(
       data => {
         if (data == null) {
           alert('failure : code exist')

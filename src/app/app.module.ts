@@ -29,12 +29,6 @@ import {
 import {
   CommandeProduitListComponent
 } from './view/commandeProduits/commande-produit-list/commande-produit-list.component';
-import {
-  RecapulatifAchatCreateComponent
-} from './view/recapulatifAchats/recapulatif-achat-create/recapulatif-achat-create.component';
-import {
-  RecapulatifAchatListComponent
-} from './view/recapulatifAchats/recapulatif-achat-list/recapulatif-achat-list.component';
 import {FormsModule} from "@angular/forms";
 import {
   LivraisonCommandeCreateComponent
@@ -68,11 +62,18 @@ import {
 } from "./view/categorieProduit/categorie-produit-list/categorie-produit-list.component";
 import {VenteCreateComponent} from "./view/vente/vente-create/vente-create.component";
 import {VenteListComponent} from "./view/vente/vente-list/vente-list.component";
-import { PaiementCreateComponent } from './view/paiement/paiement-create/paiement-create.component';
-import { PaiementListComponent } from './view/paiement/paiement-list/paiement-list.component';
-import { RecuCreateComponent } from './view/recu/recu-create/recu-create.component';
-import { RecuListComponent } from './view/recu/recu-list/recu-list.component';
-import { RecapitulatifAchatCreateComponent } from './view/recapitulatifAchat/recapitulatif-achat-create/recapitulatif-achat-create.component';
+import {PaiementCreateComponent} from './view/paiement/paiement-create/paiement-create.component';
+import {PaiementListComponent} from './view/paiement/paiement-list/paiement-list.component';
+import {RecuCreateComponent} from './view/recu/recu-create/recu-create.component';
+import {RecuListComponent} from './view/recu/recu-list/recu-list.component';
+import {
+  RecapitulatifAchatCreateComponent
+} from './view/recapitulatifAchat/recapitulatif-achat-create/recapitulatif-achat-create.component';
+import { RecapitulatifAchatListComponent } from './view/recapitulatifAchat/recapitulatif-achat-list/recapitulatif-achat-list.component';
+import {RemboursementCreateComponent} from "./view/remboursement/remboursement-create/remboursement-create.component";
+import {
+  RecuRemboursementCreateComponent
+} from "./view/recuRemboursement/recu-remboursement-create/recu-remboursement-create.component";
 
 
 @NgModule({
@@ -96,8 +97,6 @@ import { RecapitulatifAchatCreateComponent } from './view/recapitulatifAchat/rec
     CommandeListComponent,
     CommandeProduitCreateComponent,
     CommandeProduitListComponent,
-    RecapulatifAchatCreateComponent,
-    RecapulatifAchatListComponent,
     LivraisonCreateComponent,
     LivraisonListComponent,
     LivraisonCommandeCreateComponent,
@@ -114,7 +113,10 @@ import { RecapitulatifAchatCreateComponent } from './view/recapitulatifAchat/rec
     PaiementListComponent,
     RecuCreateComponent,
     RecuListComponent,
-    RecapitulatifAchatCreateComponent
+    RecapitulatifAchatCreateComponent,
+    RecapitulatifAchatListComponent,
+    RemboursementCreateComponent,
+    RecuRemboursementCreateComponent
 
   ],
   imports: [

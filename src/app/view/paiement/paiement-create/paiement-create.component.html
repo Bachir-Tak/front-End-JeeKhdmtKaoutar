@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+  <!--<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- custom css file link  -->
   <link rel="stylesheet" href="./paiement-create.component.css">
 
-</head>
-<body>
+</head> -->
+
 
 <div class="container">
 
@@ -40,8 +37,9 @@
 
         <div class="flex">
           <div class="inputBox">
-            <span>Ville :</span>
-            <input type="text" placeholder="Morocco" [(ngModel)]="paiement.achat.client.ville">
+            <app-ville-list [(ngModel)]="paiement.achat.client.ville" ></app-ville-list>
+          <!-- <span>Ville :</span>
+            <input type="text" placeholder="Morocco" [(ngModel)]="paiement.achat.client.ville"> -->
           </div>
           <div class="inputBox">
             <span>paiementEffectue:</span>
@@ -61,7 +59,7 @@
         </div>
         <div class="inputBox">
           <span>Compte :</span>
-          <input type="text" placeholder="mr. john deo" [(ngModel)]="paiement.compte">
+          <input type="text" placeholder="mr. john deo" [(ngModel)]="paiement.achat.client.compte">
         </div>
         <div class="inputBox">
           <span>Achat :</span>
@@ -71,21 +69,11 @@
           <span>credit card number :</span>
           <input type="number" placeholder="1111-2222-3333-4444" [(ngModel)]="paiement.achat.client.rib">
         </div>
-
-
-        <div class="flex">
-
-        </div>
-
       </div>
-
     </div>
-
     <input type="submit" value="Save" class="submit-btn" (click)="save()">
-
   </form>
-
 </div>
 
-</body>
-</html>
+
+

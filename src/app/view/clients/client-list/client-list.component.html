@@ -1,12 +1,16 @@
 <h1>Liste des clients</h1>
 <table>
+  <thead>
   <tr>
     <th>Nom</th>
     <th>Prénom</th>
     <th>Email</th>
     <th>Cin</th>
-    <th></th>
+    <th>Ville</th>
+    <th> Action</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>Dupont</td>
     <td>Marie</td>
@@ -37,6 +41,13 @@
       <button class="admin"><i class="fa fa-crown"></i>Rendre admin</button>
     </td>
   </tr>
+  <tr *ngFor="let client of clients">
+    <td>{{ client.nom }}</td>
+    <td>{{ client.prenom }}</td>
+    <td>{{ client.compte.email}}</td>
+    <td>{{ client.cin}}</td>
+    <td>{{ client.ville}}</td>
+  </tr>
+  </tbody>
 </table>
-
 

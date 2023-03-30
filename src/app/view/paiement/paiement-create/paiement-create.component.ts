@@ -45,4 +45,5 @@ export class PaiementCreateComponent implements OnInit{
     this.paiementService.paiements = value;
   }
 
+  protected readonly Paiement = Paiement;
 }
