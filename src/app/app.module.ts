@@ -74,6 +74,8 @@ import {RemboursementCreateComponent} from "./view/remboursement/remboursement-c
 import {
   RecuRemboursementCreateComponent
 } from "./view/recuRemboursement/recu-remboursement-create/recu-remboursement-create.component";
+import {FournisseurCreateComponent} from "./view/fournisseur/fournisseur-create/fournisseur-create.component";
+import {FournisseurListComponent} from "./view/fournisseur/fournisseur-list/fournisseur-list.component";
 
 
 @NgModule({
@@ -116,7 +118,9 @@ import {
     RecapitulatifAchatCreateComponent,
     RecapitulatifAchatListComponent,
     RemboursementCreateComponent,
-    RecuRemboursementCreateComponent
+    RecuRemboursementCreateComponent,
+    FournisseurCreateComponent,
+    FournisseurListComponent
 
   ],
   imports: [
