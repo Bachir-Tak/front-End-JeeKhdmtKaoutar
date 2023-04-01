@@ -6,7 +6,7 @@ export class CommandeProduit {
 
   public quantite !: number;
 
-  public prixUnitaire!: number;
+  public prixUnitaire !: number;
 
   public prixTotale !: number;
 

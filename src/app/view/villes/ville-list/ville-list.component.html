@@ -1,15 +1,22 @@
 
 <h6>Ville</h6>
-<select>
-  <option> --- selectionner une ville---</option>
-  <option>Casablanca</option>
-  <option>Rabat</option>
-  <option>Fès</option>
-  <option>Marrakech</option>
-  <option>Tanger</option>
-  <option>Agadir</option>
-  <option>Kénitra</option>
-</select>
+<!--<table *ngFor="let v of villes">
+  <thead>
+  <th>nom</th>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{v.nom}}</td>
+  </tr>
+  </tbody>
+</table>-->
 
+<select >
+  <option> --- selectionner une ville---</option>
+  <option  *ngFor="let v of villes" >
+       {{v.nom}}
+  </option>
+
+</select>
 
 

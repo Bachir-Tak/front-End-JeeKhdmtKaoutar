@@ -1,6 +1,6 @@
 import {AchatCommande} from "../achatCommande/achat-commande";
-import {Client} from "../client/client";
 import {HistoriqueAchat} from "../historiqueAchat/historique-achat";
+import {Client} from "../client/client";
 
 export class Achat {
   public id!: number;
