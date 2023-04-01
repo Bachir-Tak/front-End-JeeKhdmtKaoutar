@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Client} from "../../../controller/model/client/client";
 import {ClientService} from "../../../controller/service/client/client.service";
+import {Livraison} from "../../../controller/model/livraison/livraison.model";
 
 @Component({
   selector: 'app-client-list',
@@ -31,5 +32,16 @@ export class ClientListComponent implements OnInit{
 
   set clients(value: Array<Client>) {
     this.clientService.clients= value;
+  }
+  public deleteByCin(client: Client, index:number):void {
+    console.log('haaa cin' + client.cin);
+    this.clientService.deleteByCin(client.cin.toString()).subscribe(data => {
+      if (data > 0) {
+        this.clients.splice(index, 1);
+      } else {
+        alert('Del Error');
+      }
+
+    });
   }
 }

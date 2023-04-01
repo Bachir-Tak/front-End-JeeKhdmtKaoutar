@@ -42,4 +42,8 @@ export class ClientService {
     return this._http.post<Client>(this._url, this.client);
 
 }
+  public deleteByCin(cin:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'cin/'+ cin);
+    return this._http.delete<number>(this._url+ 'cin/' + cin);
+  }
 }

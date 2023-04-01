@@ -19,8 +19,7 @@
         <input type="text" class="form-control" id="address" name="address" [(ngModel)]="livraison.achat.client.adresse">
       </div>
       <div class="form-group">
-        <label for="city"><ion-icon name="pin-outline"></ion-icon> Ville:</label>
-        <input type="text" class="form-control" id="city" name="city"  [(ngModel)]="livraison.achat.client.ville">
+         <app-ville-list [(ngModel)]="livraison.achat.client.ville"></app-ville-list>
       </div>
       <button type="submit" class="btn btn-primary" (click)="save()">Continuer</button>
     </div>
