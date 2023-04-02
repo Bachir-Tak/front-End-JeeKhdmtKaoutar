@@ -1,26 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');*/
 
-:root {
-  --body-bg: rgb(204, 204, 204);
-  --white: #ffffff;
-  --darkWhite: #ccc;
-  --black: #000000;
-  --dark: #615c60;
-  --themeColor: #007ea7;
-  --pageShadow: 0 0 0.5cm rgb(0, 167, 225);
-}
+/*:root {*/
+/*  --body-bg: rgb(204, 204, 204);*/
+/*  --white: #ffffff;*/
+/*  --darkWhite: #ccc;*/
+/*  --black: #000000;*/
+/*  --dark: #615c60;*/
+/*  --themeColor: #007ea7;*/
+/*  --pageShadow: 0 0 0.5cm rgb(0, 167, 225);*/
+/*}*/
 
 
-body {
-  background-color: var(--body-bg);
-}
+/*body {*/
+/*  background-color: rgb(204, 204, 204);*/
+
+/*}*/
 
 .page {
-  background: var(--white);
+  font-size: 17px;
+  background: #ffffff;
   display: block;
   margin: 0 auto;
   position: relative;
-  box-shadow: var(--pageShadow);
+  box-shadow: 0 0 0.5cm rgb(0, 167, 225);
+  line-height: 50px;
 }
 
 .page[size="A4"] {
@@ -30,7 +33,7 @@ body {
 }
 
 .bb {
-  border-bottom: 3px solid var(--darkWhite);
+  border-bottom: 3px solid #ccc;
 }
 
 
@@ -48,16 +51,18 @@ body {
 
 .top-left .liv {
   height: 40px;
+  margin-bottom: 25px;
   position: relative;
+  width: 90px;
 }
 
 .top-left .liv::before {
   content: "";
   height: 20px;
-  background-color: var(--dark);
+  background-color: #615c60;
   position: absolute;
   left: 15px;
-  right: 0;
+  right: -100px;
   top: -15px;
   z-index: 2;
 }
@@ -66,7 +71,7 @@ body {
   content: "";
   height: 22px;
   width: 17px;
-  background: var(--black);
+  background: #000000;
   position: absolute;
   top: -13px;
   left: 6px;
@@ -74,12 +79,12 @@ body {
 }
 
 .top-left .liv p {
-  color: var(--white);
+  color: #ffffff;
   height: 40px;
   left: 0;
   right: -100px;
   text-transform: uppercase;
-  background-color: var(--themeColor);
+  background-color: #007ea7;
   font: 26px;
   z-index: 3;
   position: absolute;
@@ -101,7 +106,7 @@ body {
 }
 
 .store-user h2 {
-  color: var(--themeColor);
+  color: #007ea7;
   font-family: 'Rajdhani', sans-serif;
 }
 
@@ -111,8 +116,8 @@ body {
 
 
 thead {
-  color: var(--white);
-  background: var(--themeColor);
+  color: #ffffff;
+  background: #007ea7;
 }
 
 .table td,
