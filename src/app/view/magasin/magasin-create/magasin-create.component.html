@@ -1,0 +1,14 @@
+<div class="card cardos">
+  <div class="card-body">
+    <div class="card-title"><h5>Ajout Magasin</h5></div>
+    <div class="form-group">
+      <label for="libelle" class="form-label fw-semibold">libelle</label>
+      <input id="libelle" type="text" class="form-control" [(ngModel)]="magasin.libelle">
+    </div>
+    <div class="form-group">
+      <label for="code" class="form-label fw-semibold">code</label>
+      <input id="code" type="text" class="form-control" [(ngModel)]="magasin.code">
+    </div>
+  </div>
+    <button class="btn btn-blue align-self-center" (click)="save()">Valider</button>
+</div>
