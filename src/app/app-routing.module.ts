@@ -1,15 +1,38 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { CompteCreateComponent} from "./view/comptes/compte-create/compte-create.component";
-import { ClientCreateComponent} from "./view/clients/client-create/client-create.component";
+import {RouterModule, Routes} from "@angular/router";
+import {AccueilCreateComponent} from "./view/accueil/accueil-create/accueil-create.component";
+import {MagasinCreateComponent} from "./view/magasin/magasin-create/magasin-create.component";
+import { RouterTestingModule } from "@angular/router/testing";
+import {DemandeCreateComponent} from "./view/demande/demande-create/demande-create.component";
 
-const routes: Routes = [
-  { path: 'login', component: CompteCreateComponent },
-  { path: 'signup', component: ClientCreateComponent }
+
+const appRouteList: Routes = [
+  {
+    path: 'accueil',
+    component: AccueilCreateComponent
+  },
+  {
+    path: 'demande/:clientId/:produitRef',
+    component: DemandeCreateComponent
+  },
+  {
+    path: 'liste',
+    component: MagasinCreateComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'accueil'
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [
+    RouterModule
+  ],
+  imports: [
+    RouterModule.forRoot(appRouteList),
+    RouterTestingModule,
+
+  ]
 })
 export class AppRoutingModule { }
