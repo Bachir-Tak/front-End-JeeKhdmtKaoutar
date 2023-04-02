@@ -14,6 +14,9 @@ import {AppRoutingModule} from "./app-routing.module";
 import {SanitizeHtmlPipe} from "./SanitizeHtmlPipe";
 import { ReceptionCreateComponent } from './view/reception/reception-create/reception-create.component';
 import { ReceptionListComponent } from './view/reception/reception-list/reception-list.component';
+import {CompteCreateComponent} from "./view/comptes/compte-create/compte-create.component";
+import {ClientCreateComponent} from "./view/clients/client-create/client-create.component";
+import {VilleListComponent} from "./view/villes/ville-list/ville-list.component";
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import { ReceptionListComponent } from './view/reception/reception-list/receptio
     SanitizeHtmlPipe,
     ReceptionCreateComponent,
     ReceptionListComponent,
+    CompteCreateComponent,
+    ClientCreateComponent,
+    VilleListComponent
 
   ],
   imports: [
