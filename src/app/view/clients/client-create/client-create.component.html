@@ -1,0 +1,35 @@
+<div class="container">
+<div class="center">
+  <form id="signup-form">
+    <h1>Sign Up</h1>
+    <div class="form-group">
+      <label for="firstname"><h6>First Name </h6></label>
+      <input type="text" id="firstname" name="firstname" [(ngModel)] = "client.nom">
+    </div>
+    <div class="form-group">
+      <label for="lastname"><h6>last Name </h6></label>
+      <input type="text" id="lastname" name="lastname" [(ngModel)] = "client.prenom">
+    </div>
+    <div class="form-group">
+      <label for="cin"> <h6>Cin</h6></label>
+      <input type="text" id="cin" name="cin" [(ngModel)] = "client.cin">
+    </div>
+    <div class="form-group">
+      <label for="email"><h6>Email</h6></label>
+      <input type="email" id="email" name="email" >
+    </div>
+    <div class="form-group">
+      <app-ville-list [(ngModel)] = "client.ville"></app-ville-list>
+    </div>
+    <div class="form-group">
+      <label for="password"><h6>Password</h6></label>
+      <input type="password" id="password" name="password" >
+    </div>
+    <div class="form-group">
+      <label for="confirm-password"><h6>Confirm Password</h6></label>
+      <input type="password" id="confirm-password" name="confirm-password" >
+    </div>
+    <button type="submit" (click)="save()"> sign up</button>
+  </form>
+</div>
+</div>

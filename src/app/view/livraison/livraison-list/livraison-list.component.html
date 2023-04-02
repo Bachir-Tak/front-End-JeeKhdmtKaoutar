@@ -1,0 +1,26 @@
+<table class="table table-bordered table-hover" *ngIf="livraisons.length != 0 ">
+    <thead>
+
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Email</th>
+      <th>Adresse</th>
+      <th>Ville</th>
+    <th>Action</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let liv of livraisons ; index as i">
+      <td>{{ liv.achat.client.nom}}</td>
+      <td>{{ liv.achat.client.prenom}}</td>
+      <td>{{ liv.achat.client.compte.email}}</td>
+      <td>{{ liv.achat.client.adresse}}</td>
+      <td>{{ liv.achat.client.ville }}</td>
+      <td><span (click)="deleteByRef(liv,i)" class="fa fa-trash btn btn-sm"></span>Supprimer</td>
+    </tr>
+    </tbody>
+  </table>
+
+
+
+
+

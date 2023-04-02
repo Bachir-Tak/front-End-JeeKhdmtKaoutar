@@ -1,0 +1,26 @@
+<table class="table table-bordered table-hover" >
+  <thead>
+  <tr>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Email</th>
+    <th>Adresse</th>
+    <th>Ville</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+
+  <tbody>
+   <tr *ngFor="let lc of livraisonscommandes ; index as i">
+    <td>{{ lc.livraison.achat.client.nom }}</td>
+    <td>{{ lc.livraison.achat.client.prenom }}</td>
+    <td>{{ lc.livraison.achat.client.compte.email }}</td>
+    <td>{{ lc.livraison.achat.client.adresse }}</td>
+    <td>{{ lc.livraison.achat.client.ville }}</td>
+    <td><button class="btn btn-sm fa fa-trash">Supprimer</button></td>
+  </tr>
+  </tbody>
+</table>
+
+
+

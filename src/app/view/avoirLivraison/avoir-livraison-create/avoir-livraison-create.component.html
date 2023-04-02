@@ -1,0 +1,85 @@
+<div class="my-5 page" size="A4">
+  <div class="p-5">
+    <section class="top-content bb d-flex justify-content-between">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="" class="img-fluid">
+      </div>
+      <div class="top-left">
+        <div class="liv">
+          <p>reçu de livraison</p>
+        </div>
+        <div class="position-relative">
+          <p>N° de livraison: <span>{{ avoirLivraison.livraison.id }}</span></p>
+        </div>
+      </div>
+    </section>
+    <section class="store-user mt-5">
+      <div class="col-10">
+        <div class="row bb pb-3">
+          <div class="col-5">
+            <p>Client,</p>
+            <h2>{{ avoirLivraison.livraison.achat.client.nom }}</h2>
+            <p class="address">{{ avoirLivraison.livraison.achat.client.adresse }}</p>
+          </div>
+        </div>
+        <div class="row extra-info pt-3">
+          <div class="col-7">
+
+            <p>Mode de paiement: <span>{{ avoirLivraison.livraison.achat.client.rib }}</span></p>
+
+            <p>Numéro de commande: <span>{{ avoirLivraison.livraison.livraisonCommande.commande.id }}</span></p>
+          </div>
+          <div class="col-5">
+            <p>Date de livraison: <span>{{ avoirLivraison.livraison.date }}</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-area mt-4">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <td>Description de l'article</td>
+          <td>Prix</td>
+          <td>Quantité</td>
+          <td>Total</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let pr of avoirLivraison.livraison.livraisonCommande.commande.commandeProduits">
+          <td>
+            <div class="media">
+              <p>{{ pr.produit.id }}</p>
+              <div class="media-body">
+                <p class="mt-0 title">{{ pr.produit.nom }}</p>
+              </div>
+            </div>
+          </td>
+          <td>{{ pr.produit.prixVente }}DH</td>
+          <td>{{ pr.quantite }}</td>
+          <td>{{ pr.produit.prixVente * pr.quantite }}DH</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="balance-info" *ngFor="let pr of avoirLivraison.livraison.livraisonCommande.commande.commandeProduits">
+      <div class="row">
+        <div class="col-4">
+          <table class="table border-0 table-hover">
+            <tr>
+              <td>Livraison:</td>
+              <td>00 DH</td>
+            </tr>
+            <tr>
+              <td>Total:</td>
+              <td>{{ pr.prixTotale}} DH</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <img src="assets/images/cart.jpg" class="img-fluid cart-bg" alt="">
+  </div>
+</div>
