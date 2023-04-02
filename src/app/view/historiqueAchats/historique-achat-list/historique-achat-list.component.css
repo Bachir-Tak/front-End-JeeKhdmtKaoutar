@@ -1,0 +1,51 @@
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'popin', sans-serif;
+}
+h1 {
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #2691d9;
+  color: white;
+}
+.btn {
+  display: inline-block;
+  padding: 10px;
+  background-color: #003459;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #003459;
+}
+.btn-danger {
+  background-color: #003459;
+}
+.btn-danger:hover {
+  background-color: #00171F;
+}
+.fa {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.fa-trash {
+  color: #00A7E1;
+}
+
