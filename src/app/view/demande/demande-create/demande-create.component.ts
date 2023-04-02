@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {DemandeService} from "../../../controller/service/demande/demande.service";
 import {Demande} from "../../../controller/model/demande/demande.model";
-import {Client} from "../../../controller/model/client/client.model";
 import {ActivatedRoute} from "@angular/router";
 import {DemandeProduitService} from "../../../controller/service/demandeProduit/demande-produit.service";
 

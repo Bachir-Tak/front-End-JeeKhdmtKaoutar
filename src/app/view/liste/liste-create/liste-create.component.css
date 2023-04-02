@@ -1,0 +1,22 @@
+.cardi{
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 10px #003459;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.whole_card{
+  width: 500px;
+  justify-content: space-around;
+  row-gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.whole_card i{
+  color: #003459;
+}
+

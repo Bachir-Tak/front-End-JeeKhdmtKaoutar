@@ -4,6 +4,7 @@ import {AccueilCreateComponent} from "./view/accueil/accueil-create/accueil-crea
 import {MagasinCreateComponent} from "./view/magasin/magasin-create/magasin-create.component";
 import { RouterTestingModule } from "@angular/router/testing";
 import {DemandeCreateComponent} from "./view/demande/demande-create/demande-create.component";
+import {ListeCreateComponent} from "./view/liste/liste-create/liste-create.component";
 
 
 const appRouteList: Routes = [
@@ -17,7 +18,7 @@ const appRouteList: Routes = [
   },
   {
     path: 'liste',
-    component: MagasinCreateComponent
+    component: ListeCreateComponent
   },
   {
     path: '**',
