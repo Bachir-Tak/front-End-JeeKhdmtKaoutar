@@ -1,30 +1,23 @@
 import {Injectable} from '@angular/core';
-import {Fournisseur} from '../../model/fournisseur/fournisseur.model';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient} from "@angular/common/http";
+import {Fournisseur} from "../../model/fournisseur/fournisseur.model";
 import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
-export class FoutnisseurService {
-  private _fournisseur!: Fournisseur;
-  private _fournisseurs!: Array<Fournisseur>;
-  private url = "http://localhost:8033/GestionCommertiale/Fournisseur";
+export class FournisseurService  {
 
-  public save(): Observable<number> {
-    return this.http.post<number>(this.url, this.fournisseur);
-  }
+  private _fournisseur !: Fournisseur;
+  private _fournisseurs !: Array<Fournisseur>;
 
-  public findall(): Observable<Array<Fournisseur>> {
-    return this.http.get<Array<Fournisseur>>(this.url);
-  }
+  private _url ="http://localhost:8033/GestionCommerciale/Fournisseur/";
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private _http:HttpClient) { }
 
   get fournisseur(): Fournisseur {
-    if (this._fournisseur == null) {
-      return this._fournisseur = new Fournisseur();
+    if(this._fournisseur == null){
+      return  this._fournisseur = new Fournisseur();
     }
     return this._fournisseur;
   }
@@ -34,8 +27,8 @@ export class FoutnisseurService {
   }
 
   get fournisseurs(): Array<Fournisseur> {
-    if (this._fournisseurs == null) {
-      return this._fournisseurs = new Array<Fournisseur>();
+    if(this._fournisseurs == null){
+      return  this._fournisseurs = new Array<Fournisseur>();
     }
     return this._fournisseurs;
   }
@@ -43,4 +36,36 @@ export class FoutnisseurService {
   set fournisseurs(value: Array<Fournisseur>) {
     this._fournisseurs = value;
   }
+
+  get url(): string {
+    return this._url;
+  }
+
+  set url(value: string) {
+    this._url = value;
+  }
+  public  save ():Observable<Fournisseur>{
+    return this._http.post<Fournisseur>(this.url, this.fournisseur);
+
+  }
+  public  findAll(): Observable<Array<Fournisseur>>{
+    return this._http.get<Array<Fournisseur>>(this.url);
+  }
+
+  public deleteByCode(code:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'code/'+ code);
+    return this._http.delete<number>(this._url+ 'code/' + code);
+  }
+   postFournisseur(fournisseur: any): Observable<any> {
+    return this._http.post(this.url, this.fournisseur);
+  }
+  getFournisseurs(): Observable<Fournisseur[]> {
+    return this._http.get<Fournisseur[]>(this.url);
+  }
+
+  getFournisseur(id: number): Observable<Fournisseur> {
+    const url = `${this.url}/${id}`;
+    return this._http.get<Fournisseur>(url);
+  }
+
 }

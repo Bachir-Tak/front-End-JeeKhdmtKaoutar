@@ -26,17 +26,18 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
+
 }
 
 .product-item {
   background-color: #f2f2f2;
   border: 1px solid #ddd;
   border-radius: 3rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
   text-align: center;
   width: 300px;
+  box-shadow: 10px 10px 15px #00A7E1;
 }
 
 .product-item img {
@@ -52,7 +53,7 @@ header {
 }
 
 button {
-  background-color: #1f2ed6;
+  background-color: #00A7E1 ;
   border: none;
   border-radius: 5px;
   color: #fff;
@@ -64,7 +65,7 @@ button {
 }
 
 button:hover {
-  background-color: #4aaed9;
+  background-color: #1f2ed6;
 }
 
 @media screen and (max-width: 768px) {

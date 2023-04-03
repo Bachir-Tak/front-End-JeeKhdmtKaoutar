@@ -34,10 +34,14 @@ export class AchatService {
   set achats(value: Array<Achat>) {
     this._achats = value;
   }
-  public  save (achat: Achat):Observable<number>{
-    return this.http.post<number>(this._url, this.achat);
+  public  save ():Observable<Achat>{
+    return this.http.post<Achat>(this._url, this.achat);
   }
   public  findAll(): Observable<Array<Achat>>{
     return this.http.get<Array<Achat>>(this._url);
+  }
+  public deleteByCode(code:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'code/'+ code);
+    return this.http.delete<number>(this._url+ 'cin/' + code);
   }
 }

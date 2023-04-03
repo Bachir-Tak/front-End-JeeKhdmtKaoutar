@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import { Client } from 'src/app/controller/model/client/client.model';
 import {ClientService} from "../../../controller/service/client/client.service";
-import {Client} from "../../../controller/model/client/client";
+
 
 @Component({
   selector: 'app-client-create',
@@ -13,7 +14,7 @@ export class ClientCreateComponent implements OnInit{
   ngOnInit(): void {
   }
   public save(): void{
-    this.clientService.save(this.client).subscribe(data =>{
+    this.clientService.save().subscribe(data =>{
       if(data != null){
         alert('SAVE SUCCESS');
       }else{

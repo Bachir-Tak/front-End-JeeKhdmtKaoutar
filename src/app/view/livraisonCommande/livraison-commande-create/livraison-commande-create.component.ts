@@ -14,8 +14,8 @@ export class LivraisonCommandeCreateComponent implements OnInit {
   public save(): void {
     this.livraisonCommandeService.save().subscribe(data => {
       if (data != null) {
-        this.livraisonscommandes.push({...this.livraisoncommande});
-        this.livraisonCommandeService.livraisoncommande == null;
+       // this.livraisonscommandes.push({...this.livraisoncommande});
+       // this.livraisonCommandeService.livraisoncommande == null;
         alert('Save Success');
       } else {
         alert('Save Error ::: Ref Exixt');

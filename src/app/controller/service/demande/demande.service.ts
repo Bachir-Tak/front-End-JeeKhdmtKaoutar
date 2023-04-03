@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-
+import {Demande} from "../../model/demande/demande.model";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Demande} from "../../model/demande/demande";
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +10,22 @@ import {Demande} from "../../model/demande/demande";
 export class DemandeService {
   private _demande !: Demande ;
   private _demandes !: Array<Demande>;
-  private url ="http://localhost:8033/GestionCommertiale/Demande";
+  private _url ="http://localhost:8033/GestionCommertiale/Demande/";
 
-  save():Observable<number>{
-    return this.http.post<number>(this.url,this.demande);
+  save(demande:Demande,clientId:number):Observable<Demande>{
+    //demande.client=clientService.findById(clientId);
+    return this.http.post<Demande>(this._url,demande);
   }
   constructor(private  http: HttpClient) { }
 
 
   get demande(): Demande {
+
     if (this._demande== null)
     {
-      return this._demande=new Demande();
+     return this._demande=new Demande();
     }
+
     return this._demande;
   }
 
@@ -33,12 +36,20 @@ export class DemandeService {
   get demandes(): Array<Demande> {
     if (this._demandes== null)
     {
-      return this._demandes=new Array<Demande>();
+      this._demandes=new Array<Demande>();
     }
     return this._demandes;
   }
 
   set demandes(value: Array<Demande>) {
     this._demandes = value;
+  }
+
+  get url(): string {
+    return this._url;
+  }
+
+  set url(value: string) {
+    this._url = value;
   }
 }

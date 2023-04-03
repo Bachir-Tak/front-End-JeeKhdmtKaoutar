@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {Client} from "../../model/client/client";
+
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Client} from "../../model/client/client.model";
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,12 @@ export class ClientService {
   private _client !: Client;
   private _clients !: Array<Client>;
 
-  private url ="http://localhost:8033/GestionCommertiale/Client";
+  private _url ="http://localhost:8033/GestionCommertiale/Client/";
 
-  constructor(private http:HttpClient) { }
+  constructor(private _http:HttpClient) { }
+  public findAll(): Observable<Array<Client>>{
+    return this._http.get<Array<Client>>(this._url);
+  }
 
   get client(): Client {
     if(this._client == null){
@@ -35,9 +39,12 @@ export class ClientService {
   set clients(value: Array<Client>) {
     this._clients = value;
   }
-  public  save (client: Client):Observable<number>{
-    return this.http.post<number>(this.url, this.client);
-  }public  findAll(): Observable<Array<Client>>{
-    return this.http.get<Array<Client>>(this.url);
+  public  save ():Observable<Client>{
+    return this._http.post<Client>(this._url, this.client);
+
+}
+  public deleteByCin(cin:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'cin/'+ cin);
+    return this._http.delete<number>(this._url+ 'cin/' + cin);
   }
 }

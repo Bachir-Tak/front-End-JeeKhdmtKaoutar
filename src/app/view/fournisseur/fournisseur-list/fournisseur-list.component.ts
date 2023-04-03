@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FoutnisseurService} from "../../../controller/service/fournisseur/fournisseur.service";
 import {Fournisseur} from "../../../controller/model/fournisseur/fournisseur.model";
+import {FournisseurService} from "../../../controller/service/fournisseur/fournisseur.service";
 
 @Component({
   selector: 'app-fournisseur-list',
@@ -8,7 +8,7 @@ import {Fournisseur} from "../../../controller/model/fournisseur/fournisseur.mod
   styleUrls: ['./fournisseur-list.component.css']
 })
 export class FournisseurListComponent implements OnInit {
-  constructor(private fournisseurService: FoutnisseurService) {
+  constructor(private fournisseurService: FournisseurService) {
   }
 
   ngOnInit(): void {
@@ -16,17 +16,29 @@ export class FournisseurListComponent implements OnInit {
   }
 
   public findAll(): void {
-    this.fournisseurService.findall().subscribe(data => this.fournisseurs = data)
+    this.fournisseurService.findAll().subscribe(data => this.fournisseurs = data)
 
   }
+
+  public deleteByCode(fournisseur: Fournisseur, index: number): void {
+    console.log('haaa code' + fournisseur.code);
+    this.fournisseurService.deleteByCode(fournisseur.code.toString()).subscribe(data => {
+      if (data > 0) {
+        this.fournisseurs.splice(index, 1);
+      } else {
+        alert('Del Error');
+      }
+    })
+  };
+
 
   get fournisseur(): Fournisseur {
     return this.fournisseurService.fournisseur;
   }
-
   set fournisseur(value: Fournisseur) {
     this.fournisseurService.fournisseur = value;
   }
+
 
   get fournisseurs(): Array<Fournisseur> {
     return this.fournisseurService.fournisseurs;
@@ -36,3 +48,5 @@ export class FournisseurListComponent implements OnInit {
     this.fournisseurService.fournisseurs = value;
   }
 }
+
+

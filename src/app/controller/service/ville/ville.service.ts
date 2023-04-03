@@ -12,7 +12,7 @@ export class VilleService {
   private _ville !: Ville;
   private _villes !: Array<Ville>;
 
-  private url ="http://localhost:8033/GestionCommertiale/Ville";
+  private url ="http://localhost:8033/GestionCommertiale/Ville/";
 
   constructor(private  http:HttpClient) { }
 
