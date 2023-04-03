@@ -1,4 +1,5 @@
-import {Client} from "../client/client";
+import { Client } from "../client/client.model";
+
 
 export class Compte {
  public id !: number;

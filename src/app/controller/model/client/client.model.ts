@@ -1,12 +1,17 @@
 import {Compte} from '../compte/compte.model'
+import {Ville} from "../ville/ville";
 export class Client {
-  public id !:number;
+  public id!: number;
+  public cin !: string;
+  public  nom !: string;
 
-  public nom!:string;
+  public prenom !: string;
 
-  public prenom!:string;
+  public rib !: string;
 
-  public cin!:string;
+  public adresse!: string;
 
-  public comptes!:Array<Compte>;
+  public ville !: Ville;
+
+  public compte!: Compte;
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AchatListComponent } from './achat-list.component';
+import { ListeELCreateComponent } from './liste-el-create.component';
 
-describe('AchatListComponent', () => {
-  let component: AchatListComponent;
-  let fixture: ComponentFixture<AchatListComponent>;
+describe('ListeELCreateComponent', () => {
+  let component: ListeELCreateComponent;
+  let fixture: ComponentFixture<ListeELCreateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AchatListComponent ]
+      declarations: [ ListeELCreateComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AchatListComponent);
+    fixture = TestBed.createComponent(ListeELCreateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
