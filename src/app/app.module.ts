@@ -31,6 +31,11 @@ import {
   CategorieProduitListComponent
 } from "./view/categorieProduit/categorie-produit-list/categorie-produit-list.component";
 import {AchatListComponent} from "./view/achats/achat-list/achat-list.component";
+import { ListeELCreateComponent } from './view/listeEl/liste-el-create/liste-el-create.component';
+import {ProduitCreateComponent} from "./view/produit/produit-create/produit-create.component";
+import {ProduitListComponent} from "./view/produit/produit-list/produit-list.component";
+import {CommandeCreateComponent} from "./view/commandes/commande-create/commande-create.component";
+import {FournisseurCreateComponent} from "./view/fournisseur/fournisseur-create/fournisseur-create.component";
 
 
 @NgModule({
@@ -56,7 +61,12 @@ import {AchatListComponent} from "./view/achats/achat-list/achat-list.component"
     FournisseurListComponent,
     MagasinListComponent,
     CategorieProduitListComponent,
-    AchatListComponent
+    AchatListComponent,
+    ListeELCreateComponent,
+    ProduitCreateComponent,
+    ProduitListComponent,
+    CommandeCreateComponent,
+    FournisseurCreateComponent
 
   ],
   imports: [

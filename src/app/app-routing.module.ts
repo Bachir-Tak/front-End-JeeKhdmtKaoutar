@@ -23,6 +23,15 @@ import {ClientListComponent} from "./view/clients/client-list/client-list.compon
 import {MagasinListComponent} from "./view/magasin/magasin-list/magasin-list.component";
 import {StockListComponent} from "./view/stock/stock-list/stock-list.component";
 import {AchatListComponent} from "./view/achats/achat-list/achat-list.component";
+import {ListeELCreateComponent} from "./view/listeEl/liste-el-create/liste-el-create.component";
+import {ReceptionCreateComponent} from "./view/reception/reception-create/reception-create.component";
+import {ReceptionListComponent} from "./view/reception/reception-list/reception-list.component";
+import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-list.component";
+import {ProduitCreateComponent} from "./view/produit/produit-create/produit-create.component";
+import {FournisseurCreateComponent} from "./view/fournisseur/fournisseur-create/fournisseur-create.component";
+import {
+  CategorieProduitCreateComponent
+} from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
 
 
 const appRouteList: Routes = [
@@ -35,6 +44,32 @@ const appRouteList: Routes = [
     component: DemandeCreateComponent
   },
   {
+    path: 'reception-ch',
+    component: ListeELCreateComponent,
+    data:{text:'reception',link:'reception'}
+  },
+  {
+    path: 'reception-ch/reception',
+    component: ReceptionCreateComponent
+  },
+  {
+    path: 'reception-ch/reception-list',
+    component: ReceptionListComponent
+  },
+  {
+    path: 'produit-ch',
+    component: ListeELCreateComponent,
+    data:{text:'produit',link:'produit'}
+  },
+  {
+    path: 'produit-ch/produit',
+    component: ProduitCreateComponent
+  },
+  {
+    path: 'produit-ch/produit-list',
+    component: ProduitListComponent
+  },
+  {
     path: 'liste',
     component: ListeCreateComponent,
   },
@@ -43,15 +78,42 @@ const appRouteList: Routes = [
     component: ClientListComponent
   },
   {
-    path: 'fournisseurs',
+    path: 'fournisseur-ch',
+    component: ListeELCreateComponent,
+    data:{text:'fournisseur',link:'fournisseur'}
+  },
+  {
+    path: 'fournisseur-ch/fournisseur',
+    component: FournisseurCreateComponent
+  },
+  {
+    path: 'fournisseur-ch/fournisseur-list',
     component: FournisseurListComponent
   },
   {
-    path: 'categories',
+    path: 'categorie-ch',
+    component: ListeELCreateComponent,
+    data:{text:'categorie',link:'categorie'}
+  },
+  {
+    path: 'categorie-ch/categorie',
+    component: CategorieProduitCreateComponent
+  },
+  {
+    path: 'categorie-ch/categorie-list',
     component: CategorieProduitListComponent
   },
   {
-    path: 'magasins',
+    path: 'magasin-ch',
+    component: ListeELCreateComponent,
+    data:{text:'magasin',link:'magasin'}
+  },
+  {
+    path: 'magasin-ch/magasin',
+    component: MagasinCreateComponent
+  },
+  {
+    path: 'magasin-ch/magasin-list',
     component: MagasinListComponent
   },
   {
@@ -61,6 +123,14 @@ const appRouteList: Routes = [
   {
     path: 'achats',
     component: AchatListComponent
+  },
+  {
+    path: 'livraison',
+    component: LivraisonListComponent
+  },
+  {
+    path: 'remboursement',
+    component: RemboursementCreateComponent
   },
   {
     path: '**',
