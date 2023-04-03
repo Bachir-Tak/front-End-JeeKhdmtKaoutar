@@ -72,7 +72,8 @@ import {
     CommandeCreateComponent,
     FournisseurCreateComponent,
     AchatCreateComponent,
-    HistoriqueAchatListComponent
+    HistoriqueAchatListComponent,
+    RecuRemboursementCreateComponent
 
   ],
   imports: [

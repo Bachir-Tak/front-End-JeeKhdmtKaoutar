@@ -2,7 +2,6 @@ import {Injectable, OnInit} from '@angular/core';
 import {CategorieProduit} from "../../model/categorieProduit/categorie-produit";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Produit} from "../../model/produit/produit";
 
 
 @Injectable({
@@ -12,20 +11,20 @@ export class CategorieProduitService implements OnInit {
   private _categorieProduit!: CategorieProduit;
   private _categorieProduits!: Array<CategorieProduit>;
 
-  private url = "http://localhost:8033/GestionCommertiale/CategorieProduit";
+  private _url = "http://localhost:8033/GestionCommertiale/CategorieProduit/";
 
-  constructor(private http: HttpClient) {
+  constructor(private _http: HttpClient) {
   }
 
   ngOnInit(): void {
   }
 
   public save(): Observable<number> {
-    return this.http.post<number>(this.url, this.categorieProduit);
+    return this._http.post<number>(this._url, this.categorieProduit);
   }
 
   public findall(): Observable<Array<CategorieProduit>> {
-    return this.http.get<Array<CategorieProduit>>(this.url);
+    return this._http.get<Array<CategorieProduit>>(this._url);
   }
 
   get categorieProduit(): CategorieProduit {
@@ -48,5 +47,17 @@ export class CategorieProduitService implements OnInit {
 
   set categorieProduits(value: Array<CategorieProduit>) {
     this._categorieProduits = value;
+  }
+  public deleteByCode(code:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'code/'+ code);
+    return this._http.delete<number>(this._url+ 'code/' + code);
+  }
+
+  get url(): string {
+    return this._url;
+  }
+
+  set url(value: string) {
+    this._url = value;
   }
 }
