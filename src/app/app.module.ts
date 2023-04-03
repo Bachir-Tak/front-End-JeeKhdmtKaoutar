@@ -17,6 +17,20 @@ import { ReceptionListComponent } from './view/reception/reception-list/receptio
 import {CompteCreateComponent} from "./view/comptes/compte-create/compte-create.component";
 import {ClientCreateComponent} from "./view/clients/client-create/client-create.component";
 import {VilleListComponent} from "./view/villes/ville-list/ville-list.component";
+import {RemboursementCreateComponent} from "./view/remboursement/remboursement-create/remboursement-create.component";
+import {RecuRemboursement} from "./controller/model/recuRemboursement/recu-remboursement";
+import {
+  RecuRemboursementCreateComponent
+} from "./view/recuRemboursement/recu-remboursement-create/recu-remboursement-create.component";
+import {ListeCreateComponent} from "./view/liste/liste-create/liste-create.component";
+import { StockCreateComponent } from './view/stock/stock-create/stock-create.component';
+import { StockListComponent } from './view/stock/stock-list/stock-list.component';
+import {ClientListComponent} from "./view/clients/client-list/client-list.component";
+import {FournisseurListComponent} from "./view/fournisseur/fournisseur-list/fournisseur-list.component";
+import {
+  CategorieProduitListComponent
+} from "./view/categorieProduit/categorie-produit-list/categorie-produit-list.component";
+import {AchatListComponent} from "./view/achats/achat-list/achat-list.component";
 
 
 @NgModule({
@@ -32,7 +46,17 @@ import {VilleListComponent} from "./view/villes/ville-list/ville-list.component"
     ReceptionListComponent,
     CompteCreateComponent,
     ClientCreateComponent,
-    VilleListComponent
+    VilleListComponent,
+    RemboursementCreateComponent,
+    RecuRemboursementCreateComponent,
+    ListeCreateComponent,
+    StockCreateComponent,
+    StockListComponent,
+    ClientListComponent,
+    FournisseurListComponent,
+    MagasinListComponent,
+    CategorieProduitListComponent,
+    AchatListComponent
 
   ],
   imports: [
