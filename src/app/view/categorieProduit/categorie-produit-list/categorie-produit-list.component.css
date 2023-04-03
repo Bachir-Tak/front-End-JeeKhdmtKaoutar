@@ -1,8 +1,8 @@
 table {
   border-collapse: collapse;
-  width: 75%;
-  margin-left: 12%;
-  margin-top: 5%;
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 3%;
 
 }
 
@@ -35,12 +35,12 @@ li {
 
 }
 .head{
-  border-bottom: 1px solid #ddd;
+
   padding-top: 3px;
   text-align: center;
-  margin-bottom: 5%;
-  background-color: #007EA7;
-  color: #ddd;
+  margin-bottom: 6%;
+  background-color: #FFFFFF;
+  color: #003459;
 }
 .button_cat{
   margin-left: 75%;

@@ -11,7 +11,7 @@ export class CategorieProduitService implements OnInit {
   private _categorieProduit!: CategorieProduit;
   private _categorieProduits!: Array<CategorieProduit>;
 
-  private _url = "http://localhost:8033/GestionCommertiale/CategorieProduit/";
+  private _url = "http://localhost:8033/GestionCommerciale/CategorieProduit/";
 
   constructor(private _http: HttpClient) {
   }

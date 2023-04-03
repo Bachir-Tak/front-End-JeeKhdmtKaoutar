@@ -133,7 +133,7 @@ const appRouteList: Routes = [
   },
   {
     path: 'remboursement',
-    component: RecuRemboursementCreateComponent
+    component: RemboursementCreateComponent
   },
 
   {
