@@ -1,2 +1,35 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~font-awesome/css/font-awesome.min.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "font-awesome/css/font-awesome.min.css";
+*{
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;}
+.mainDiv{
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.navbar-nav a{
+  color:#003459 !important;
+
+}
+.navbar-nav a:hover{
+  color: #2781c1 !important;
+
+}
+a:hover{
+  cursor: pointer;
+}
+.profile{
+  height: 10%;
+  left: auto;
+  right: 0;
+  border: 0;
+  font-size: 20px;
+}
+.contentos{
+  margin: auto;
+}
+
+

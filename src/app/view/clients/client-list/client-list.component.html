@@ -1,42 +1,35 @@
 <h1>Liste des clients</h1>
 <table>
+  <thead>
   <tr>
     <th>Nom</th>
     <th>Prénom</th>
-    <th>Email</th>
     <th>Cin</th>
-    <th></th>
+    <th>Adress</th>
+    <th> Action</th>
   </tr>
-  <tr>
-    <td>Dupont</td>
-    <td>Marie</td>
-    <td>marie.dupont@gmail.com</td>
-    <td>EE2345</td>
+  </thead>
+  <tbody>
+  <tr *ngFor="let client of clients , index as i">
+    <td>{{ client.nom }}</td>
+    <td>{{ client.prenom }}</td>
+    <td>{{ client.cin}}</td>
+    <td>{{client.adresse}}</td>
     <td>
-      <button class="delete"><i class="fa fa-trash"></i>Supprimer</button>
-      <button class="admin"><i class="fa fa-crown"></i>Rendre admin</button>
+      <button class="delete" (click)="deleteByCin(client,i)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6f32be" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <line x1="4" y1="7" x2="20" y2="7" />
+        <line x1="10" y1="11" x2="10" y2="17" />
+        <line x1="14" y1="11" x2="14" y2="17" />
+        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+      </svg>Supprimer</button>
+      <button class="admin"><svg  width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#6f32be" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M12 6l4 6l5 -4l-2 10h-14l-2 -10l5 4z" />
+      </svg>Rendre admin</button>
     </td>
   </tr>
-  <tr>
-    <td>Leclerc</td>
-    <td>Antoine</td>
-    <td>antoine.leclerc@hotmail.com</td>
-    <td>E151413</td>
-    <td>
-      <button class="delete"><i class="fa fa-trash"></i>Supprimer</button>
-      <button class="admin"><i class="fa fa-crown"></i>Rendre admin</button>
-    </td>
-  </tr>
-  <tr>
-    <td>Dubois</td>
-    <td>Lucie</td>
-    <td>lucie.dubois@yahoo.fr</td>
-    <td>A15613</td>
-    <td>
-      <button class="delete"><i class="fa fa-trash"></i>Supprimer</button>
-      <button class="admin"><i class="fa fa-crown"></i>Rendre admin</button>
-    </td>
-  </tr>
+  </tbody>
 </table>
-
 

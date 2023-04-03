@@ -1,72 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reçu de remboursement</title>
-  <link rel="stylesheet" href="recu-remboursement-create.component.css">
-</head>
-<body>
-<div class="header">
-  <h1 class="recu">Reçu</h1>
-  <img class="logo" src="C:\Users\user\Desktop\Rembouuresement\image\simo.jpg" >
+<div class="recu-remboursement">
+  <h2>Recu de remboursement</h2>
+  <link rel="stylesheet" type="text/css" href="recu-remboursement-create.component.css">
+  <p>Identifiant : <span class="id" [(ngModel)]="recuRemboursement.id"></span></p>
+  <p>Code : <span class="code" [(ngModel)]="recuRemboursement.code"></span></p>
+  <div class="remboursement" [(ngModel)]="recuRemboursement.remboursement">
+  </div>
 </div>
-<div class="entreprise-info">
-  <h2>Entreprise Excellente</h2>
-  <p>123 Rue de la Réussite, Paris, France</p>
-  <p>Tél: +33 1 23 45 67 89</p>
-</div>
-<center>
-  <table class="tableau">
-    <thead>
-    <tr>
-      <th>Description</th>
-      <th>Quantité</th>
-      <th>Prix unitaire</th>
-      <th>TVA</th>
-      <th>TVA total</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!-- Ajoutez des lignes de produits ici -->
-    <tr>
-      <td>Produit A</td>
-      <td>1</td>
-      <td>100€</td>
-      <td>20%</td>
-      <td>20€</td>
-    </tr>
-    <tr>
-      <td>Produit E</td>
-      <td>1</td>
-      <td>100€</td>
-      <td>20%</td>
-      <td>20€</td>
-    </tr>
-    <tr>
-      <td>Produit B</td>
-      <td>1</td>
-      <td>100€</td>
-      <td>20%</td>
-      <td>20€</td>
-    </tr>
-    <tr>
-      <td>Produit C</td>
-      <td>1</td>
-      <td>100€</td>
-      <td>20%</td>
-      <td>20€</td>
-    </tr>
-    <tr>
-      <td>Produit D</td>
-      <td>1</td>
-      <td>100€</td>
-      <td>20%</td>
-      <td>20€</td>
-    </tr>
-    </tbody>
-  </table>
-</center>
-</body>
-</html>
+
 

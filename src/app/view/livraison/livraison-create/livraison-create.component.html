@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Livraison</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="livraison-create.component.css">
-</head>
-<body>
 <div class="container myfr">
   <form>
     <h1>Livraison Formulaire</h1>
@@ -29,12 +19,12 @@
         <input type="text" class="form-control" id="address" name="address" [(ngModel)]="livraison.achat.client.adresse">
       </div>
       <div class="form-group">
-        <label for="city"><ion-icon name="pin-outline"></ion-icon> Ville:</label>
-        <input type="text" class="form-control" id="city" name="city"  [(ngModel)]="livraison.achat.client.ville">
+         <app-ville-list [(ngModel)]="livraison.achat.client.ville"></app-ville-list>
       </div>
       <button type="submit" class="btn btn-primary" (click)="save()">Continuer</button>
     </div>
   </form>
 </div>
-</body>
-</html>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+

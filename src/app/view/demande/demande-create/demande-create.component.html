@@ -1,0 +1,21 @@
+<div class="card cardos">
+  <div class="card-body">
+    <div class="card-title"><h5>Remplir les informations de votre demande</h5></div>
+
+    <div class="form-group">
+      <label for="libelle" class="form-label fw-semibold">Libelle</label>
+      <input id="libelle" type="text" class="form-control" [(ngModel)]="demande.libelle">
+    </div>
+    <div class="form-group">
+      <label for="code" class="form-label fw-semibold">Code</label>
+      <input id="code" type="text" class="form-control" [(ngModel)]="demande.code">
+    </div>
+    <div class="form-group justify-content-around w-100 ">
+      <div [innerHtml]="content | sanitizeHtml" class="demandeProduits">
+      </div>
+    </div>
+    <span class="fa fa-plus-square " (click)="contentAdd()"></span>
+
+  </div>
+    <button class="btn btn-blue align-self-center" (click)="save()">Valider</button>
+</div>

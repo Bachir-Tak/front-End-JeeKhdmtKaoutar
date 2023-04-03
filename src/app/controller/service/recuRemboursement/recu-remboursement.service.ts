@@ -1,8 +1,7 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 import {HttpClient} from "@angular/common/http";
 import {RecuRemboursement} from "../../model/recuRemboursement/recu-remboursement";
-import {Remboursement} from "../../model/remboursement/remboursement.model";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -11,7 +10,7 @@ import {Observable} from "rxjs";
 export class RecuRemboursementService {
   private _recuRemboursement!:RecuRemboursement;
   private _recuRemboursements!:Array<RecuRemboursement>;
-  private _url = "http://localhost:8033/GestionCommertiale/RecuRemboursement"
+  private _url = "http://localhost:8033/GestionCommertiale/RecuRemboursement";
   constructor(private _http:HttpClient) {}
   public save(recuRemboursement: RecuRemboursement):Observable<RecuRemboursement>{
     return this._http.post<RecuRemboursement>(this._url,this.recuRemboursement);

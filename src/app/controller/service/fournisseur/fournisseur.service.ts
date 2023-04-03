@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Client} from "../../model/client/client";
 import {HttpClient} from "@angular/common/http";
 import {Fournisseur} from "../../model/fournisseur/fournisseur.model";
 import {Observable} from "rxjs";
@@ -9,10 +8,10 @@ import {Observable} from "rxjs";
 })
 export class FournisseurService  {
 
-  private _fournisseur !: Fournisseur
+  private _fournisseur !: Fournisseur;
   private _fournisseurs !: Array<Fournisseur>;
 
-  private _url ="http://localhost:8033/GestionCommertiale/Fournisseur";
+  private _url ="http://localhost:8033/GestionCommerciale/Fournisseur/";
 
   constructor(private _http:HttpClient) { }
 
@@ -51,6 +50,22 @@ export class FournisseurService  {
   }
   public  findAll(): Observable<Array<Fournisseur>>{
     return this._http.get<Array<Fournisseur>>(this.url);
+  }
+
+  public deleteByCode(code:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'code/'+ code);
+    return this._http.delete<number>(this._url+ 'code/' + code);
+  }
+   postFournisseur(fournisseur: any): Observable<any> {
+    return this._http.post(this.url, this.fournisseur);
+  }
+  getFournisseurs(): Observable<Fournisseur[]> {
+    return this._http.get<Fournisseur[]>(this.url);
+  }
+
+  getFournisseur(id: number): Observable<Fournisseur> {
+    const url = `${this.url}/${id}`;
+    return this._http.get<Fournisseur>(url);
   }
 
 }

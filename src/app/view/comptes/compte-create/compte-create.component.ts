@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CompteService} from "../../../controller/service/compte/compte.service";
 import {Compte} from "../../../controller/model/compte/compte";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-compte-create',
@@ -9,7 +10,10 @@ import {Compte} from "../../../controller/model/compte/compte";
 })
 export class CompteCreateComponent  implements OnInit{
 
-  constructor(private  compteService: CompteService) {
+  constructor(private  compteService: CompteService , private router: Router) {}
+
+  goToSignup() {
+    this.router.navigate(['/signup']);
   }
   ngOnInit(): void {
   }
