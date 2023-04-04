@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CategorieProduitService} from "../../../controller/service/categorieProduit/categorie-produit.service";
 import {CategorieProduit} from "../../../controller/model/categorieProduit/categorie-produit";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-categorie-produit-create',

@@ -4,8 +4,6 @@
   padding: 16px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 8px;
-  background-color: #007EA7;
-  margin-top: 10%;
 }
 
 h1 {
@@ -19,15 +17,15 @@ label {
 
 }
 
-input[type=text], textarea {
+input[type=text] {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   resize: vertical;
-  box-shadow: 0 8px 8px 0 #6d35b7;
+  box-shadow: 0 8px 8px 0 #003459;
 }
 
 button[type=submit] {

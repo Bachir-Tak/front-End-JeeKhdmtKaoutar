@@ -1,13 +1,13 @@
 <div class="container">
-  <h1>Ajouter une catégorie de produit</h1>
+  <h1>Ajouter une catégorie produit</h1>
   <form>
-
-
     <label for="code" >Code:</label>
-    <input type="text" id="code" name="code" required>
+    <input type="text" id="code" name="code"  [(ngModel)]="categorieProduit.code" >
+    <label for="code"  >Description :</label>
+    <input type="text" id="description" name="code" [(ngModel)]="categorieProduit.description">
 
-    <label for="produits">Produits:</label>
-    <textarea id="produits" name="produits" rows="3"></textarea>
+    <label for="produits" >Produits:</label>
+    <input type="text" id="produits" name="produits" rows="3" [(ngModel)]="categorieProduit.produits">
   </form>
-  <button type="submit">Ajouter</button>
+  <button type="submit" (click)="save()"><i class="fa fa-plus-circle" aria-hidden="true"></i> Ajouter</button>
 </div>
