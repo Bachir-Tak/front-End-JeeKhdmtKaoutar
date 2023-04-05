@@ -1,10 +1,77 @@
-<div class="recu-remboursement">
-  <h2>Recu de remboursement</h2>
-  <link rel="stylesheet" type="text/css" href="recu-remboursement-create.component.css">
-  <p>Identifiant : <span class="id" [(ngModel)]="recuRemboursement.id"></span></p>
-  <p>Code : <span class="code" [(ngModel)]="recuRemboursement.code"></span></p>
-  <div class="remboursement" [(ngModel)]="recuRemboursement.remboursement">
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tableau Recu</title>
+  <link rel="stylesheet" href="recu-remboursement-create.component.css">
+</head>
+<body>
+<main>
+  <h2>Recu</h2><br>
+  <h3>CommerceX</h3>
+  <h3>Téléphone  : 073187238713</h3>
+  <p><time>Envoyer le 04/04/2023</time></p>
+  <table class="client">
+    <tr>
+      <th>Recu pour</th>
+
+      <th>remboursement</th>
+    </tr>
+    <tr>
+
+      <td rowspan="2">Nom</td>
+
+    </tr>
+
+  </table>
+  <hr size="1">
+
+  <table class="description">
+    <tbody>
+    <tr>
+      <th>Description</th>
+
+      <th>Prix de  Produit</th>
+      <th>Prix de livraison</th>
+      <th>prix total</th>
+    </tr>
+    <tr>
+      <td>product 1</td>
+
+      <td>38,00$</td>
+      <td>4,00$</td>
+      <td>42,00$</td>
+    </tr>
+    <tr>
+      <td>product 2</td>
+
+      <td>200,00$</td>
+      <td>4,00$</td>
+      <td>204,00$</td>
+    </tr>
+    <tr>
+      <td>product 3</td>
+
+      <td>6,50$</td>
+      <td>4,00$</td>
+      <td>10,50</td>
+    </tr>
 
 
+    </tbody>
+    <tfoot>
+    <tr>
+      <td>256,50$</td>
+    </tr>
+    <tr>
+      <td colspan="3">Total</td>
+      <td>256,50$</td>
+    </tr>
+
+    </tfoot>
+  </table>
+</main>
+</body>
+</html>
