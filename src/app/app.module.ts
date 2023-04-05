@@ -40,6 +40,8 @@ import { PiechartComponent } from './view/accueil/piechart/piechart.component';
 import { CourbeComponent } from './view/accueil/courbe/courbe.component';
 import { ListComponent } from './view/accueil/list/list.component';
 import { AccueilClComponent } from './view/accueil-cl/accueil-cl/accueil-cl.component';
+import { AccueilClMainComponent } from './view/accueil-cl-main/accueil-cl-main/accueil-cl-main.component';
+import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-list.component";
 
 
 @NgModule({
@@ -75,6 +77,9 @@ import { AccueilClComponent } from './view/accueil-cl/accueil-cl/accueil-cl.comp
     CourbeComponent,
     ListComponent,
     AccueilClComponent,
+    AccueilClMainComponent,
+    LivraisonListComponent,
+    ListeCreateComponent
 
 
   ],

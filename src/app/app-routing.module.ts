@@ -32,6 +32,11 @@ import {FournisseurCreateComponent} from "./view/fournisseur/fournisseur-create/
 import {
   CategorieProduitCreateComponent
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
+import {AccueilClComponent} from "./view/accueil-cl/accueil-cl/accueil-cl.component";
+import {AccueilClMainComponent} from "./view/accueil-cl-main/accueil-cl-main/accueil-cl-main.component";
+import {
+  HistoriqueAchatListComponent
+} from "./view/historiqueAchats/historique-achat-list/historique-achat-list.component";
 
 
 const appRouteList: Routes = [
@@ -131,6 +136,18 @@ const appRouteList: Routes = [
   {
     path: 'remboursement',
     component: RemboursementCreateComponent
+  },
+  {
+    path: 'accueil-cl',
+    component: AccueilClMainComponent
+  },
+  {
+    path: 'accueil-cl/produits',
+    component: ProduitListComponent
+  },
+  {
+    path: 'accueil-cl/historique',
+    component: HistoriqueAchatListComponent
   },
   {
     path: '**',

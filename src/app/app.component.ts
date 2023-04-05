@@ -11,8 +11,7 @@ export class AppComponent {
   }
 
   title = 'JEEproject';
-
-
+  yaro=true;
 
 
 }

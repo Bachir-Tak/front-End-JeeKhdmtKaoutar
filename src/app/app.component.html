@@ -1,4 +1,4 @@
-<div class="mainDiv ">
+<div class="mainDiv " *ngIf="yaro">
   <nav class="rounded navbar  nav bg-body-tertiary rounded  shadow h-100  navos">
     <div class="container-fluid h-100">
       <div class="navbar-nav  h-100 justify-content-around text-center">
@@ -59,3 +59,4 @@
   <div class="contentos"><router-outlet></router-outlet></div>
   </div>
   </div>
+<app-accueil-cl *ngIf="!yaro"></app-accueil-cl>
