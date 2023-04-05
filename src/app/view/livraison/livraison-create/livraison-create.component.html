@@ -19,7 +19,7 @@
         <input type="text" class="form-control" id="address" name="address" [(ngModel)]="livraison.achat.client.adresse">
       </div>
       <div class="form-group">
-        <i class="fa fa-flag-o" aria-hidden="true"></i> <app-ville-list [(ngModel)]="livraison.achat.client.ville"></app-ville-list>
+        <i class="fa fa-flag-o" aria-hidden="true"></i> <app-ville-list [(ngModel)]="livraison.achat.client.ville" ></app-ville-list>
       </div>
       <button type="submit" class="btn btn-primary" (click)="save()">Continuer</button>
     </div>

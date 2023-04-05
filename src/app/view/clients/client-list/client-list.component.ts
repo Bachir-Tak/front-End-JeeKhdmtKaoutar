@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Client} from "../../../controller/model/client/client";
+import { Client } from 'src/app/controller/model/client/client.model';
+
 import {ClientService} from "../../../controller/service/client/client.service";
 
 @Component({
