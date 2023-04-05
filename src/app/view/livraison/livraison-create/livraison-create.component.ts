@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {LivraisonService} from "../../../controller/service/livraison/livraison.service";
 import {Livraison} from "../../../controller/model/livraison/livraison.model";
 
+
+
 @Component({
   selector: 'app-livraison-create',
   templateUrl: './livraison-create.component.html',
@@ -14,10 +16,10 @@ export class LivraisonCreateComponent implements OnInit {
   }
 
   public save(): void {
-    this.livraisonService.save().subscribe(data => {
-        if (data != null) {
-         // this.livraisons.push({...this.livraison});
-         // this.livraisonService.livraison == null;
+    this.livraisonService.save(this.livraison).subscribe(data => {
+        if (data < 0) {
+        // this.livraisons.push({...this.livraison});
+        // this.livraisonService.livraison == null;
           alert('Save Success');
         } else {
           alert('Save Error ::: Ref Exixt');

@@ -13,13 +13,15 @@ export class LivraisonService {
   private _livraisons !: Array<Livraison>;
   private _url="http://localhost:8033/GestionCommertiale/Livraison";
 
-  public save():Observable<Livraison>{
-    return this._http.post<Livraison>(this._url,this.livraison);
+  public save(livraison : Livraison):Observable<number>{
+    return this._http.post<number>(this._url,livraison);
   }
 
   public deleteByRef(ref:string):Observable<number>{
     return this._http.delete<number>(this._url + 'livraison/' + ref);
   }
+
+
 
   public findAll():Observable<Array<Livraison>>{
     return this._http.get<Array<Livraison>>(this._url);

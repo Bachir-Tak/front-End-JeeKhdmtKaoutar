@@ -1,29 +1,40 @@
 <div class="container">
   <h1>Ajouter un fournisseur</h1>
   <form >
-    <form class="center" #f="ngForm" (submit)="onSubmit(f)">
+    <form class="center">
     <div class="form-group">
       <label for="nom"><h6>Nom</h6></label>
-      <input type="text" id="nom" class="form-control" placeholder="Entrez le nom du fournisseur"  [(ngModel)]="fournisseur.nom">
+      <input type="text" id="nom" class="form-control" placeholder="Entrez le nom du fournisseur" name="nom"  [(ngModel)]="fournisseur.nom">
     </div>
     <div class="form-group">
       <label for="adresse"><h6>Adresse</h6></label>
-      <input type="text" id="adresse" class="form-control" placeholder="Entrez l'adresse du fournisseur" [(ngModel)]="fournisseur.adresse">
+      <input type="text" id="adresse" class="form-control" placeholder="Entrez l'adresse du fournisseur" name="adresse" [(ngModel)]="fournisseur.adresse">
     </div>
     <div class="form-group">
-      <div class="inputBox"></div>
-      <app-ville-list [(ngModel)]="fournisseur.ville" ></app-ville-list>
-     <!-- <input type="ville" id="ville" class="form-control" placeholder="Entrez la ville du fournisseur" required [(ngModel)]="fournisseur.ville"> !-->
+        <label> <h6>Ville</h6> </label>
+        <select id="ville" class="form-select"   name="ville" [(ngModel)]="fournisseur.ville">
+          <option selected >--- selecter une ville ---</option>
+          <option value="Casablanca">Casablanca</option>
+          <option value="Rabat">Rabat</option>
+          <option value="Marrakech">Marrakech</option>
+          <option value="Fès">Fès</option>
+          <option value="Tanger">Tanger</option>
+          <option value="Agadir">Agadir</option>
+          <option value="Meknès">Meknès</option>
+          <option value="Oujda">Oujda</option>
+          <option value="Kenitra">Kenitra</option>
+          <option value="Tétouan">Tétouan</option>
+        </select>
     </div>
     <div class="form-group">
       <label for="code"><h6>Code</h6></label>
-      <input type="text" id="code" class="form-control" placeholder="Entrez le code du fournisseur" required [(ngModel)]="fournisseur.code">
+      <input type="text" id="code" class="form-control" placeholder="Entrez le code du fournisseur" name="code" [(ngModel)]="fournisseur.code">
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="!f.valid" (click)="save()" >Ajouter</button>
-  </form>
-    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+    <button type="submit" class="btn btn-primary"  (click)="save()" >Ajouter</button>
+    </form>
   </form>
 </div>
+
 
 
 

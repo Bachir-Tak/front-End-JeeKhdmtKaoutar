@@ -37,6 +37,7 @@ import {AccueilClMainComponent} from "./view/accueil-cl-main/accueil-cl-main/acc
 import {
   HistoriqueAchatListComponent
 } from "./view/historiqueAchats/historique-achat-list/historique-achat-list.component";
+import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
 
 
 const appRouteList: Routes = [
@@ -131,12 +132,13 @@ const appRouteList: Routes = [
   },
   {
     path: 'livraison',
-    component: LivraisonListComponent
+    component: LivraisonCreateComponent
   },
   {
     path: 'remboursement',
     component: RemboursementCreateComponent
   },
+
   {
     path: 'accueil-cl',
     component: AccueilClMainComponent
