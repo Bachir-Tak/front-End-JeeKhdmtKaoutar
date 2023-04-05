@@ -1,0 +1,91 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 3%;
+
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+
+  font-size: 16px;
+  border: 1px solid #ddd;
+
+}
+
+th {
+  background-color: #003459;
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 4px;
+}
+#cat2,#cat4{
+  background-color: #00A7E1;
+  color: #ddd;
+
+}
+.head{
+
+  padding-top: 3px;
+  text-align: center;
+  margin-bottom: 6%;
+  background-color: #FFFFFF;
+  color: #003459;
+}
+.button_cat{
+  margin-left: 75%;
+  margin-top: 15px;
+
+}
+.button {
+
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.button-add{
+  background-color: #003459;
+
+}
+.button-add:hover{
+  background-color: #373da2;
+}
+
+.button-delete {
+  background-color: #006cd8;
+}
+.button-delete:hover{
+  background-color: #060c86;
+}
+
+.button-find {
+  background-color: #00A7E1;
+
+}
+.button-find:hover{
+  background-color:#003459
+}
+
+.button :hover{
+}
+
+.button :hover{
+  transform: all 0.3s ease;
+}

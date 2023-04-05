@@ -1,1 +1,19 @@
-<p>achat-list works!</p>
+<div class="container">
+  <h1>Liste des achats</h1>
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Date</th>
+      <th>Total</th>
+      <th>Action</th>
+    </tr>
+     <tr *ngFor="let achat of achats , index as i">
+      <td>{{ achat.code}}</td>
+      <td>{{ achat.historiqueAchat.date}}</td>
+      <td>{{ achat.historiqueAchat.total}}</td>
+      <td>
+  <td><button class="delete-btn" (click)="deleteByCode(achat, i)">Supprimer</button></td>
+
+  </table>
+</div>
+
