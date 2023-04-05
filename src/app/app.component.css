@@ -21,6 +21,9 @@
 a:hover{
   cursor: pointer;
 }
+img{
+  width:100px;
+}
 .profile{
   height: 10%;
   left: auto;

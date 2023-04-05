@@ -42,6 +42,9 @@ import { ListComponent } from './view/accueil/list/list.component';
 import { AccueilClComponent } from './view/accueil-cl/accueil-cl/accueil-cl.component';
 import { AccueilClMainComponent } from './view/accueil-cl-main/accueil-cl-main/accueil-cl-main.component';
 import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-list.component";
+import {
+  CategorieProduitCreateComponent
+} from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
 
 
 @NgModule({
@@ -79,7 +82,9 @@ import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-
     AccueilClComponent,
     AccueilClMainComponent,
     LivraisonListComponent,
-    ListeCreateComponent
+    ListeCreateComponent,
+    CategorieProduitListComponent,
+    CategorieProduitCreateComponent
 
 
   ],
