@@ -46,6 +46,7 @@ import {
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
 import {ListComponent} from "./view/accueil/list/list.component";
+import { SearchClientComponent } from './view/clients/search-client/search-client.component';
 
 
 
@@ -85,7 +86,9 @@ import {ListComponent} from "./view/accueil/list/list.component";
     LivraisonListComponent,
     ListeCreateComponent,
     CategorieProduitCreateComponent,
-    LivraisonCreateComponent
+    LivraisonCreateComponent,
+    SearchClientComponent,
+    SearchClientComponent
 
 
 
