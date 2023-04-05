@@ -1,7 +1,7 @@
-<div class="table">
+<div class="tablos shadow rounded-3">
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
   <thead>
   <tr>
-    <th scope="col">Id</th>
     <th scope="col">Libelle</th>
     <th scope="col">Code</th>
     <th scope="col">Client</th>
@@ -9,4 +9,14 @@
     <th scope="col">Quantite</th>
   </tr>
   </thead>
+    <tbody>
+    <tr *ngFor="let dem of demandes">
+      <td>{{dem.libelle}}</td>
+      <td>{{dem.code}}</td>
+      <td>{{dem.client.cin}}</td>
+      <td>{{dem.demandeProduits}}</td>
+    </tr>
+    </tbody>
+  </table>
+
 </div>

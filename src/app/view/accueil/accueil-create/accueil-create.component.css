@@ -1,0 +1,41 @@
+.accueil {
+  width: 100%;
+  height: 100vh;
+
+}
+
+.accueilChart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.list {
+  flex-basis: 80%;
+  position: relative;
+  background-color: white;
+  border-color: #0298ff !important;
+
+}
+
+.courbe {
+  position: relative;
+  background-color: white;
+  width: 45%;
+  border-color: #0298ff !important;
+
+}
+
+.pie {
+  width: 45%;
+  position: relative;
+  background-color: white;
+  border-color: #0298ff !important;
+
+
+}
+
+
+

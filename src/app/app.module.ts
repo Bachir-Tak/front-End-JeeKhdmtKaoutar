@@ -36,6 +36,10 @@ import {ProduitCreateComponent} from "./view/produit/produit-create/produit-crea
 import {ProduitListComponent} from "./view/produit/produit-list/produit-list.component";
 import {CommandeCreateComponent} from "./view/commandes/commande-create/commande-create.component";
 import {FournisseurCreateComponent} from "./view/fournisseur/fournisseur-create/fournisseur-create.component";
+import { PiechartComponent } from './view/accueil/piechart/piechart.component';
+import { CourbeComponent } from './view/accueil/courbe/courbe.component';
+import { ListComponent } from './view/accueil/list/list.component';
+import { AccueilClComponent } from './view/accueil-cl/accueil-cl/accueil-cl.component';
 
 
 @NgModule({
@@ -66,7 +70,12 @@ import {FournisseurCreateComponent} from "./view/fournisseur/fournisseur-create/
     ProduitCreateComponent,
     ProduitListComponent,
     CommandeCreateComponent,
-    FournisseurCreateComponent
+    FournisseurCreateComponent,
+    PiechartComponent,
+    CourbeComponent,
+    ListComponent,
+    AccueilClComponent,
+
 
   ],
   imports: [

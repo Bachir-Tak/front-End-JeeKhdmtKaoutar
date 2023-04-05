@@ -1,1 +1,25 @@
-<p>stock-list works!</p>
+<div class="tablos shadow rounded-3">
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
+    <thead>
+    <tr>
+      <th scope="col">Reference</th>
+      <th scope="col">Magasin</th>
+      <th scope="col">produit</th>
+      <th scope="col">quantite</th>
+      <th scope="col">quantiteEntree</th>
+      <th scope="col">quantiteSortie</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let sto of stocks">
+      <td>{{sto.ref}}</td>
+      <td>{{sto.magasin.libelle}}</td>
+      <td>{{sto.produit.nom}}</td>
+      <td>{{sto.quantite}}</td>
+      <td>{{sto.quantiteEntree}}</td>
+      <td>{{sto.quantiteSortie}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
