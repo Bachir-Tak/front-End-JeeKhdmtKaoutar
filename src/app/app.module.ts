@@ -40,6 +40,10 @@ import {AchatCreateComponent} from "./view/achats/achat-create/achat-create.comp
 import {
   HistoriqueAchatListComponent
 } from "./view/historiqueAchats/historique-achat-list/historique-achat-list.component";
+import {
+  CategorieProduitCreateComponent
+} from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
+import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
 
 
 @NgModule({
@@ -73,7 +77,9 @@ import {
     FournisseurCreateComponent,
     AchatCreateComponent,
     HistoriqueAchatListComponent,
-    RecuRemboursementCreateComponent
+    RecuRemboursementCreateComponent,
+    CategorieProduitCreateComponent,
+    LivraisonCreateComponent
 
   ],
   imports: [

@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-color: #3d6cd2;
+  background-color: #003459;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -37,7 +37,7 @@ header {
   padding: 20px;
   text-align: center;
   width: 300px;
-  box-shadow: 10px 10px 15px #00A7E1;
+  box-shadow: 10px 10px 15px #003459;
 }
 
 .product-item img {
@@ -65,7 +65,7 @@ button {
 }
 
 button:hover {
-  background-color: #1f2ed6;
+  background-color: #003459;
 }
 
 @media screen and (max-width: 768px) {
