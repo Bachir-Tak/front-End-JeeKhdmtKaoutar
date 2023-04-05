@@ -1,5 +1,5 @@
 .containera{
-  background: linear-gradient(173deg, rgba(0,62,89,1) 0%, rgba(34,193,195,1) 49%);
+  background: linear-gradient(173deg, rgb(3, 41, 56) 0%, rgb(53, 140, 225) 49%);
   width: 93vw;
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@ form h1{
   margin-bottom: 0.5rem;
 }
 
-.form-group input {
+.form-group input, select {
   width: 500px;
   height: 40px;
   border-radius: 15px;

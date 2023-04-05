@@ -6,13 +6,13 @@
   box-sizing: border-box;
   font-family: 'poppins' ,sans-serif;
 }
-
 .container{
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(120deg,#2980b9, #8e44ad);
+  background: linear-gradient(173deg, rgb(3, 41, 56) 0%, rgb(53, 140, 225) 49%);
+  width: 93vw;
+  display: flex;
+  justify-content: center;
   height: 100vh;
-  overflow: hidden;
+
 }
 .center{
   position: absolute;
