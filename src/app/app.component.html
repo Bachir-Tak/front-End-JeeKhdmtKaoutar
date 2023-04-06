@@ -1,25 +1,65 @@
-<div class="container">
-  <div class="row">
-     <!--<div class="col-md-6">
-      <app-compte-create></app-compte-create>
-    </div>
-    <div class="col-md-6">
-      <app-client-create></app-client-create>
-    </div>
-    <div class="col-md-6">
-      <app-client-list></app-client-list>
-    </div>
-    <div class="col-md-6">
-      <app-historique-achat-list></app-historique-achat-list>
-    </div>
-    <div class="col-md-6">
-      <app-commande-create></app-commande-create>
-    </div> -->
-    <div class="col-md-6">
-      <app-compte-create></app-compte-create>
-    </div>
 
 
+<div class="mainDiv " *ngIf="yaro">
+  <nav class="rounded navbar  nav bg-body-tertiary rounded  shadow h-100  navos">
+    <div class="container-fluid h-100">
+      <div class="navbar-nav  h-100 justify-content-around text-center">
+
+        <a  class="nav-link ">
+          <img src="../assets/images/Artboard_2.png" alt=""></a>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/accueil" >
+                <span class="fa fa-home fa-2x"></span>
+                <p>Accueil</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/liste">
+                <span class="fa fa-list fa-2x"></span>
+                <p>Liste</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/produit-ch">
+                <span class="fa fa-product-hunt fa-2x"></span>
+                <p>Produit</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/demande', 5,'azdaz' ] //client.id,produit.ref]">
+                <span class="fa fa-gift fa-2x"></span>
+                <p>Demande</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/reception-ch">
+                <span class="fa fa-cubes fa-2x"></span>
+                <p>Reception</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/livraison">
+                <span class="fa fa-truck fa-2x"></span>
+                <p>Livraison</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/remboursement">
+                <span class="fa fa-credit-card fa-2x"></span>
+                <p>Remboursement</p>
+              </a>
+            </li>
+
+          </div>
+        </div>
+  </nav>
+  <div class="card profile position-absolute">
+    <div class="card-body shadow rounded "> <span class="fa fa-user-circle"></span> Welcome, {{title}}<!--/client.nom---></div>
+  </div>
+  <div class="contentosParent">
+    <div class="contentos"><router-outlet></router-outlet></div>
   </div>
 </div>
+<app-accueil-cl *ngIf="!yaro"></app-accueil-cl>
 
