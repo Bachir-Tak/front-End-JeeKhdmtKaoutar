@@ -16,7 +16,7 @@ import { ReceptionCreateComponent } from './view/reception/reception-create/rece
 import { ReceptionListComponent } from './view/reception/reception-list/reception-list.component';
 import {CompteCreateComponent} from "./view/comptes/compte-create/compte-create.component";
 import {ClientCreateComponent} from "./view/clients/client-create/client-create.component";
-import {VilleListComponent} from "./view/villes/ville-list/ville-list.component";
+
 import {RemboursementCreateComponent} from "./view/remboursement/remboursement-create/remboursement-create.component";
 import {RecuRemboursement} from "./controller/model/recuRemboursement/recu-remboursement";
 import {
@@ -45,7 +45,10 @@ import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-
 import {
   CategorieProduitCreateComponent
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
-import { ProduitAjouterCreateComponent } from './view/produitAjouter/produit-ajouter-create/produit-ajouter-create.component';
+
+import {SearchClientComponent} from "./view/clients/search-client/search-client.component";
+import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
+import { AchatCreateComponent } from './view/achats/achat-create/achat-create.component';
 
 
 @NgModule({
@@ -61,9 +64,9 @@ import { ProduitAjouterCreateComponent } from './view/produitAjouter/produit-ajo
     ReceptionListComponent,
     CompteCreateComponent,
     ClientCreateComponent,
-    VilleListComponent,
     RemboursementCreateComponent,
     RecuRemboursementCreateComponent,
+    LivraisonCreateComponent,
     ListeCreateComponent,
     StockCreateComponent,
     StockListComponent,
@@ -86,7 +89,10 @@ import { ProduitAjouterCreateComponent } from './view/produitAjouter/produit-ajo
     ListeCreateComponent,
     CategorieProduitListComponent,
     CategorieProduitCreateComponent,
-    ProduitAjouterCreateComponent
+
+    SearchClientComponent,
+    AchatCreateComponent
+
 
 
   ],

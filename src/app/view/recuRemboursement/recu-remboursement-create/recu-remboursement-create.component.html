@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tableau Recu</title>
-  <link rel="stylesheet" href="recu-remboursement-create.component.css">
-</head>
+
 <body>
 <main>
   <h2>Recu</h2><br>
   <h3>CommerceX</h3>
   <h3>Téléphone  : 073187238713</h3>
   <p><time>Envoyer le 04/04/2023</time></p>
+  <div class="tablos shadow rounded-3">
   <table class="client">
     <tr>
-      <th>Recu pour</th>
+      <th scope="col">Recu pour</th>
 
-      <th>remboursement</th>
+      <th scope="col">remboursement</th>
     </tr>
     <tr>
 
@@ -27,18 +20,21 @@
 
   </table>
   <hr size="1">
+  </div>
+  <div class="tablos shadow rounded-3">
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
 
-  <table class="description">
     <tbody>
-    <tr>
-      <th>Description</th>
 
-      <th>Prix de  Produit</th>
-      <th>Prix de livraison</th>
-      <th>prix total</th>
+    <tr>
+      <th scope="col">Description</th>
+
+      <th scope="col">Prix de  Produit</th>
+      <th scope="col">Prix de livraison</th>
+      <th scope="col">prix total</th>
     </tr>
     <tr>
-      <td>product 1</td>
+      <td >product 1</td>
 
       <td>38,00$</td>
       <td>4,00$</td>
@@ -63,7 +59,7 @@
     </tbody>
     <tfoot>
     <tr>
-      <td>256,50$</td>
+      <td >256,50$</td>
     </tr>
     <tr>
       <td colspan="3">Total</td>
@@ -72,6 +68,6 @@
 
     </tfoot>
   </table>
+  </div>
 </main>
 </body>
-</html>
