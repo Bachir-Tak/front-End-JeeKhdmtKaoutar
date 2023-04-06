@@ -73,3 +73,29 @@ button:hover {
     width:100%;
   }
 }
+.tablos thead{
+  background-color: #6c7ae0;
+  color: white;
+}
+.tablos{
+  width: 1000px;
+  max-height: 500px;
+  overflow: auto;
+
+
+}
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6c7ae0;
+  border-radius: 2px;
+}
+tr:nth-child(even){
+  background-color: #f8f6ff;
+
+}
+tr:hover{
+  background-color: #bfc3ec;
+
+}
