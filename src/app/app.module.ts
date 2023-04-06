@@ -49,6 +49,9 @@ import {
 import {SearchClientComponent} from "./view/clients/search-client/search-client.component";
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
 import { AchatCreateComponent } from './view/achats/achat-create/achat-create.component';
+import {
+  ProduitAjouterCreateComponent
+} from "./view/produit/produit-ajouter-create/produit-ajouter-create.component";
 
 
 @NgModule({
@@ -89,7 +92,7 @@ import { AchatCreateComponent } from './view/achats/achat-create/achat-create.co
     ListeCreateComponent,
     CategorieProduitListComponent,
     CategorieProduitCreateComponent,
-
+    ProduitAjouterCreateComponent,
     SearchClientComponent,
     AchatCreateComponent
 
