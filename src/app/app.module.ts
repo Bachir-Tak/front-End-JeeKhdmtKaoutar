@@ -89,7 +89,6 @@ import {SearchClientComponent} from "./view/clients/search-client/search-client.
     CategorieProduitCreateComponent,
     SearchClientComponent
 
-
   ],
   imports: [
     BrowserModule,

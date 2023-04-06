@@ -1,11 +1,11 @@
-<div class="container">
+<div class="tablos shadow rounded-3">
   <h1>Historique des achats</h1>
-  <table>
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
     <tr>
-      <th>Référence</th>
-      <th>Date</th>
-      <th>Total</th>
-      <th>Action</th>
+      <th scope="col">Référence</th>
+      <th scope="col">Date</th>
+      <th scope="col">Total</th>
+      <th scope="col">Action</th>
     </tr>
     <tr *ngFor="let h of historiqueAchats, index as i">
       <td>{{historiqueAchat.ref }}</td>
