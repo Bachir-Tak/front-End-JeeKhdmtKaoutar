@@ -1,4 +1,6 @@
+
 <div class="tablos shadow rounded-3">
+
   <h1>Liste des achats</h1>
   <table class="table table-hover text-center table-bordered table-responsive rounded-3">
     <thead>
@@ -10,12 +12,13 @@
     </tr>
     </thead>
      <tr *ngFor="let achat of achats , index as i">
+
+
       <td>{{ achat.code}}</td>
       <td>{{ achat.historiqueAchat.date}}</td>
       <td>{{ achat.historiqueAchat.total}}</td>
       <td>
-  <td><button class="delete-btn" (click)="deleteByCode(achat, i)">Supprimer</button></td>
+      <td><button class="delete-btn" (click)="deleteByCode(achat, i)">Supprimer</button></td>
 
   </table>
 </div>
-

@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Produit} from "../../../controller/model/produit/produit";
 import {ProduitService} from "../../../controller/service/produit/produit.service";
+import {Client} from "../../../controller/model/client/client.model";
+import {CategorieProduit} from "../../../controller/model/categorieProduit/categorie-produit";
 
 @Component({
   selector: 'app-produit-list',
@@ -8,7 +10,7 @@ import {ProduitService} from "../../../controller/service/produit/produit.servic
   styleUrls: ['./produit-list.component.css']
 })
 export class ProduitListComponent implements OnInit {
-  constructor(private produitService: ProduitService) {
+  constructor(private produitService: ProduitService ) {
   }
 
   ngOnInit(): void {
@@ -16,7 +18,7 @@ export class ProduitListComponent implements OnInit {
   }
 
   public findAll(): void {
-    this.produitService.findall().subscribe(data => this.produits = data)
+    this.produitService.findAll().subscribe(data => this.produits = data)
 
   }
 
@@ -36,5 +38,16 @@ export class ProduitListComponent implements OnInit {
 
   set produits(value: Array<Produit>) {
     this.produitService.produits = value;
+  }
+  public deleteByRef(produit : Produit, index:number):void {
+    console.log('haaa cin' + produit.ref);
+    this.produitService.deleteByRef(produit.ref.toString()).subscribe(data => {
+      if (data > 0) {
+        this.produits.splice(index, 1);
+      } else {
+        alert('Del Error');
+      }
+
+    });
   }
 }

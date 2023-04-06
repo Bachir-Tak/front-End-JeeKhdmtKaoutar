@@ -45,8 +45,10 @@ import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-
 import {
   CategorieProduitCreateComponent
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
-import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
+
 import {SearchClientComponent} from "./view/clients/search-client/search-client.component";
+import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
+import { AchatCreateComponent } from './view/achats/achat-create/achat-create.component';
 
 
 @NgModule({
@@ -62,9 +64,9 @@ import {SearchClientComponent} from "./view/clients/search-client/search-client.
     ReceptionListComponent,
     CompteCreateComponent,
     ClientCreateComponent,
-    LivraisonCreateComponent,
     RemboursementCreateComponent,
     RecuRemboursementCreateComponent,
+    LivraisonCreateComponent,
     ListeCreateComponent,
     StockCreateComponent,
     StockListComponent,
@@ -87,7 +89,11 @@ import {SearchClientComponent} from "./view/clients/search-client/search-client.
     ListeCreateComponent,
     CategorieProduitListComponent,
     CategorieProduitCreateComponent,
-    SearchClientComponent
+
+    SearchClientComponent,
+    AchatCreateComponent
+
+
 
   ],
   imports: [
