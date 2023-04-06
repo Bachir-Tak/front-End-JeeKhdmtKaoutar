@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CategorieProduitService} from "../../../controller/service/categorieProduit/categorie-produit.service";
 import {CategorieProduit} from "../../../controller/model/categorieProduit/categorie-produit";
-import {NgForm} from "@angular/forms";
+import {Fournisseur} from "../../../controller/model/fournisseur/fournisseur.model";
 
 @Component({
   selector: 'app-categorie-produit-create',
@@ -16,13 +16,14 @@ export class CategorieProduitCreateComponent implements OnInit {
   }
 
   public save(): void {
-    this.categorieProduitService.save().subscribe(data => {
-      if (data != null) {
+    this.categorieProduitService.save(this.categorieProduit).subscribe(data => {
+      if (data > 0) {
+        this.categorieProduit = new CategorieProduit();
         alert("Done");
       } else {
         alert("Save Error");
       }
-    })
+    });
   }
 
   get categorieProduit(): CategorieProduit {

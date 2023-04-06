@@ -19,12 +19,12 @@ export class CategorieProduitService implements OnInit {
   ngOnInit(): void {
   }
 
-  public save(): Observable<number> {
-    return this._http.post<number>(this._url, this.categorieProduit);
+  public save(categorieProduit : CategorieProduit): Observable<number> {
+    return this._http.post<number>(this.url, categorieProduit);
   }
 
-  public findall(): Observable<Array<CategorieProduit>> {
-    return this._http.get<Array<CategorieProduit>>(this._url);
+  public findAll(): Observable<Array<CategorieProduit>> {
+    return this._http.get<Array<CategorieProduit>>(this.url);
   }
 
   get categorieProduit(): CategorieProduit {
