@@ -45,6 +45,7 @@ import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-
 import {
   CategorieProduitCreateComponent
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
+import { ProduitAjouterCreateComponent } from './view/produitAjouter/produit-ajouter-create/produit-ajouter-create.component';
 
 
 @NgModule({
@@ -84,7 +85,8 @@ import {
     LivraisonListComponent,
     ListeCreateComponent,
     CategorieProduitListComponent,
-    CategorieProduitCreateComponent
+    CategorieProduitCreateComponent,
+    ProduitAjouterCreateComponent
 
 
   ],
