@@ -45,6 +45,7 @@ import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-
 import {
   CategorieProduitCreateComponent
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
+
 import {SearchClientComponent} from "./view/clients/search-client/search-client.component";
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
 import { AchatCreateComponent } from './view/achats/achat-create/achat-create.component';
@@ -88,8 +89,10 @@ import { AchatCreateComponent } from './view/achats/achat-create/achat-create.co
     ListeCreateComponent,
     CategorieProduitListComponent,
     CategorieProduitCreateComponent,
+
     SearchClientComponent,
     AchatCreateComponent
+
 
 
   ],

@@ -1,13 +1,14 @@
 
-<div class="container">
+<div class="tablos shadow rounded-3">
+
   <app-search-remboursement></app-search-remboursement>
   <h1>Liste des remboursements</h1>
-  <table>
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
     <thead>
     <tr>
-      <th>Code</th>
-      <th>Code de livraison</th>
-      <th>Livraison</th>
+      <th scope="col">Code</th>
+      <th scope="col">Code de livraison</th>
+      <th scope="col">Livraison</th>
     </tr>
     </thead>
     <tbody>
@@ -15,6 +16,7 @@
       <td>{{ remboursement.code }}</td>
       <td>{{ remboursement.avoirLivraison.code }}</td>
       <td>{{ remboursement.avoirLivraison.livraison}}</td>
+
       <td>
         <button class="delete" (click)="deleteByCode(remboursement,i)"><i class="fa fa-trash"></i> Supprimer</button>
       </td>
