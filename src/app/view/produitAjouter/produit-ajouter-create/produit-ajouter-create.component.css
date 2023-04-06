@@ -1,0 +1,23 @@
+.btn-blue{
+  background-color: #003459;
+  color: white;
+  position: relative;
+  width: 50%;
+  margin-bottom: 5%;
+}
+.btn-blue:hover{
+  background-color: #01518a;
+
+}
+.cardos{
+  width: 500px;
+  box-shadow: 2px 2px 10px #003459;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.imge{
+  width: 30%;
+  height: 30%;
+}
