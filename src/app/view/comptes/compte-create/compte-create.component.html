@@ -1,24 +1,24 @@
-  <div class="container">
-    <div class="center">
+<div class="containeros">
+  <div class="center">
     <span>Have an account?</span>
     <h1>Login</h1>
-    <form method="post">
+    <div class="formus">
       <div class="txt_field">
-        <label><h6>Email</h6></label>
-        <input type="text" value="Your Email" [(ngModel)] = "compte.email">
+        <label for="email"><h6>Email</h6></label>
+        <input id="email" type="text" placeholder="Your Email" [(ngModel)] = "compte.email">
         <span></span>
       </div>
       <div class="txt_field">
-        <label><h6>Password</h6></label>
-        <input type="password" value="password" [(ngModel)] = "compte.motDePasse">
+        <label for="password"><h6>Password</h6></label>
+        <input id="password" type="password" placeholder="password" [(ngModel)] = "compte.motDePasse">
         <span></span>
 
       </div>
-      <input class="btn" type="submit" value="Login"  (click)="save()">
+      <input class="btn" value="Login" type="submit" (click)="findByEmail()">
       <div class="signup_link">
         Not a member? <button class="btn" (click)="goToSignup()">Signup</button>
       </div>
-    </form>
+    </div>
   </div>
   </div>
 

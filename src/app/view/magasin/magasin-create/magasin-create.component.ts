@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {MagasinService} from "../../../controller/service/magasin/magasin.service";
 import {Magasin} from "../../../controller/model/magasin/magasin.model";
+import {StockService} from "../../../controller/service/stock/stock.service";
+import {ProduitService} from "../../../controller/service/produit/produit.service";
 
 @Component({
   selector: 'app-magasin-create',
@@ -10,8 +12,10 @@ import {Magasin} from "../../../controller/model/magasin/magasin.model";
 export class MagasinCreateComponent implements OnInit{
 
 
-  constructor(private magasinService:MagasinService) {
+  constructor(private magasinService:MagasinService,private stockService:StockService, private produitService:ProduitService) {
   }
+  test=this.magasin.stocks.at(0);
+  listProduit=this.produitService.produits;
   public save():void{
     this.magasinService.save(this.magasin).subscribe(data=>{alert(data)})
   }

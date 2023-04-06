@@ -15,6 +15,7 @@ export class CompteService {
   private url= "http://localhost:8033/GestionCommertiale/Compte";
   constructor(private http:HttpClient) {}
 
+
   get compte(): Compte {
     if(this._compte == null){
       this._compte = new  Compte();
@@ -36,9 +37,11 @@ export class CompteService {
   set comptes(value: Compte[]) {
     this._comptes = value;
   }
-  public  save (compte: Compte):Observable<number>{
-    return this.http.post<number>(this.url, this.compte);
-  }public  findAll(): Observable<Array<Compte>>{
+  public  findByEmail (compte: Compte):Observable<Compte>{
+    return this.http.get<Compte>(this.url+'/emai/'+compte.email);
+  }
+
+  public  findAll(): Observable<Array<Compte>>{
     return this.http.get<Array<Compte>>(this.url);
   }
 

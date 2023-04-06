@@ -1,8 +1,3 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-@import "font-awesome/css/font-awesome.min.css";
-*{
-  scroll-behavior: smooth;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;}
 .mainDiv{
   height: 100vh;
   max-height: 100vh;
@@ -40,5 +35,3 @@ img{
   display: flex;
 
 }
-
-

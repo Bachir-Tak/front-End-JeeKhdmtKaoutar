@@ -1,7 +1,6 @@
 
 
     <header>
-      <img src="image/simo.jpg" alt="Logo">
     </header>
     <main>
       <form>
@@ -10,19 +9,15 @@
         <table>
           <tr>
             <td><label for="id">ID :</label></td>
-            <td><input type="text" id="id" name="id" required [(ngModel)]="remboursement.id"></td>
+            <td><input type="text" id="id" name="id" required [(ngModel)]="remboursement.id"><br></td>
           </tr>
           <tr>
             <td> <label for="code">Code :</label></td>
-            <td><input type="text" id="code" name="code" required  [(ngModel)]="remboursement.code"></td>
+            <td><input type="text" id="code" name="code" required  [(ngModel)]="remboursement.code"><br></td>
           </tr>
           <tr>
             <td><label for="Article">Article :</label></td>
-            <td><input type="text" id="Article" name="Article" [(ngModel)]="remboursement.avoirLivraison.id"></td>
-          </tr>
-          <tr>
-            <td><label for="capture">Capture d'écran :</label></td>
-            <td><input type="file" id="capture" name="capture"><br></td>
+            <td><input type="text" id="Article" name="Article" [(ngModel)]="remboursement.avoirLivraison.code"><br></td>
           </tr>
           <tr>
             <td colspan="2"><input type="submit" value="Soumettre" (click)="save()"><br></td>
@@ -31,6 +26,6 @@
       </form>
     </main>
     <footer>
-      <a href="recu.html">Voir le reçu de remboursement</a>
+      <app-recuRemboursement-create >Voir le reçu de remboursement</app-recuRemboursement-create>
     </footer>
 

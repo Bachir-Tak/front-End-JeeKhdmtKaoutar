@@ -16,7 +16,6 @@
     </div>
     <span class="fa fa-plus-square " (click)="contentAdd()"></span>
     <div class="form-group" class="demandeProduits">
-
       <label for="stock" class="form-label fw-semibold">Stock</label>
       <select name="stock" id="stock">
         <option *ngFor="let i of stocks" value={{i.produit}}></option>

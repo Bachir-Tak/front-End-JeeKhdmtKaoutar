@@ -1,24 +1,15 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
-import {AccueilCreateComponent} from "./view/accueil/accueil-create/accueil-create.component";
 import {MagasinCreateComponent} from "./view/magasin/magasin-create/magasin-create.component";
-import { RouterTestingModule } from "@angular/router/testing";
+import {RouterTestingModule} from "@angular/router/testing";
 import {DemandeCreateComponent} from "./view/demande/demande-create/demande-create.component";
 import {ListeCreateComponent} from "./view/liste/liste-create/liste-create.component";
-import {CompteCreateComponent} from "./view/comptes/compte-create/compte-create.component";
-import {ClientCreateComponent} from "./view/clients/client-create/client-create.component";
-import {CommandeCreateComponent} from "./view/commandes/commande-create/commande-create.component";
-import {AchatCreateComponent} from "./view/achats/achat-create/achat-create.component";
 import {
   CategorieProduitListComponent
 } from "./view/categorieProduit/categorie-produit-list/categorie-produit-list.component";
 import {ProduitListComponent} from "./view/produit/produit-list/produit-list.component";
 import {FournisseurListComponent} from "./view/fournisseur/fournisseur-list/fournisseur-list.component";
 import {RemboursementCreateComponent} from "./view/remboursement/remboursement-create/remboursement-create.component";
-import {RecuCreateComponent} from "./view/recu/recu-create/recu-create.component";
-import {
-  RecuRemboursementCreateComponent
-} from "./view/recuRemboursement/recu-remboursement-create/recu-remboursement-create.component";
 import {ClientListComponent} from "./view/clients/client-list/client-list.component";
 import {MagasinListComponent} from "./view/magasin/magasin-list/magasin-list.component";
 import {StockListComponent} from "./view/stock/stock-list/stock-list.component";
@@ -32,124 +23,144 @@ import {FournisseurCreateComponent} from "./view/fournisseur/fournisseur-create/
 import {
   CategorieProduitCreateComponent
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
-import {AccueilClComponent} from "./view/accueil-cl/accueil-cl/accueil-cl.component";
-import {AccueilClMainComponent} from "./view/accueil-cl-main/accueil-cl-main/accueil-cl-main.component";
+import {AccueilClient} from "./view/accueilClient/accueilClient/accueilClient";
 import {
   HistoriqueAchatListComponent
 } from "./view/historiqueAchats/historique-achat-list/historique-achat-list.component";
-import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
+import {WhichComponent} from "./view/Which/which/which.component";
+import {ConnexionService} from "./controller/service/connexion/connexion.service";
+import {ConnexionNotService} from "./controller/service/connexionNot/connexion-not.service";
 
 
 const appRouteList: Routes = [
   {
     path: 'accueil',
-    component: AccueilCreateComponent
+    component: WhichComponent,
   },
   {
     path: 'demande/:clientId/:produitRef',
-    component: DemandeCreateComponent
+    component: DemandeCreateComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'reception-ch',
     component: ListeELCreateComponent,
-    data:{text:'reception',link:'reception'}
+    data:{text:'reception',link:'reception'},
+    canActivate: [ConnexionService]
   },
   {
     path: 'reception-ch/reception',
-    component: ReceptionCreateComponent
+    component: ReceptionCreateComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'reception-ch/reception-list',
-    component: ReceptionListComponent
+    component: ReceptionListComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'produit-ch',
     component: ListeELCreateComponent,
-    data:{text:'produit',link:'produit'}
+    data:{text:'produit',link:'produit'},
+    canActivate: [ConnexionService]
   },
   {
     path: 'produit-ch/produit',
-    component: ProduitCreateComponent
+    component: ProduitCreateComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'produit-ch/produit-list',
-    component: ProduitListComponent
+    component: ProduitListComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'liste',
     component: ListeCreateComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'clients',
-    component: ClientListComponent
+    component: ClientListComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'fournisseur-ch',
     component: ListeELCreateComponent,
-    data:{text:'fournisseur',link:'fournisseur'}
+    data:{text:'fournisseur',link:'fournisseur'},
+    canActivate: [ConnexionService]
   },
   {
     path: 'fournisseur-ch/fournisseur',
-    component: FournisseurCreateComponent
+    component: FournisseurCreateComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'fournisseur-ch/fournisseur-list',
-    component: FournisseurListComponent
+    component: FournisseurListComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'categorie-ch',
     component: ListeELCreateComponent,
-    data:{text:'categorie',link:'categorie'}
+    data:{text:'categorie',link:'categorie'},
+    canActivate: [ConnexionService]
   },
   {
     path: 'categorie-ch/categorie',
-    component: CategorieProduitCreateComponent
+    component: CategorieProduitCreateComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'categorie-ch/categorie-list',
-    component: CategorieProduitListComponent
+    component: CategorieProduitListComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'magasin-ch',
     component: ListeELCreateComponent,
+  canActivate: [ConnexionService],
     data:{text:'magasin',link:'magasin'}
   },
   {
     path: 'magasin-ch/magasin',
-    component: MagasinCreateComponent
+    component: MagasinCreateComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'magasin-ch/magasin-list',
-    component: MagasinListComponent
+    component: MagasinListComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'stocks',
-    component: StockListComponent
+    component: StockListComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'achats',
-    component: AchatListComponent
+    component: AchatListComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'livraison',
-    component: LivraisonCreateComponent
+    component: LivraisonListComponent,
+    canActivate: [ConnexionService]
   },
   {
     path: 'remboursement',
-    component: RemboursementCreateComponent
-  },
-
-  {
-    path: 'accueil-cl',
-    component: AccueilClMainComponent
+    component: RemboursementCreateComponent,
+    canActivate: [ConnexionService]
   },
   {
-    path: 'accueil-cl/produits',
-    component: ProduitListComponent
+    path: 'produits',
+    component: ProduitListComponent,
+    canActivate: [ConnexionNotService]
   },
   {
-    path: 'accueil-cl/historique',
-    component: HistoriqueAchatListComponent
+    path: 'historique',
+    component: HistoriqueAchatListComponent,
+    canActivate: [ConnexionNotService]
   },
   {
     path: '**',
