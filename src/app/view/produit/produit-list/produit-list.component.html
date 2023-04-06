@@ -1,32 +1,29 @@
-
-<div class="tablos shadow rounded-3">
 <header>
   <h1>Liste de produits</h1>
 </header>
-  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
+<table>
+<thead>
+<tr>
+  <th>Nom</th>
+  <th>Reference</th>
+  <th>Prix De Vente</th>
+  <th>Description</th>
+  <th>Image</th>
+  <th> Action</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let p of produits , index as i">
+  <td>{{ p.nom }}</td>
+  <td>{{ p.ref }}</td>
+  <td>{{ p.prixVente}}</td>
+  <td>{{p.description}}</td>
+  <td>{{p.imgUrl}}</td>
+  <td>
+    <button class="delete" (click)="deleteByRef(p,i)"><i class="fa fa-trash"></i> Supprimer</button>
+  </td>
+</tr>
+</tbody>
+</table>
 
-<section class="product-list">
-  <div class="product-item">
-    <img class="image" src="assets/images/produit4.jpg" alt="Product image">
-    <h2 scope="col">Product 1</h2>
-    <p scope="col">Description du produit 1</p>
-    <button>Acheter</button>
-  </div>
 
-  <div class="product-item">
-    <img class="image" src="assets/images/produit2.jpg" alt="Product image">
-    <h2 scope="col">Product 2</h2>
-    <p scope="col">Description du produit 2</p>
-    <button>Acheter</button>
-  </div>
-
-  <div class="product-item">
-    <img  class="image" src="assets/images/produit3.jpg" alt="Product image">
-    <h2 scope="col">Product 3</h2>
-    <p scope="col">Description du produit 3</p>
-    <button>Acheter</button>
-  </div>
-
-</section>
-  </table>
-</div>

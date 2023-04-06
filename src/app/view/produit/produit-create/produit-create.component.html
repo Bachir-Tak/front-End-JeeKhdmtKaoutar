@@ -22,15 +22,8 @@
     </div>
   </div>
   <div class="product-details">
-    <h2 class="product-name">Product Name</h2>
+    <h2 class="product-name" name="nom" [(ngModel)]="produit.nom">Product Name</h2>
     <div class="product-rating">
-       <!--<i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-star"></i>
-      <i class="fa fa-user"></i>
-      <span>(5 out of 5)</span> -->
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffbf00" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
@@ -52,14 +45,14 @@
         <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
       </svg>
     </div>
-    <p class="product-description">Description  du produit.</p>
+    <p class="product-description" name="description" [(ngModel)]="produit.description">Description  du produit.</p>
     <ul class="product-features">
-      <li>Reference : XXXXXXX</li>
-      <li>Categorie Product : XXXXXXXX </li>
+      <li [(ngModel)]="produit.ref">Reference : XXXXXXX</li>
+      <li [(ngModel)]="produit.categorieProduit">Categorie Product : XXXXXXXX </li>
 
     </ul>
     <div class="product-price">
-      <span class="product-price"> Prix : $XX.XXX</span>
+      <span class="product-price" [(ngModel)]="produit.prixVente"> Prix : $XX.XXX</span>
     </div>
     <div class="size">
     </div>
