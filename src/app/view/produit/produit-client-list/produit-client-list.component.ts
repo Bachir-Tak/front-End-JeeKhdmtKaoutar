@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {Produit} from "../../../controller/model/produit/produit";
 import {ProduitService} from "../../../controller/service/produit/produit.service";
+import {Produit} from "../../../controller/model/produit/produit";
 
 @Component({
-  selector: 'app-produit-list',
-  templateUrl: './produit-list.component.html',
-  styleUrls: ['./produit-list.component.css']
+  selector: 'app-produit-client-list',
+  templateUrl: './produit-client-list.component.html',
+  styleUrls: ['./produit-client-list.component.css']
 })
-export class ProduitListComponent implements OnInit {
+export class ProduitClientListComponent implements OnInit {
   constructor(private produitService: ProduitService ) {
   }
 
@@ -48,4 +48,7 @@ export class ProduitListComponent implements OnInit {
 
     });
   }
+
+
+
 }

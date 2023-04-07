@@ -41,6 +41,10 @@ import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livrai
 import {
   ProduitAjouterCreateComponent
 } from "./view/produit/produit-ajouter-create/produit-ajouter-create.component";
+import {RemboursementListComponent} from "./view/remboursement/remboursement-list/remboursement-list.component";
+import {
+  AvoirLivraisonCreateComponent
+} from "./view/avoirLivraison/avoir-livraison-create/avoir-livraison-create.component";
 
 
 const appRouteList: Routes = [
@@ -139,7 +143,7 @@ const appRouteList: Routes = [
   },
   {
     path: 'remboursement',
-    component: RemboursementCreateComponent
+    component: RemboursementListComponent
   },
 
   {
