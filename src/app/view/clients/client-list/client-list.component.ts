@@ -40,7 +40,6 @@ export class ClientListComponent implements OnInit{
       } else {
         alert('Del Error');
       }
-
     });
   }
 }

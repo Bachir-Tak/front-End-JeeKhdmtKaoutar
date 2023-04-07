@@ -60,16 +60,6 @@ export class FournisseurService  {
     console.log('urrrllll ==>'+ this._url +'code/'+ code);
     return this._http.delete<number>(this._url+ 'code/' + code);
   }
-   postFournisseur(fournisseur: any): Observable<any> {
-    return this._http.post(this.url, this.fournisseur);
-  }
-  getFournisseurs(): Observable<Fournisseur[]> {
-    return this._http.get<Fournisseur[]>(this.url);
-  }
 
-  getFournisseur(id: number): Observable<Fournisseur> {
-    const url = `${this.url}/${id}`;
-    return this._http.get<Fournisseur>(url);
-  }
 
 }

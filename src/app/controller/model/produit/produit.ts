@@ -6,6 +6,6 @@ export class Produit {
   public ref!: string;
   public description!: string;
   public prixVente!: number;
-  public imgUrl!: string;
+  
   public categorieProduit !: CategorieProduit;
 }

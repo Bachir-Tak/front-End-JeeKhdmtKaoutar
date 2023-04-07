@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Produit} from "../../../controller/model/produit/produit";
 import {ProduitService} from "../../../controller/service/produit/produit.service";
+import {Client} from "../../../controller/model/client/client.model";
 
 @Component({
   selector: 'app-produit-list',
@@ -37,15 +38,15 @@ export class ProduitListComponent implements OnInit {
   set produits(value: Array<Produit>) {
     this.produitService.produits = value;
   }
-  public deleteByRef(produit : Produit, index:number):void {
-    console.log('haaa cin' + produit.ref);
+  public deleteByRef(produit: Produit, index:number):void {
+    console.log('haaa ref' + produit.ref);
     this.produitService.deleteByRef(produit.ref.toString()).subscribe(data => {
       if (data > 0) {
         this.produits.splice(index, 1);
       } else {
         alert('Del Error');
       }
-
     });
   }
+
 }
