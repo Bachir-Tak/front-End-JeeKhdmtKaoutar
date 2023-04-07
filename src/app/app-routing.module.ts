@@ -76,7 +76,7 @@ const appRouteList: Routes = [
   },
   {
     path: 'produit-ch/produit',
-    component: ProduitCreateComponent
+    component: ProduitAjouterCreateComponent
   },
   {
     path: 'produit-ch/produit-list',

@@ -2,6 +2,7 @@ import {Injectable, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Produit} from "../../model/produit/produit";
 import {Observable} from "rxjs";
+import {Client} from "../../model/client/client.model";
 
 
 @Injectable({
@@ -23,6 +24,9 @@ export class ProduitService  {
 
   public findAll(): Observable<Array<Produit>> {
     return this._http.get<Array<Produit>>(this.url);
+  }
+  public findByRef(ref:string):Observable<Produit>{
+    return this._http.get<Produit>(this._url+'ref/'+ ref);
   }
   public deleteByRef(ref:string):Observable<number>{
     console.log('urrrllll ==>'+ this._url +'ref/'+ ref);

@@ -97,6 +97,9 @@ import {
 } from "./view/livraisonCommande/livraison-commande-list/livraison-commande-list.component";
 import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-create/produit-ajouter-create.component";
 import {ProduitClientListComponent} from './view/produit/produit-client-list/produit-client-list.component';
+import { SearchProduitComponent } from './view/produit/search-produit/search-produit.component';
+import { SearchCategorieComponent } from './view/categorieProduit/search-categorie/search-categorie.component';
+import { SearchFournisseurComponent } from './view/fournisseur/search-fournisseur/search-fournisseur.component';
 
 
 
@@ -167,7 +170,10 @@ import {ProduitClientListComponent} from './view/produit/produit-client-list/pro
     LivraisonCommandeCreateComponent,
     LivraisonCommandeListComponent,
     ProduitAjouterCreateComponent,
-    ProduitClientListComponent
+    ProduitClientListComponent,
+    SearchProduitComponent,
+    SearchCategorieComponent,
+    SearchFournisseurComponent
 
 
 
