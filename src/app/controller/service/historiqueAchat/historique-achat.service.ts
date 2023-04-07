@@ -36,7 +36,7 @@ export class HistoriqueAchatService {
   set historiqueAchats(value: Array<HistoriqueAchat>) {
     this._historiqueAchats = value;
   }
-  public  save ():Observable<HistoriqueAchat>{
+  public  save(historiqueAchat: HistoriqueAchat):Observable<HistoriqueAchat>{
     return this._http.post<HistoriqueAchat>(this._url, this.historiqueAchat);
   }
   public  findAll(): Observable<Array<HistoriqueAchat>>{
