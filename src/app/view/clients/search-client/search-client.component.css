@@ -11,7 +11,7 @@ input[type=text] {
 }
 
 button{
-  background-color: #00a7e1;
+  background-color: #6c7ae0;
   border: none;
   color: white;
   padding: 12px 24px;
@@ -22,6 +22,9 @@ button{
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+}
+button:hover{
+  background-color: #8e44ad;
 }
 
 .tablos thead{

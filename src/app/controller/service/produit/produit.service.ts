@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class ProduitService implements OnInit {
+export class ProduitService  {
   private _produit!: Produit;
   private _produits!: Array<Produit>;
 
@@ -16,8 +16,6 @@ export class ProduitService implements OnInit {
   constructor(private _http: HttpClient) {
   }
 
-  ngOnInit(): void {
-  }
 
   public save(produit : Produit): Observable<number> {
     return this._http.post<number>(this.url, produit);

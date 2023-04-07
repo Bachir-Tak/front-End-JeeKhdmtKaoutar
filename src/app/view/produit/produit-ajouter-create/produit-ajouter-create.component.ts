@@ -1,22 +1,22 @@
 import {Component, OnInit} from '@angular/core';
-import {ProduitService} from "../../../controller/service/produit/produit.service";
 import {Produit} from "../../../controller/model/produit/produit";
+import {ProduitService} from "../../../controller/service/produit/produit.service";
+import {Fournisseur} from "../../../controller/model/fournisseur/fournisseur.model";
 
 @Component({
-  selector: 'app-produit-create',
-  templateUrl: './produit-create.component.html',
-  styleUrls: ['./produit-create.component.css']
+  selector: 'app-produit-ajouter-create',
+  templateUrl: './produit-ajouter-create.component.html',
+  styleUrls: ['./produit-ajouter-create.component.css']
 })
-export class ProduitCreateComponent implements OnInit {
-  constructor(private produitService: ProduitService) {
+export class ProduitAjouterCreateComponent implements OnInit{
+  constructor(   private  produitService:ProduitService) {
   }
-
   ngOnInit(): void {
   }
-
   public save(): void {
     this.produitService.save(this.produit).subscribe(data => {
       if (data > 0) {
+        this.produit= new Produit();
         alert("Done");
       } else {
         alert("Save Error");
@@ -41,5 +41,7 @@ export class ProduitCreateComponent implements OnInit {
   set produits(value: Array<Produit>) {
     this.produitService.produits = value;
   }
+
+
 
 }

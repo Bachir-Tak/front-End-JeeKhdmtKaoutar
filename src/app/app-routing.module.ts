@@ -38,6 +38,9 @@ import {
   HistoriqueAchatListComponent
 } from "./view/historiqueAchats/historique-achat-list/historique-achat-list.component";
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
+import {
+  ProduitAjouterCreateComponent
+} from "./view/produit/produit-ajouter-create/produit-ajouter-create.component";
 
 
 const appRouteList: Routes = [
@@ -69,7 +72,7 @@ const appRouteList: Routes = [
   },
   {
     path: 'produit-ch/produit',
-    component: ProduitCreateComponent
+    component: ProduitAjouterCreateComponent
   },
   {
     path: 'produit-ch/produit-list',
