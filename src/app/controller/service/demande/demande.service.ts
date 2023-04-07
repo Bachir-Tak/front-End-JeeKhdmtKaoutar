@@ -16,6 +16,9 @@ export class DemandeService {
     //demande.client=clientService.findById(clientId);
     return this.http.post<Demande>(this._url,demande);
   }
+  public findAll(): Observable<Array<Demande>>{
+    return this.http.get<Array<Demande>>(this._url);
+  }
   constructor(private  http: HttpClient) { }
 
 
@@ -45,11 +48,5 @@ export class DemandeService {
     this._demandes = value;
   }
 
-  get url(): string {
-    return this._url;
-  }
 
-  set url(value: string) {
-    this._url = value;
-  }
 }

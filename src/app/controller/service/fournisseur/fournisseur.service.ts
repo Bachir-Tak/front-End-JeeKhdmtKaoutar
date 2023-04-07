@@ -44,8 +44,8 @@ export class FournisseurService  {
   set url(value: string) {
     this._url = value;
   }
-  public  save ():Observable<Fournisseur>{
-    return this._http.post<Fournisseur>(this.url, this.fournisseur);
+  public  save (fournisseur : Fournisseur):Observable<number>{
+    return this._http.post<number>(this.url, fournisseur);
 
   }
   public  findAll(): Observable<Array<Fournisseur>>{

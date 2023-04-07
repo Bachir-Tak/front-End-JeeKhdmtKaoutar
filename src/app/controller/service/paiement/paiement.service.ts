@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Paiement} from "../../model/paiement/paiement.model";
+import {StockService} from "../stock/stock.service";
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class PaiementService {
   private _url = "http://localhost:8033/GestionCommertiale/Paiement/";
 
 
-  constructor(private _http:HttpClient) { }
+  constructor(private _http:HttpClient , private stockService: StockService) { }
 
   public findAll():Observable<Array<Paiement>>{
     return this._http.get<Array<Paiement>>(this.url);

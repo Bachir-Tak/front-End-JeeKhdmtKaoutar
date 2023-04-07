@@ -10,7 +10,7 @@ export class AchatService {
 
   private _achat !: Achat;
   private _achats !: Array<Achat>;
-  private _url= "http://localhost:8033/GestionCommertiale/Achat";
+  private _url= "http://localhost:8033/GestionCommerciale/Achat/";
   constructor(private http:HttpClient) {}
 
   get achat(): Achat {

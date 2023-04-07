@@ -1,1 +1,18 @@
-<p>magasin-list works!</p>
+<div class="tablos shadow rounded-3">
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
+    <thead>
+    <tr>
+      <th scope="col">Libelle</th>
+      <th scope="col">Code</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let maga of magasins">
+      <td>{{maga.libelle}}</td>
+      <td>{{maga.code}}</td>
+      <td>{{maga.stocks}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

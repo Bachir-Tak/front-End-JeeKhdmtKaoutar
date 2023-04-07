@@ -1,1 +1,27 @@
-<p>recapitulatif-achat-list works!</p>
+
+<div class="tablos shadow rounded-3">
+  <app-search-client></app-search-client>
+  <h1>Recapitulatifs Achats</h1>
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
+    <thead>
+    <tr>
+      <th scope="col">Produit</th>
+      <th scope="col">Prix Unitaire</th>
+      <th scope="col">Quantite</th>
+      <th scope="col">Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let recapitulatifAchat of recapitulatifAchats , index as i">
+      <td>{{ recapitulatifAchat.commandeProduit.produit }}</td>
+      <td>{{ recapitulatifAchat.commandeProduit.prixUnitaire }}</td>
+      <td>{{ recapitulatifAchat.commandeProduit.quantite}}</td>
+      <td>{{recapitulatifAchat.commandeProduit.prixTotale}}</td>
+      <td>
+        <button class="delete" (click)="deleteByCode(recapitulatifAchat,i)"><i class="fa fa-trash"></i> Supprimer</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

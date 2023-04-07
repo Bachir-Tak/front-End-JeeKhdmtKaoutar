@@ -7,24 +7,26 @@ import {Observable} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class ProduitService implements OnInit {
+export class ProduitService  {
   private _produit!: Produit;
   private _produits!: Array<Produit>;
 
-  private url = "http://localhost:8033/GestionCommertiale/Produit";
+  private _url = "http://localhost:8033/GestionCommerciale/Produit/";
 
-  constructor(private http: HttpClient) {
+  constructor(private _http: HttpClient) {
   }
 
-  ngOnInit(): void {
+
+  public save(produit : Produit): Observable<number> {
+    return this._http.post<number>(this.url, produit);
   }
 
-  public save(): Observable<number> {
-    return this.http.post<number>(this.url, this.produit);
+  public findAll(): Observable<Array<Produit>> {
+    return this._http.get<Array<Produit>>(this.url);
   }
-
-  public findall(): Observable<Array<Produit>> {
-    return this.http.get<Array<Produit>>(this.url);
+  public deleteByRef(ref:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'ref/'+ ref);
+    return this._http.delete<number>(this._url+ 'ref/' + ref);
   }
 
   get produit(): Produit {
@@ -47,5 +49,13 @@ export class ProduitService implements OnInit {
 
   set produits(value: Array<Produit>) {
     this._produits = value;
+  }
+
+  get url(): string {
+    return this._url;
+  }
+
+  set url(value: string) {
+    this._url = value;
   }
 }

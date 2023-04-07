@@ -1,0 +1,182 @@
+.bigDiv{
+  overflow-x: hidden;
+
+}
+.profile_client {
+  display: flex;
+  font-weight:500;
+
+}
+
+nav {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0vh 0vh 0.5vh 0vh;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5vh;
+}
+a img {
+  width: 150px;
+
+}
+a {
+  text-decoration: none;
+  font-weight:500;
+}
+form {
+  border: solid;
+  border-width: 0.3vh;
+  border-radius: 2vh;
+  padding: 2px;
+}
+form input {
+  border: none;
+  border-width: 0.3vh;
+  border-radius: 2vh;
+}
+form input:focus {
+  outline: none;
+}
+form svg {
+  width: 3.5vh;
+  height: 3.5vh;
+}
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  bottom: 0;
+  box-shadow: 0vh 0vh 0.5vh 0vh;
+  margin: 0;
+}
+.accep_res {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50vh;
+}
+.iconss {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+hr {
+  background-color: black;
+  height: 0.1vh;
+  width: 5vh;
+}
+.main_content {
+  width: 100%;
+  display: flex;
+  min-height: 68vh;
+  margin: 0;
+  border-top: solid 2vh;
+  border-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%) 1;
+}
+.main_content img {
+  object-fit: cover;
+  height: 68vh;
+  flex: 1;
+  transition: 0.3s;
+}
+.main_content div {
+  display: flex;
+  position: relative;
+  height: 68vh;
+  padding: 0;
+  flex: 1;
+}
+.main_content div p {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  left: 4%;
+  font-size: 7vh;
+}
+.item_main1:hover {
+  height: 69vh;
+}
+.item_main2:hover {
+  height: 69vh;
+}
+
+.other {
+  display: flex;
+  width: 100%;
+  min-height: 90vh;
+  border-image: linear-gradient(45deg, #08aeea 0%, #2af598 100%) 1;
+  border-top: solid 2vh;
+  border-bottom: solid 2vh;
+}
+.other div p {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  left: 4%;
+  font-size: 7vh;
+}
+.other img {
+  object-fit: cover;
+  height: 90vh;
+  flex: 1;
+  transition: 0.3s;
+}
+.other div {
+  display: flex;
+  position: relative;
+  height: 90vh;
+  padding: 0;
+  flex: 1;
+}
+.other img:hover {
+  height: 95vh;
+}
+
+.recomm {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.recomm_img {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20vh;
+  text-align: center;
+}
+.recomm_img img {
+  object-fit: cover;
+  height: 50vh;
+  transition: 0.5s;
+}
+.recomm_img img:hover {
+  height: 55vh;
+}
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #00abfb;
+  border-radius: 1vh;
+}

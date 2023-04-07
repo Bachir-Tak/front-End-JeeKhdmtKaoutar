@@ -15,19 +15,34 @@
       <input type="text" id="cin" name="cin" [(ngModel)] = "client.cin">
     </div>
     <div class="form-group">
-      <label for="email"><h6>Email</h6></label>
-      <input type="email" id="email" name="email" >
+      <label> <h6>Ville</h6> </label>
+      <select id="ville" class="form-select"   name="ville" [(ngModel)]="client.ville">
+        <option selected >--- selecter une ville ---</option>
+        <option value="Casablanca">Casablanca</option>
+        <option value="Rabat">Rabat</option>
+        <option value="Marrakech">Marrakech</option>
+        <option value="Fès">Fès</option>
+        <option value="Tanger">Tanger</option>
+        <option value="Agadir">Agadir</option>
+        <option value="Meknès">Meknès</option>
+        <option value="Oujda">Oujda</option>
+        <option value="Kenitra">Kenitra</option>
+        <option value="Tétouan">Tétouan</option>
+      </select>
     </div>
     <div class="form-group">
-      <app-ville-list [(ngModel)] = "client.ville"></app-ville-list>
+      <label for="email"><h6>Email</h6></label>
+      <input type="email" id="email" name="email"  [(ngModel)]="client.compte.email">
+    </div>
+    <div class="form-group">
     </div>
     <div class="form-group">
       <label for="password"><h6>Password</h6></label>
-      <input type="password" id="password" name="password"   >
+      <input type="password" id="password" name="password" [(ngModel)]="client.compte.motDePasse"  >
     </div>
     <div class="form-group">
       <label for="confirm-password"><h6>Confirm Password</h6></label>
-      <input type="password" id="confirm-password" name="confirm-password"  >
+      <input type="password" id="confirm-password" name="confirm-password"  [(ngModel)]="client.compte.motDePasse"  >
     </div>
     <button type="submit" (click)="save()"> sign up</button>
   </form>

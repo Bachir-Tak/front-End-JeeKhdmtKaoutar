@@ -15,6 +15,9 @@ export class MagasinService {
   save(magasin:Magasin):Observable<Magasin>{
     return this.http.post<Magasin>(this._url,magasin);
   }
+  public findAll(): Observable<Array<Magasin>>{
+    return this.http.get<Array<Magasin>>(this._url);
+  }
   constructor(private http:HttpClient) { }
 
 
@@ -43,11 +46,4 @@ export class MagasinService {
     this._magasins = value;
   }
 
-  get url(): string {
-    return this._url;
-  }
-
-  set url(value: string) {
-    this._url = value;
-  }
 }

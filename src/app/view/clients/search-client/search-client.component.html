@@ -1,0 +1,25 @@
+<div class="tablos shadow rounded-3">
+<input id="searchbar" onkeyup="search " type="text"
+       name="search" placeholder="Search with CIN .." aria-describedby="button-addon2" [(ngModel)]="client.cin">
+<button type="button" classe="btn btn- primary" data-bs-toggle="button" id="button-addon2" (click)="search()"> Search</button>
+
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
+  <thead>
+  <tr>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Cin</th>
+    <th>Adress</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr >
+    <td>{{ client.nom }}</td>
+    <td>{{ client.prenom }}</td>
+    <td>{{ client.cin}}</td>
+    <td>{{client.adresse}}</td>
+
+  </tr>
+  </tbody>
+</table>
+</div>

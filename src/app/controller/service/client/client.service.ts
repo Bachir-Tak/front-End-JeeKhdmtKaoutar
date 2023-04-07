@@ -17,6 +17,9 @@ export class ClientService {
   public findAll(): Observable<Array<Client>>{
     return this._http.get<Array<Client>>(this._url);
   }
+  public findByCin(cin:string):Observable<Client>{
+    return this._http.get<Client>(this._url+'cin/'+ cin);
+  }
 
   get client(): Client {
     if(this._client == null){

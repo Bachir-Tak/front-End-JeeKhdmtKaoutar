@@ -18,18 +18,10 @@ export class CategorieProduitListComponent implements OnInit {
   }
 
   public findAll(): void {
-    this.categorieProduitService.findall().subscribe(data => this.categorieProduits = data)
+    this.categorieProduitService.findAll().subscribe(data => this.categorieProduits = data)
 
   }
-  public save(): void {
-    this.categorieProduitService.save().subscribe(data => {
-      if (data != null) {
-        alert("Done");
-      } else {
-        alert("Save Error");
-      }
-    })
-  }
+
   public deleteByCode(categorieProduit: CategorieProduit, index:number):void {
     console.log('haaa code' + categorieProduit.code);
     this.categorieProduitService.deleteByCode(categorieProduit.code.toString()).subscribe(data => {

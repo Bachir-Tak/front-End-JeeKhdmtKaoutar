@@ -15,8 +15,8 @@ export class ProduitCreateComponent implements OnInit {
   }
 
   public save(): void {
-    this.produitService.save().subscribe(data => {
-      if (data != null) {
+    this.produitService.save(this.produit).subscribe(data => {
+      if (data > 0) {
         alert("Done");
       } else {
         alert("Save Error");

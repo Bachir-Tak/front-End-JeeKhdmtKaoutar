@@ -1,20 +1,23 @@
-<div class="head">
+<div class="tablos shadow rounded-3">
   <h1> CategorieProduit liste :</h1>
-</div>
 
-<table>
+<table class="table table-hover text-center table-bordered table-responsive rounded-3">
+  <thead>
   <tr >
-    <th>Code</th>
-    <th>Produits</th>
-    <th>Action</th>
+    <th scope="col">Code</th>
+    <th scope="col">Description</th>
+    <th scope="col">Action</th>
   </tr>
+  </thead>
+  <tbody>
   <tr *ngFor="let c of categorieProduits, index as i">
     <td>{{c.code}}</td>
-    <td>{{c.produits}}</td>
+    <td>{{c.description}}</td>
  <td>
-  <button class="button button-add" (click)="save()"><i class="fa fa-plus-square" aria-hidden="true"></i>Add</button>
   <button class="button button-delete" (click)="deleteByCode(c,i)"><i class="fa fa-trash" aria-hidden="true"></i>Delete</button>
-  <button class="button button-find" (click)="findAll()"><i class="fa fa-list-alt" aria-hidden="true"></i>Find</button>
  </td>
   </tr>
+  </tbody>
 </table>
+</div>
+

@@ -1,0 +1,58 @@
+#searchbar{
+  margin-left: 15%;
+  padding:15px;
+  border-radius: 10px;
+}
+
+input[type=text] {
+  width: 30%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+}
+
+button{
+  background-color: #6c7ae0;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #8e44ad;
+}
+
+.tablos thead{
+  background-color: #6c7ae0;
+  color: white;
+}
+.tablos{
+  width: 1000px;
+  max-height: 500px;
+  overflow: auto;
+
+
+}
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6c7ae0;
+  border-radius: 2px;
+}
+tr:nth-child(even){
+  background-color: #f8f6ff;
+
+}
+tr:hover{
+  background-color: #bfc3ec;
+
+}
+
+
+

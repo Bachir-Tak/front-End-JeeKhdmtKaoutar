@@ -34,11 +34,15 @@ export class RecapitulatifAchatListComponent implements OnInit{
   set recapitulatifAchats(value: Array<RecapitulatifAchat>) {
     this.recapitulatifAchatService.recapitulatifAchats = value;
   }
-  public delete(r: RecapitulatifAchat) {
-    this.recapitulatifAchatService.deleteByCode(r.code).subscribe(
-      data => {
-        let index = this.recapitulatifAchats.findIndex(e => r.code == e.code);
+  public deleteByCode(r : RecapitulatifAchat, index:number):void {
+    console.log('voila le code' + r.code);
+    this.recapitulatifAchatService.deleteByCode(r.code.toString()).subscribe(data => {
+      if (data > 0) {
         this.recapitulatifAchats.splice(index, 1);
+      } else {
+        alert('Del Error');
       }
-    );
-  }}
+
+    });
+  }
+}

@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AchatService} from "../../../controller/service/achat/achat.service";
 import {Achat} from "../../../controller/model/achat/achat";
-import {Client} from "../../../controller/model/client/client.model";
 
 @Component({
   selector: 'app-achat-list',

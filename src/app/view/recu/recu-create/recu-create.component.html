@@ -29,10 +29,10 @@
   <table class="description">
     <tbody>
     <tr>
-      <th>Description</th>
-      <th>Libelle</th>
-      <th>PaiementEffectue</th>
-      <th>Prix total</th>
+      <th [(ngModel)]="recu.produit.description">Description</th>
+      <th [(ngModel)]="recu.libelle">Libelle</th>
+      <th [(ngModel)]="recu.paiement.paiementEffectue">PaiementEffectue</th>
+      <th [(ngModel)]="recu.commandeProduit.prixTotale">Prix total</th>
     </tr>
     <tr>
       <td>product 1</td>

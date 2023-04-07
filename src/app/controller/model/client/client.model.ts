@@ -1,5 +1,5 @@
-import {Compte} from '../compte/compte.model'
-import {Ville} from "../ville/ville";
+import {Compte} from "../compte/compte";
+
 export class Client {
   public id!: number;
   public cin !: string;
@@ -11,7 +11,7 @@ export class Client {
 
   public adresse!: string;
 
-  public ville !: Ville;
+  public ville !: string;
 
   public compte!: Compte;
 }
