@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Recu} from "../../../controller/model/recu/recu.model";
 import {RecuService} from "../../../controller/service/recu/recu.service";
-import {RecapitulatifAchat} from "../../../controller/model/recapitulatifAchat/recapitulatifAchat.model";
 
 
 @Component({
