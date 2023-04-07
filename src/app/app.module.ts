@@ -48,6 +48,9 @@ import {
 
 import {SearchClientComponent} from "./view/clients/search-client/search-client.component";
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
+
+import { RemboursementListComponent } from './view/remboursement/remboursement-list/remboursement-list.component';
+
 import { AchatCreateComponent } from './view/achats/achat-create/achat-create.component';
 import {RecuCreateComponent} from "./view/recu/recu-create/recu-create.component";
 import {RecuListComponent} from "./view/recu/recu-list/recu-list.component";
@@ -96,6 +99,7 @@ import {
 import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-create/produit-ajouter-create.component";
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -131,7 +135,7 @@ import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-crea
     AccueilClComponent,
     AccueilClMainComponent,
     LivraisonListComponent,
-    ListeCreateComponent,
+   
     CategorieProduitListComponent,
     CategorieProduitCreateComponent,
     RecuCreateComponent,
@@ -156,9 +160,16 @@ import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-crea
     FournisseurProduitCreateComponent,
     HistoriqueAchatCreateComponent,
     HistoriqueAchatListComponent,
+
+    RecuRemboursementCreateComponent,
+    CategorieProduitCreateComponent,
+    LivraisonCreateComponent,
+    RemboursementListComponent
+
     LivraisonCommandeCreateComponent,
     LivraisonCommandeListComponent,
     ProduitAjouterCreateComponent
+
 
 
 
