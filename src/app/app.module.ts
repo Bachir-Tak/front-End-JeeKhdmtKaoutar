@@ -44,6 +44,7 @@ import {
   CategorieProduitCreateComponent
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
+import { RemboursementListComponent } from './view/remboursement/remboursement-list/remboursement-list.component';
 
 
 @NgModule({
@@ -79,7 +80,8 @@ import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livrai
     HistoriqueAchatListComponent,
     RecuRemboursementCreateComponent,
     CategorieProduitCreateComponent,
-    LivraisonCreateComponent
+    LivraisonCreateComponent,
+    RemboursementListComponent
 
   ],
   imports: [
