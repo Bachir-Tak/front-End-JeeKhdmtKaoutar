@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Recu} from "../../../controller/model/recu/recu.model";
 import {RecuService} from "../../../controller/service/recu/recu.service";
+import {RecapitulatifAchat} from "../../../controller/model/recapitulatifAchat/recapitulatifAchat.model";
 
 
 @Component({
@@ -35,13 +36,16 @@ export class RecuListComponent implements OnInit{
   set recus(value: Array<Recu>) {
     this.recuService.recus = value;
   }
-  public delete(r: Recu) {
-    this.recuService.deleteByReference(r.code).subscribe(
-      data => {
-        let index = this.recus.findIndex(e => r.code == e.code);
+  public deleteByCode(r : Recu, index:number):void {
+    console.log('voila le code' + r.code);
+    this.recuService.deleteByCode(r.code.toString()).subscribe(data => {
+      if (data > 0) {
         this.recus.splice(index, 1);
+      } else {
+        alert('Del Error');
       }
-    );
+
+    });
   }
 
 }

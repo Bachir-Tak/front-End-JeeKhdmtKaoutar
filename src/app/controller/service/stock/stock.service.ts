@@ -23,6 +23,8 @@ export class StockService {
   constructor(private  http: HttpClient) { }
 
 
+
+
   get stock(): Stock {
     if (this._stock== null)
     {
