@@ -22,19 +22,18 @@ export class LivraisonCreateComponent implements OnInit {
         // this.livraisonService.livraison == null;
           alert('Save Success');
         } else {
-          alert('Save Error ::: Ref Exixt');
+          alert('Save Error ::: Ref Exist');
         }
       }
     );
   }
 
-  ngOnInit(): void {
 
-  }
 
   get livraison(): Livraison {
     return this.livraisonService.livraison;
   }
+
 
   set livraison(value: Livraison) {
     this.livraisonService.livraison = value;
@@ -46,6 +45,9 @@ export class LivraisonCreateComponent implements OnInit {
 
   set livraisons(value: Array<Livraison>) {
     this.livraisonService.livraisons = value;
+  }
+
+  ngOnInit(): void {
   }
 
 }
