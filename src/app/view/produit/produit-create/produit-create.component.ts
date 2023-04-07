@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ProduitService} from "../../../controller/service/produit/produit.service";
 import {Produit} from "../../../controller/model/produit/produit";
+import {CommandeProduit} from "../../../controller/model/commandeProduit/commande-produit";
+import {CommandeService} from "../../../controller/service/commande/commande.service";
+import {CommandeProduitService} from "../../../controller/service/commandeProduit/commande-produit.service";
 
 @Component({
   selector: 'app-produit-create',
@@ -8,12 +11,23 @@ import {Produit} from "../../../controller/model/produit/produit";
   styleUrls: ['./produit-create.component.css']
 })
 export class ProduitCreateComponent implements OnInit {
-  constructor(private produitService: ProduitService) {
+  commandeProduits!:Array<CommandeProduit>
+  constructor(private produitService: ProduitService , private commandeService: CommandeService, private commandeProduitService: CommandeProduitService) {
   }
 
   ngOnInit(): void {
+    this.findAll();
   }
+  public findAll(): void {
+    this.produitService.findAll().subscribe(data => this.produits = data)
 
+  }
+  commandeProduit = new CommandeProduit();
+  public addToCard(produit : Produit): Array<CommandeProduit>{
+    this.commandeProduit.produit=produit;
+    this.commandeProduits.push(this.commandeProduit);
+    return this.commandeProduits;
+  }
   public save(): void {
     this.produitService.save(this.produit).subscribe(data => {
       if (data > 0) {
@@ -41,5 +55,6 @@ export class ProduitCreateComponent implements OnInit {
   set produits(value: Array<Produit>) {
     this.produitService.produits = value;
   }
+
 
 }

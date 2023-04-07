@@ -46,8 +46,7 @@
       </svg>
     </div>
     <p class="product-description" name="description">Description  du produit.</p>
-    <ul class="product-features">
-      <li>Reference : XXXXXXX</li>
+    <ul class="product-features" >
       <li >Categorie Product : XXXXXXXX </li>
 
     </ul>
@@ -56,7 +55,9 @@
     </div>
     <div class="size">
     </div>
-    <app-commande-create></app-commande-create>
+    <button class="btn-acheter" (click)="addToCard(this.produit)">
+      <i class="fa fa-credit-card"></i>  Add To Card
+    </button>
     <button class="favorite"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pinned" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M9 4v6l-2 4v2h10v-2l-2 -4v-6" />
