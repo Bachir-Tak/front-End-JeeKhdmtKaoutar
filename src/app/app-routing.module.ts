@@ -139,7 +139,7 @@ const appRouteList: Routes = [
   },
   {
     path: 'livraison',
-    component: LivraisonCreateComponent
+    component: LivraisonListComponent
   },
   {
     path: 'remboursement',
