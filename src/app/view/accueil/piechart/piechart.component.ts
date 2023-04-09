@@ -33,7 +33,7 @@ export class PiechartComponent  implements OnInit{
             label: "Profit",
             data: ['542', '542', '536', '327', '17',
               '0.00', '538', '541'],
-            backgroundColor: '#9b0000'
+            backgroundColor: '#7d55b9'
           }
         ]
       },
