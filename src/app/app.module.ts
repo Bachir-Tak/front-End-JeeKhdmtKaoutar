@@ -47,7 +47,14 @@ import {SearchClientComponent} from "./view/clients/search-client/search-client.
 import {NavbarAdmin} from './view/navbarAdmin/navbarAdmin/navbarAdmin';
 import {WhichComponent} from './view/Which/which/which.component';
 import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-create/produit-ajouter-create.component";
-
+import {SearchCategorieComponent} from "./view/categorieProduit/search-categorie/search-categorie.component";
+import {SearchFournisseurComponent} from "./view/fournisseur/search-fournisseur/search-fournisseur.component";
+import {SearchProduitComponent} from "./view/produit/search-produit/search-produit.component";
+import {ProduitClientListComponent} from "./view/produit/produit-client-list/produit-client-list.component";
+import {RemboursementListComponent} from "./view/remboursement/remboursement-list/remboursement-list.component";
+import {
+  HistoriqueAchatListComponent
+} from "./view/historiqueAchats/historique-achat-list/historique-achat-list.component";
 
 @NgModule({
   declarations: [
@@ -91,8 +98,14 @@ import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-crea
     NavbarAdmin,
     WhichComponent,
     ProduitAjouterCreateComponent,
-
-
+    SearchClientComponent,
+    SearchCategorieComponent,
+    SearchCategorieComponent,
+    SearchFournisseurComponent,
+    SearchProduitComponent,
+    ProduitClientListComponent,
+    RemboursementListComponent,
+    HistoriqueAchatListComponent
 
   ],
   imports: [
@@ -107,4 +120,5 @@ import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-crea
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
