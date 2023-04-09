@@ -2,15 +2,18 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Reception} from "../../model/reception/reception";
 import {Observable} from "rxjs";
+import {ReceptionProduit} from "../../model/receptionProduit/reception-produitl";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReceptionService {
   private _reception !: Reception
+
+  private _receptionProduit!: ReceptionProduit
   private _receptions !: Array<Reception>;
 
-  private _url ="http://localhost:8033/GestionCommertiale/Reception/";
+  private _url ="http://localhost:8033/GestionCommerciale/Reception/";
 
   save (reception:Reception):Observable<Reception>{
     return this.http.post<Reception>(this._url,reception);
@@ -46,5 +49,19 @@ export class ReceptionService {
     this._receptions = value;
   }
 
+  get receptionProduit(): ReceptionProduit {
+    if (this._receptionProduit==null)
+    {
+      this._receptionProduit=new ReceptionProduit();
+    }
+    return this._receptionProduit;
+  }
 
+  set receptionProduit(value: ReceptionProduit) {
+    this._receptionProduit = value;
+  }
+
+  public addReceptionProduit(){
+    this.reception.receptionProduit.push(this.receptionProduit)
+  }
 }

@@ -10,7 +10,7 @@ import {Observable} from "rxjs";
 export class VenteProduitService implements OnInit {
   private _venteProduit!: VenteProduit;
   private _venteProduits!: Array<VenteProduit>;
-  private url = "http://localhost:8033/GestionCommertiale/VenteProduit";
+  private url = "http://localhost:8033/GestionCommerciale/VenteProduit";
 
   ngOnInit(): void {
   }

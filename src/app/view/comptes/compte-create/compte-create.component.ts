@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CompteService} from "../../../controller/service/compte/compte.service";
 import {Compte} from "../../../controller/model/compte/compte";
-import {Router} from '@angular/router';
 import {ConnexionService} from "../../../controller/service/connexion/connexion.service";
 import {AppComponent} from "../../../app.component";
 
@@ -12,16 +11,14 @@ import {AppComponent} from "../../../app.component";
 })
 export class CompteCreateComponent implements OnInit {
 
-  constructor(private compteService: CompteService, private connexionService:ConnexionService,private appComponent: AppComponent, private router: Router) {
+  constructor(private compteService: CompteService, private connexionService:ConnexionService,private appComponent: AppComponent) {
   }
-
   goToSignup() {
-    this.router.navigate(['/signup']);
+    this.appComponent.signup=true;
   }
 
   ngOnInit(): void {
   }
-
   public findByEmail(): void {
     this.compteService.findByEmail(this.compte).subscribe(data => {
       if(data==null){
@@ -44,7 +41,6 @@ export class CompteCreateComponent implements OnInit {
         alert("Mot de passe eronné");
         this.connexionService.connected[0]=false;
       }
-      console.log("azdaz"+this.connexionService.connected[2])
       ;
     });
   }

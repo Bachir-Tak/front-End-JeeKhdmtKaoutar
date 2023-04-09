@@ -4,7 +4,7 @@
     <a routerLink="/accueil">Accueil</a>
     <a routerLink="/produits">Produits</a>
     <a routerLink="/historique">Historique achat</a>
-    <a routerLink="/apropos">À propos</a>
+    <a [routerLink]="['/demande', client['cin'] ]">Demande</a>
     <form>
       <input type="search" placeholder="Search"/>
       <svg
@@ -26,7 +26,7 @@
     </div>
 
   </nav>
-  <router-outlet *ngIf="!connexion  && connected[0]"></router-outlet>
+  <div class="contentos"><router-outlet *ngIf="!connexion  && connected[0]"></router-outlet></div>
   <footer>
     <div class="accep_res">
       <div class="iconss">

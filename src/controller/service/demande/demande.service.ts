@@ -10,7 +10,7 @@ import {Demande} from "../../model/demande/demande";
 export class DemandeService {
   private _demande !: Demande ;
   private _demandes !: Array<Demande>;
-  private url ="http://localhost:8033/GestionCommertiale/Demande";
+  private url ="http://localhost:8033/GestionCommerciale/Demande";
 
   save():Observable<number>{
     return this.http.post<number>(this.url,this.demande);

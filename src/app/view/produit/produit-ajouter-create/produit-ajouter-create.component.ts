@@ -13,6 +13,7 @@ export class ProduitAjouterCreateComponent implements OnInit{
   }
   ngOnInit(): void {
   }
+
   public save(): void {
     this.produitService.save(this.produit).subscribe(data => {
       if (data > 0) {

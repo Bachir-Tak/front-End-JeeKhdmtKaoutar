@@ -9,7 +9,7 @@ import {Observable} from "rxjs";
 export class LivraisonCommandeService {
   private _livraisoncommande !: LivraisonCommande;
   private _livraisonscommandes !: Array<LivraisonCommande>;
-  private _url ="http://localhost:8033/GestionCommertiale/LivraisonCommande";
+  private _url ="http://localhost:8033/GestionCommerciale/LivraisonCommande";
   save():Observable<number>{
     return this.http.post<number>(this._url,this.livraisoncommande);
   }

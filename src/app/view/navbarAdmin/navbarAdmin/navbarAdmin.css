@@ -13,6 +13,9 @@
   color: #2781c1 !important;
 
 }
+i{
+  cursor: pointer;
+}
 a:hover{
   cursor: pointer;
 }

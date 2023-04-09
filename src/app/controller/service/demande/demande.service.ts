@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import {Demande} from "../../model/demande/demande.model";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {DemandeProduit} from "../../model/demandeProduit/demande-produit.model";
+import {ClientService} from "../client/client.service";
+import {ActivatedRoute} from "@angular/router";
+
 
 
 @Injectable({
@@ -9,11 +13,12 @@ import {Observable} from "rxjs";
 })
 export class DemandeService {
   private _demande !: Demande ;
-  private _demandes !: Array<Demande>;
-  private _url ="http://localhost:8033/GestionCommertiale/Demande/";
 
-  save(demande:Demande,clientId:number):Observable<Demande>{
-    //demande.client=clientService.findById(clientId);
+  private _demandeProduit!:DemandeProduit;
+  private _demandes !: Array<Demande>;
+  private _url ="http://localhost:8033/GestionCommerciale/Demande/";
+
+  save(demande:Demande):Observable<Demande>{
     return this.http.post<Demande>(this._url,demande);
   }
   public findAll(): Observable<Array<Demande>>{
@@ -47,6 +52,24 @@ export class DemandeService {
   set demandes(value: Array<Demande>) {
     this._demandes = value;
   }
+
+  get demandeProduit(): DemandeProduit {
+    if (this._demandeProduit==null)
+    {
+      this._demandeProduit=new DemandeProduit();
+    }
+    return this._demandeProduit;
+  }
+
+  set demandeProduit(value: DemandeProduit) {
+    this._demandeProduit = value;
+  }
+
+  public addDemandeProduit(){
+    this.demande.demandeProduits.push(this.demandeProduit)
+  }
+
+
 
 
 }

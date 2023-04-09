@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MagasinService} from "../../../controller/service/magasin/magasin.service";
-import {Magasin} from "../../../controller/model/magasin/magasin";
+import {Magasin} from "../../../controller/model/magasin/magasin.model";
 
 @Component({
   selector: 'app-magasin-list',

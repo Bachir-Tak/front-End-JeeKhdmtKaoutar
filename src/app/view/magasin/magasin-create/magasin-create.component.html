@@ -11,25 +11,25 @@
     </div>
     <div class="form-group">
       <label for="stock" class="form-label fw-semibold">Stock ref</label>
-      <input id="stock" type="text" class="form-control" [(ngModel)]="test!.ref">
+      <input id="stock" type="text" class="form-control" [(ngModel)]="stock.ref">
     </div>
     <div class="form-group">
-      <label for="produit" class="form-label fw-semibold">code</label>
-      <select name="produit" id="produit">
-        <option *ngFor="let i of  listProduit" value={{i.nom} [(ngModel)]="test!.produit"></option>
+      <label for="produit" class="form-label fw-semibold">Produit</label>
+      <select name="produit" id="produit"[(ngModel)]="stock.produit">
+        <option *ngFor="let i of  listProduit" [ngValue]="i" >{{i.nom}}</option>
       </select>
     </div>
     <div class="form-group">
       <label for="quantite" class="form-label fw-semibold">quantite</label>
-      <input id="quantite" type="text" class="form-control" [(ngModel)]="test!.quantite">
+      <input id="quantite" type="number" class="form-control" [(ngModel)]="stock.quantite">
     </div>
     <div class="form-group">
       <label for="quantiteEntree" class="form-label fw-semibold">quantite Entrée</label>
-      <input id="quantiteEntree" type="text" class="form-control" [(ngModel)]="test!.quantiteEntree">
+      <input id="quantiteEntree" type="number" class="form-control" [(ngModel)]="stock.quantiteEntree">
     </div>
     <div class="form-group">
       <label for="quantiteSortie" class="form-label fw-semibold">quantite Sortie</label>
-      <input id="quantiteSortie" type="text" class="form-control" [(ngModel)]="test!.quantiteSortie">
+      <input id="quantiteSortie" type="number" class="form-control" [(ngModel)]="stock.quantiteSortie">
     </div>
   </div>
 

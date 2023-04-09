@@ -10,7 +10,7 @@ import {Observable} from "rxjs";
 export class RecuRemboursementService {
   private _recuRemboursement!:RecuRemboursement;
   private _recuRemboursements!:Array<RecuRemboursement>;
-  private _url = "http://localhost:8033/GestionCommertiale/RecuRemboursement";
+  private _url = "http://localhost:8033/GestionCommerciale/RecuRemboursement";
   constructor(private _http:HttpClient) {}
   public save(recuRemboursement: RecuRemboursement):Observable<RecuRemboursement>{
     return this._http.post<RecuRemboursement>(this._url,this.recuRemboursement);

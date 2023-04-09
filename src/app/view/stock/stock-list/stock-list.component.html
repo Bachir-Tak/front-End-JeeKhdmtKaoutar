@@ -3,7 +3,6 @@
     <thead>
     <tr>
       <th scope="col">Reference</th>
-      <th scope="col">Magasin</th>
       <th scope="col">produit</th>
       <th scope="col">quantite</th>
       <th scope="col">quantiteEntree</th>
@@ -13,7 +12,6 @@
     <tbody>
     <tr *ngFor="let sto of stocks">
       <td>{{sto.ref}}</td>
-      <td>{{sto.magasin.libelle}}</td>
       <td>{{sto.produit.nom}}</td>
       <td>{{sto.quantite}}</td>
       <td>{{sto.quantiteEntree}}</td>

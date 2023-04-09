@@ -18,18 +18,18 @@ import {ListeELCreateComponent} from "./view/listeEl/liste-el-create/liste-el-cr
 import {ReceptionCreateComponent} from "./view/reception/reception-create/reception-create.component";
 import {ReceptionListComponent} from "./view/reception/reception-list/reception-list.component";
 import {LivraisonListComponent} from "./view/livraison/livraison-list/livraison-list.component";
-import {ProduitCreateComponent} from "./view/produit/produit-create/produit-create.component";
 import {FournisseurCreateComponent} from "./view/fournisseur/fournisseur-create/fournisseur-create.component";
 import {
   CategorieProduitCreateComponent
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
-import {AccueilClient} from "./view/accueilClient/accueilClient/accueilClient";
 import {
   HistoriqueAchatListComponent
 } from "./view/historiqueAchats/historique-achat-list/historique-achat-list.component";
 import {WhichComponent} from "./view/Which/which/which.component";
 import {ConnexionService} from "./controller/service/connexion/connexion.service";
 import {ConnexionNotService} from "./controller/service/connexionNot/connexion-not.service";
+import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-create/produit-ajouter-create.component";
+import {DemandeListComponent} from "./view/demande/demande-list/demande-list.component";
 
 
 const appRouteList: Routes = [
@@ -38,8 +38,8 @@ const appRouteList: Routes = [
     component: WhichComponent,
   },
   {
-    path: 'demande/:clientId/:produitRef',
-    component: DemandeCreateComponent,
+    path: 'demandes',
+    component: DemandeListComponent,
     canActivate: [ConnexionService]
   },
   {
@@ -66,7 +66,7 @@ const appRouteList: Routes = [
   },
   {
     path: 'produit-ch/produit',
-    component: ProduitCreateComponent,
+    component: ProduitAjouterCreateComponent,
     canActivate: [ConnexionService]
   },
   {
@@ -133,7 +133,7 @@ const appRouteList: Routes = [
     canActivate: [ConnexionService]
   },
   {
-    path: 'stocks',
+    path: 'stock',
     component: StockListComponent,
     canActivate: [ConnexionService]
   },
@@ -160,6 +160,11 @@ const appRouteList: Routes = [
   {
     path: 'historique',
     component: HistoriqueAchatListComponent,
+    canActivate: [ConnexionNotService]
+  },
+  {
+    path: 'demande/:ClientCin',
+    component: DemandeCreateComponent,
     canActivate: [ConnexionNotService]
   },
   {

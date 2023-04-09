@@ -2,17 +2,18 @@ import { Injectable } from '@angular/core';
 import {Magasin} from "../../model/magasin/magasin.model";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {StockService} from "../stock/stock.service";
-import {ProduitService} from "../produit/produit.service";
+import {Stock} from "../../model/stock/stock.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MagasinService {
   private _magasin!:Magasin;
+
+  private _stock!:Stock
   private _magasins!:Array<Magasin>;
 
-  private _url ="http://localhost:8033/GestionCommertiale/Magasin/";
+  private _url ="http://localhost:8033/GestionCommerciale/Magasin/";
 
   save(magasin:Magasin):Observable<Magasin>{
     return this.http.post<Magasin>(this._url,magasin);
@@ -20,16 +21,20 @@ export class MagasinService {
   public findAll(): Observable<Array<Magasin>>{
     return this.http.get<Array<Magasin>>(this._url);
   }
-  constructor(private http:HttpClient,private stockService:StockService) { }
+
+  public addStock(){
+    this.magasin.stocks.push(this.stock)
+  }
+  constructor(private http:HttpClient) { }
 
   get magasin(): Magasin {
     if (this._magasin==null)
     {
       this._magasin=new Magasin();
-      this._magasin.stocks.push();
     }
     return this._magasin;
   }
+
 
   set magasin(value: Magasin) {
 
@@ -48,4 +53,16 @@ export class MagasinService {
     this._magasins = value;
   }
 
+
+  get stock(): Stock {
+    if (this._stock==null)
+    {
+      this._stock=new Stock();
+    }
+    return this._stock;
+  }
+
+  set stock(value: Stock) {
+    this._stock = value;
+  }
 }

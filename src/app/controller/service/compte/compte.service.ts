@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Compte} from "../../model/compte/compte";
+import {ClientService} from "../client/client.service";
 
 
 
@@ -12,13 +13,15 @@ import {Compte} from "../../model/compte/compte";
 export class CompteService {
   private _compte !: Compte;
   private _comptes !: Array<Compte>;
-  private url= "http://localhost:8033/GestionCommertiale/Compte";
-  constructor(private http:HttpClient) {}
+  private url= "http://localhost:8033/GestionCommerciale/Compte/";
+  constructor(private http:HttpClient, private clientService:ClientService) {}
 
 
   get compte(): Compte {
     if(this._compte == null){
       this._compte = new  Compte();
+      this.compte.client=this.clientService.client;
+
     }
     return this._compte;
   }
@@ -38,7 +41,11 @@ export class CompteService {
     this._comptes = value;
   }
   public  findByEmail (compte: Compte):Observable<Compte>{
-    return this.http.get<Compte>(this.url+'/emai/'+compte.email);
+    return this.http.get<Compte>(this.url+'emai/'+compte.email);
+  }
+  public  save (compte:Compte):Observable<Compte>{
+    return this.http.post<Compte>(this.url, compte);
+
   }
 
   public  findAll(): Observable<Array<Compte>>{

@@ -3,6 +3,8 @@ import {MagasinService} from "../../../controller/service/magasin/magasin.servic
 import {Magasin} from "../../../controller/model/magasin/magasin.model";
 import {StockService} from "../../../controller/service/stock/stock.service";
 import {ProduitService} from "../../../controller/service/produit/produit.service";
+import {Produit} from "../../../controller/model/produit/produit";
+import {Stock} from "../../../controller/model/stock/stock.model";
 
 @Component({
   selector: 'app-magasin-create',
@@ -11,16 +13,23 @@ import {ProduitService} from "../../../controller/service/produit/produit.servic
 })
 export class MagasinCreateComponent implements OnInit{
 
+  constructor(private magasinService:MagasinService, private produitService:ProduitService) {
+  }
+  listProduit!: Array<Produit>;
 
-  constructor(private magasinService:MagasinService,private stockService:StockService, private produitService:ProduitService) {
-  }
-  test=this.magasin.stocks.at(0);
-  listProduit=this.produitService.produits;
-  public save():void{
-    this.magasinService.save(this.magasin).subscribe(data=>{alert(data)})
-  }
   ngOnInit(): void {
+    this.produitService.findAll().subscribe(data=>{this.listProduit=data;});
   }
+  public save():void{
+    this.addStock();
+    this.magasinService.save(this.magasin).subscribe(data=>{alert(data);this.magasin=new Magasin();this.stock=new Stock();})
+
+  }
+  public addStock(){
+    this.magasinService.addStock();
+  }
+
+
   get magasin(): Magasin {
     return this.magasinService.magasin;
   }
@@ -29,11 +38,12 @@ export class MagasinCreateComponent implements OnInit{
     this.magasinService.magasin = value;
   }
 
-  get magasins(): Array<Magasin> {
-    return this.magasinService.magasins;
+  get stock(): Stock {
+    return this.magasinService.stock;
   }
 
-  set magasins(value: Array<Magasin>) {
-    this.magasinService.magasins = value;
+  set stock(value: Stock) {
+    this.magasinService.stock = value;
   }
+
 }

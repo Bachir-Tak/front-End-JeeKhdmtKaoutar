@@ -1,3 +1,4 @@
 <app-navbarAdmin *ngIf="user  && connected[0]"></app-navbarAdmin>
 <app-navbarClient *ngIf="!user && connected[0]"></app-navbarClient>
-<app-compte-create *ngIf="!connected[0]"></app-compte-create>
+<app-compte-create *ngIf="!connected[0] && !signup"></app-compte-create>
+<app-client-create *ngIf="!connected[0] && signup"></app-client-create>

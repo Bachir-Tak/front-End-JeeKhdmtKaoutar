@@ -18,7 +18,7 @@ export class ProduitListComponent implements OnInit {
   }
 
   public findAll(): void {
-    this.produitService.findAll().subscribe(data => this.produits = data)
+    this.produitService.findAll().subscribe(data => {this.produits = data})
 
   }
 

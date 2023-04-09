@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AppComponent} from "../../../app.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-navbarAdmin',
@@ -16,8 +17,10 @@ export class NavbarAdmin implements OnInit{
 
 signout():void{
   this.appComponent.connected[0]=false;
+  this.appComponent.connected[2]=false;
+  this.router.navigate(["/accueil"])
 }
-  constructor(private appComponent:AppComponent) {
+  constructor(private appComponent:AppComponent, private router:Router) {
   }
 
   ngOnInit(): void {

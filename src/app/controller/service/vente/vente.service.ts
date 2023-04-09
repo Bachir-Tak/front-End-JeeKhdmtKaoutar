@@ -10,7 +10,7 @@ import {Produit} from "../../model/produit/produit";
 export class VenteService implements OnInit {
   private _vente!: Vente;
   private _ventes!: Array<Vente>;
-  private url = "http://localhost:8033/GestionCommertiale/Vente";
+  private url = "http://localhost:8033/GestionCommerciale/Vente";
 
   constructor(private http: HttpClient) {
   }

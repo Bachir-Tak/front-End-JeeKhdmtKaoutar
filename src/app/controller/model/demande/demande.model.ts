@@ -7,5 +7,5 @@ export class Demande {
 
   public code !: string;
   public  client !: Client;
-  public demandeProduits !: Array<DemandeProduit>;
+  public demandeProduits =new Array<DemandeProduit>;
 }

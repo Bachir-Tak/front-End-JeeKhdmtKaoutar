@@ -46,6 +46,7 @@ import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livrai
 import {SearchClientComponent} from "./view/clients/search-client/search-client.component";
 import {NavbarAdmin} from './view/navbarAdmin/navbarAdmin/navbarAdmin';
 import {WhichComponent} from './view/Which/which/which.component';
+import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-create/produit-ajouter-create.component";
 
 
 @NgModule({
@@ -89,6 +90,7 @@ import {WhichComponent} from './view/Which/which/which.component';
     RecuRemboursementCreateComponent,
     NavbarAdmin,
     WhichComponent,
+    ProduitAjouterCreateComponent,
 
 
 

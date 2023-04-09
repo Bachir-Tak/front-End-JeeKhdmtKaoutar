@@ -3,7 +3,7 @@ export class Magasin {
   public id!: number;
   public libelle!: string;
   public code!: string;
-  public stocks!: Array<Stock>;
+  public stocks= new Array<Stock>;
 
 
 }

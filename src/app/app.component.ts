@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
   }
 
   title = 'JEEproject';
+  signup=false;
 
   user=this.connexionService.connected[2];
 

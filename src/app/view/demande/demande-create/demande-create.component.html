@@ -7,14 +7,23 @@
       <input id="libelle" type="text" class="form-control" [(ngModel)]="demande.libelle">
     </div>
     <div class="form-group">
-      <label for="code" class="form-label fw-semibold">Code</label>
-      <input id="code" type="text" class="form-control" [(ngModel)]="demande.code">
+      <label for="Code" class="form-label fw-semibold">Code</label>
+      <input id="Code" type="text" class="form-control" [(ngModel)]="demande.code">
     </div>
-    <div class="form-group justify-content-around w-100 ">
-      <div [innerHtml]="content | sanitizeHtml" class="demandeProduits">
+    <div class="form-group  justify-content-around w-100">
+      <div class="demandeProduits">
+        <label for="produitNom" class="form-label fw-semibold">Nom Produit</label>
+        <input id="produitNom" type="text" class="form-control" [(ngModel)]="demandeProduit.produit.nom">
+        <label for="produitRef" class="form-label fw-semibold">Réference Produit</label>
+        <input id="produitRef" type="text" class="form-control" [(ngModel)]="demandeProduit.produit.ref">
+        <label for="produitDescription" class="form-label fw-semibold">Description Produit</label>
+        <input id="produitDescription" type="text" class="form-control" [(ngModel)]="demandeProduit.produit.description">
+
+        <label for="produitQuantite" class="form-label fw-semibold">Quantité Produit</label>
+        <input type="number" id="produitQuantite" [(ngModel)]="demandeProduit.quantite">
       </div>
     </div>
-    <span class="fa fa-plus-square " (click)="contentAdd()"></span>
+    <span class="fa fa-plus-square " (click)="addDemandeProduit()"></span>
 
   </div>
     <button class="btn btn-blue align-self-center" (click)="save()">Valider</button>

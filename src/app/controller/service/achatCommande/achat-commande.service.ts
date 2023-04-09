@@ -12,7 +12,7 @@ export class AchatCommandeService {
 
   private _achatCommandes !: Array<AchatCommande>;
 
-  private url ="http://localhost:8033/GestionCommertiale/AchatCommande";
+  private url ="http://localhost:8033/GestionCommerciale/AchatCommande";
 
   constructor(private http:HttpClient) {}
 

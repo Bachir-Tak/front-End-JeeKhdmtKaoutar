@@ -9,7 +9,7 @@ import {RecapitulatifAchat} from "../../model/recapitulatifAchat/recapitulatifAc
 export class RecapitulatifService {
   private _recapitulatifAchat!: RecapitulatifAchat;
   private _recapitulatifAchats!: Array<RecapitulatifAchat>;
-  private _url = "http://localhost:8033/GestionCommertiale/RecapitulatifAchat/"
+  private _url = "http://localhost:8033/GestionCommerciale/RecapitulatifAchat/"
 
   constructor(private _http:HttpClient) { }
   public findAll():Observable<Array<RecapitulatifAchat>>{

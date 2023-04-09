@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { Client } from 'src/app/controller/model/client/client.model';
 import {ClientService} from "../../../controller/service/client/client.service";
+import {AppComponent} from "../../../app.component";
+import {CompteService} from "../../../controller/service/compte/compte.service";
 
 
 @Component({
@@ -9,14 +11,22 @@ import {ClientService} from "../../../controller/service/client/client.service";
   styleUrls: ['./client-create.component.css']
 })
 export class ClientCreateComponent implements OnInit{
-  constructor(private clientService: ClientService) {
+  constructor(private clientService: ClientService,private appComponent: AppComponent,private compteService:CompteService) {
+  }
+  goLogin():void{
+    this.appComponent.signup=false;
+
   }
   ngOnInit(): void {
   }
+  compte=this.compteService.compte;
   public save(): void{
-    this.clientService.save().subscribe(data =>{
+
+    this.compteService.save(this.compte).subscribe(data =>{
       if(data != null){
         alert('SAVE SUCCESS');
+        this.appComponent.signup=false;
+
       }else{
         alert('SAVE ERROR');
       }

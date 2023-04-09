@@ -1,18 +1,27 @@
 .containera{
   background: linear-gradient(173deg, rgb(3, 41, 56) 0%, rgb(53, 140, 225) 49%);
-  width: 93vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
   height: 100vh;
 
 }
+i{
+  cursor: pointer;
+}
+.names{
+  display: flex;
+}
 .center{
+  margin: 10px;
   position: relative;
   padding-inline:  3rem;
-  width: 600px;
   background: white;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -39,7 +48,6 @@ form h1{
 }
 
 .form-group input, select {
-  width: 500px;
   height: 40px;
   border-radius: 15px;
   border: 1px solid #ccc;
