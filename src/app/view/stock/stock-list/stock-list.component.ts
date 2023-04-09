@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {StockService} from "../../../controller/service/stock/stock.service";
 import {Stock} from "../../../controller/model/stock/stock.model";
+import {Fournisseur} from "../../../controller/model/fournisseur/fournisseur.model";
 
 @Component({
   selector: 'app-stock-list',
@@ -35,6 +36,16 @@ export class StockListComponent implements OnInit{
 
   set stocks(value: Array<Stock>) {
     this.stockService.stocks = value;
+  }
+  public deleteByMagasinCode(stock: Stock, index: number): void {
+    console.log('haaa code' + stock.magasin.code);
+    this.stockService.deleteByMagasinCode(stock.magasin.code.toString()).subscribe(data => {
+      if (data > 0) {
+        this.stocks.splice(index, 1);
+      } else {
+        alert('Del Error');
+      }
+    });
   }
 
 }

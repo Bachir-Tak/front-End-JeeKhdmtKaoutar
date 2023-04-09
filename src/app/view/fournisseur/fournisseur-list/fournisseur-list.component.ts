@@ -28,8 +28,8 @@ export class FournisseurListComponent implements OnInit {
       } else {
         alert('Del Error');
       }
-    })
-  };
+    });
+  }
 
 
   get fournisseur(): Fournisseur {

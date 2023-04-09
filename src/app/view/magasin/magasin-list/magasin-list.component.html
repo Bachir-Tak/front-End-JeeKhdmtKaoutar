@@ -5,13 +5,16 @@
     <tr>
       <th scope="col">Libelle</th>
       <th scope="col">Code</th>
+      <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let maga of magasins">
+    <tr *ngFor="let maga of magasins , index as i">
       <td>{{maga.libelle}}</td>
       <td>{{maga.code}}</td>
-      <td>{{maga.stocks}}</td>
+      <td>
+        <button class="delete" (click)="deleteByCode(maga,i)"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</button>
+      </td>
     </tr>
     </tbody>
   </table>

@@ -12,11 +12,15 @@ export class ReceptionService {
 
   private _url ="http://localhost:8033/GestionCommertiale/Reception/";
 
-  save (reception:Reception):Observable<Reception>{
+  public save (reception:Reception):Observable<Reception>{
     return this.http.post<Reception>(this._url,reception);
   }
   public findAll(): Observable<Array<Reception>>{
     return this.http.get<Array<Reception>>(this._url);
+  }
+  public deleteByRef(ref:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'ref/'+ ref);
+    return this.http.delete<number>(this._url+ 'ref/' + ref);
   }
 
   constructor(private  http: HttpClient) { }

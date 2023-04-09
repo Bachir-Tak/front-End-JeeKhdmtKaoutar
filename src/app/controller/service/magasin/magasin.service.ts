@@ -12,11 +12,15 @@ export class MagasinService {
 
   private _url ="http://localhost:8033/GestionCommertiale/Magasin/";
 
-  save(magasin:Magasin):Observable<Magasin>{
+   public save(magasin:Magasin):Observable<Magasin>{
     return this.http.post<Magasin>(this._url,magasin);
   }
   public findAll(): Observable<Array<Magasin>>{
     return this.http.get<Array<Magasin>>(this._url);
+  }
+  public deleteByCode(code:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'code/'+ code);
+    return this.http.delete<number>(this._url+ 'code/' + code);
   }
   constructor(private http:HttpClient) { }
 

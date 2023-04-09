@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ReceptionService} from "../../../controller/service/reception/reception.service";
 import {Reception} from "../../../controller/model/reception/reception";
+import {Fournisseur} from "../../../controller/model/fournisseur/fournisseur.model";
 
 @Component({
   selector: 'app-reception-list',
@@ -33,5 +34,15 @@ export class ReceptionListComponent implements OnInit{
 
   set receptions(value: Array<Reception>) {
     this.receptionService.receptions = value;
+  }
+  public deleteByRef(reception: Reception, index: number): void {
+    console.log('haaa ref' + reception.ref);
+    this.receptionService.deleteByRef(reception.ref.toString()).subscribe(data => {
+      if (data > 0) {
+        this.receptions.splice(index, 1);
+      } else {
+        alert('Del Error');
+      }
+    });
   }
 }

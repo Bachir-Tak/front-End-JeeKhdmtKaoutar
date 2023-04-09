@@ -13,12 +13,16 @@ export class StockService {
 
   private _url ="http://localhost:8033/GestionCommertiale/Stock/";
 
-  save (stock:Stock):Observable<Stock>{
+   public save (stock:Stock):Observable<Stock>{
     return this.http.post<Stock>(this._url,stock);
   }
 
   public findAll(): Observable<Array<Stock>>{
     return this.http.get<Array<Stock>>(this._url);
+  }
+  public deleteByMagasinCode(code:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'code/'+ code);
+    return this.http.delete<number>(this._url+ 'code/' + code);
   }
   constructor(private  http: HttpClient) { }
 

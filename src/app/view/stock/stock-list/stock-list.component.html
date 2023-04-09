@@ -9,16 +9,20 @@
       <th scope="col">quantite</th>
       <th scope="col">quantiteEntree</th>
       <th scope="col">quantiteSortie</th>
+      <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let sto of stocks">
+    <tr *ngFor="let sto of stocks, index as i">
       <td>{{sto.ref}}</td>
       <td>{{sto.magasin.libelle}}</td>
       <td>{{sto.produit.nom}}</td>
       <td>{{sto.quantite}}</td>
       <td>{{sto.quantiteEntree}}</td>
       <td>{{sto.quantiteSortie}}</td>
+      <td>
+        <button class="delete" (click)="deleteByMagasinCode(sto, i)"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</button>
+      </td>
     </tr>
     </tbody>
   </table>
