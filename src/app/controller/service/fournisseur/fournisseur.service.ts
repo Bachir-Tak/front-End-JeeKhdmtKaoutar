@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Fournisseur} from "../../model/fournisseur/fournisseur.model";
 import {Observable} from "rxjs";
+import {CategorieProduit} from "../../model/categorieProduit/categorie-produit";
 
 @Injectable({
   providedIn: 'root'
@@ -51,21 +52,14 @@ export class FournisseurService  {
   public  findAll(): Observable<Array<Fournisseur>>{
     return this._http.get<Array<Fournisseur>>(this.url);
   }
+  public findByCode(code:string):Observable<Fournisseur>{
+    return this._http.get<Fournisseur>(this._url+'code/'+ code);
+  }
 
   public deleteByCode(code:string):Observable<number>{
     console.log('urrrllll ==>'+ this._url +'code/'+ code);
     return this._http.delete<number>(this._url+ 'code/' + code);
   }
-   postFournisseur(fournisseur: any): Observable<any> {
-    return this._http.post(this.url, this.fournisseur);
-  }
-  getFournisseurs(): Observable<Fournisseur[]> {
-    return this._http.get<Fournisseur[]>(this.url);
-  }
 
-  getFournisseur(id: number): Observable<Fournisseur> {
-    const url = `${this.url}/${id}`;
-    return this._http.get<Fournisseur>(url);
-  }
 
 }

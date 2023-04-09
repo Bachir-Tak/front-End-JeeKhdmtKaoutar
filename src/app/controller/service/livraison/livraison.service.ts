@@ -30,9 +30,9 @@ export class LivraisonService {
 
 
   get livraison(): Livraison {
-    if (this._livraison== null)
+    if (this._livraison == null)
     {
-      return this._livraison=new Livraison();
+      return this._livraison = new Livraison();
     }
     return this._livraison;
   }
@@ -42,9 +42,9 @@ export class LivraisonService {
   }
 
   get livraisons(): Array<Livraison> {
-    if (this._livraison== null)
+    if (this._livraison == null)
     {
-      return this._livraisons=new Array<Livraison>();
+      return this._livraisons = new Array<Livraison>();
     }
     return this._livraisons;
   }

@@ -2,6 +2,7 @@ import {Injectable, OnInit} from '@angular/core';
 import {CategorieProduit} from "../../model/categorieProduit/categorie-produit";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Client} from "../../model/client/client.model";
 
 
 @Injectable({
@@ -18,7 +19,9 @@ export class CategorieProduitService implements OnInit {
 
   ngOnInit(): void {
   }
-
+  public findByCode(code:string):Observable<CategorieProduit>{
+    return this._http.get<CategorieProduit>(this._url+'code/'+ code);
+  }
   public save(categorieProduit : CategorieProduit): Observable<number> {
     return this._http.post<number>(this.url, categorieProduit);
   }

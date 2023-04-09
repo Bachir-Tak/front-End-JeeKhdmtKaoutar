@@ -4,15 +4,16 @@
   <title>Recapitulatif d'achat</title>
   <link rel="stylesheet" type="text/css" href="./recapitulatif-achat-create.component.css">
 </head>  -->
-<body>
+ <script src="../recapitulatif-achat-list/recapitulatif-achat-list.component.ts"></script>
+ <body>
 <h1>Recapitulatif d'achat</h1>
 <table>
   <thead>
   <tr>
-    <th>Produit</th>
-    <th>Prix</th>
-    <th>Quantite</th>
-    <th>Total</th>
+    <th [(ngModel)]="recapitulatifAchat.commandeProduit.produit" >Produit</th>
+    <th [(ngModel)]="recapitulatifAchat.produit.prixVente">Prix</th>
+    <th [(ngModel)]="recapitulatifAchat.commandeProduit.quantite">Quantite</th>
+    <th [(ngModel)]="recapitulatifAchat.montantTotal">Total</th>
     <th>Action</th>
   </tr>
   </thead>
@@ -64,7 +65,7 @@
   <tr>
     <td colspan="3"><strong>Montant Total</strong></td>
     <td>$85.00</td>
-    <td> <button class="btn-validate">Valider</button>
+    <td> <button class="btn-validate"  (click)="save()">Valider</button>
     </td>
   </tr>
   </tfoot>

@@ -25,6 +25,8 @@ export class StockService {
   constructor(private  http: HttpClient,private produitService:ProduitService,private magasinService:MagasinService) { }
 
 
+
+
   get stock(): Stock {
     if (this._stock== null)
     {

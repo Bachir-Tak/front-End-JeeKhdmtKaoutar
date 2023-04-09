@@ -32,7 +32,7 @@ export class AchatListComponent implements OnInit{
     this.achatService.achats = value;
   }
   public deleteByCode(achat: Achat, index:number):void {
-    console.log('haaa cin' + achat.code);
+    console.log('haaa code' + achat.code);
     this.achatService.deleteByCode(achat.code.toString()).subscribe(data => {
       if (data > 0) {
         this.achats.splice(index, 1);

@@ -1,26 +1,28 @@
-<table class="table table-bordered table-hover" *ngIf="livraisons.length != 0 ">
+
+
+<div class="tablos shadow rounded-3">
+  <h1>La Listes Des Livraisons</h1>
+<table class="table table-hover text-center table-bordered table-responsive rounded-3" >
     <thead>
 
-      <th>Nom</th>
-      <th>Prenom</th>
-      <th>Email</th>
-      <th>Adresse</th>
-      <th>Ville</th>
-    <th>Action</th>
+      <th scope="col">Ref</th>
+      <th scope="col">Email</th>
+      <th scope="col">Ville</th>
+      <th scope="col">Date</th>
+    <th scope="col">Action</th>
     </thead>
     <tbody>
     <tr *ngFor="let liv of livraisons ; index as i">
-      <td>{{ liv.achat.client.nom}}</td>
-      <td>{{ liv.achat.client.prenom}}</td>
+      <td>{{ liv.ref}}</td>
       <td>{{ liv.achat.client.compte.email}}</td>
-      <td>{{ liv.achat.client.adresse}}</td>
-      <td>{{ liv.achat.client.ville }}</td>
-      <td><span (click)="deleteByRef(liv,i)" class="fa fa-trash btn btn-sm"></span>Supprimer</td>
+      <td>{{ liv.ville}}</td>
+      <td>{{ liv.date }}</td>
+      <td>
+        <button class="delete" (click)="deleteByRef(liv,i)"><i class="fa fa-trash"></i> Supprimer</button>
+      </td>
     </tr>
     </tbody>
   </table>
-
-
-
+</div>
 
 

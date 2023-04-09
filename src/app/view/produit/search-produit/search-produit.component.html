@@ -1,0 +1,22 @@
+<div class="tablos shadow rounded-3">
+  <input id="searchbar" onkeyup="search " type="text"
+         name="search" placeholder="Search with REF .." aria-describedby="button-addon2" [(ngModel)]="produit.ref">
+  <button type="button" classe="btn btn- primary" data-bs-toggle="button" id="button-addon2" (click)="search()"> Search</button>
+
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
+    <thead>
+    <th>Nom</th>
+    <th>Reference</th>
+    <th>Prix De Vente</th>
+    <th>Description</th>
+    </thead>
+    <tbody>
+      <td>{{ produit.nom }}</td>
+      <td>{{ produit.ref }}</td>
+      <td>{{ produit.prixVente}}</td>
+      <td>{{produit.description}}</td>
+      <td>
+    </tbody>
+  </table>
+</div>
+

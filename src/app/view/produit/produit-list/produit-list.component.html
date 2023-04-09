@@ -1,29 +1,28 @@
-<header>
+<div class="tablos shadow rounded-3">
+  <app-search-produit></app-search-produit>
   <h1>Liste de produits</h1>
-</header>
-<table>
+<table  class="table table-hover text-center table-bordered table-responsive rounded-3">
 <thead>
 <tr>
-  <th>Nom</th>
-  <th>Reference</th>
-  <th>Prix De Vente</th>
-  <th>Description</th>
-  <th>Image</th>
-  <th> Action</th>
+  <th scope="col">Nom</th>
+  <th scope="col">Reference</th>
+  <th scope="col">Prix De Vente</th>
+  <th scope="col">Description</th>
+  <th scope="col"> Action</th>
 </tr>
 </thead>
 <tbody>
-<tr *ngFor="let p of produits , index as i">
+<tr *ngFor="let p of produits ,index as i">
   <td>{{ p.nom }}</td>
   <td>{{ p.ref }}</td>
   <td>{{ p.prixVente}}</td>
   <td>{{p.description}}</td>
-  <td>{{p.imgUrl}}</td>
+
   <td>
     <button class="delete" (click)="deleteByRef(p,i)"><i class="fa fa-trash"></i> Supprimer</button>
   </td>
 </tr>
 </tbody>
 </table>
-
+</div>
 
