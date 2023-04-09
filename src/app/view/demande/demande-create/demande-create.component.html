@@ -1,30 +1,46 @@
-<div class="card cardos">
-  <div class="card-body">
-    <div class="card-title"><h5>Remplir les informations de votre demande</h5></div>
+<div class="containera">
+  <div class="card cardos">
+    <div class="card-body">
+      <div class="card-title"><h5>Remplir les informations de votre demande</h5></div>
 
-    <div class="form-group">
-      <label for="libelle" class="form-label fw-semibold">Libelle</label>
-      <input id="libelle" type="text" class="form-control" [(ngModel)]="demande.libelle">
-    </div>
-    <div class="form-group">
-      <label for="Code" class="form-label fw-semibold">Code</label>
-      <input id="Code" type="text" class="form-control" [(ngModel)]="demande.code">
-    </div>
-    <div class="form-group  justify-content-around w-100">
-      <div class="demandeProduits">
-        <label for="produitNom" class="form-label fw-semibold">Nom Produit</label>
-        <input id="produitNom" type="text" class="form-control" [(ngModel)]="demandeProduit.produit.nom">
-        <label for="produitRef" class="form-label fw-semibold">Réference Produit</label>
-        <input id="produitRef" type="text" class="form-control" [(ngModel)]="demandeProduit.produit.ref">
-        <label for="produitDescription" class="form-label fw-semibold">Description Produit</label>
-        <input id="produitDescription" type="text" class="form-control" [(ngModel)]="demandeProduit.produit.description">
-
-        <label for="produitQuantite" class="form-label fw-semibold">Quantité Produit</label>
-        <input type="number" id="produitQuantite" [(ngModel)]="demandeProduit.quantite">
+      <div class="form-group">
+        <label for="libelle" class="form-label fw-semibold">Libelle</label>
+        <input id="libelle" type="text" class="form-control" [(ngModel)]="demande.libelle">
       </div>
+      <div class="form-group">
+        <label for="Code" class="form-label fw-semibold">Code</label>
+        <input id="Code" type="text" class="form-control" [(ngModel)]="demande.code">
+      </div>
+      <div class="form-group  justify-content-around w-100">
+        <div class="demandeProduits">
+          <label for="Produit" class="form-label fw-semibold">Produit</label>
+          <select name="Produit" id="Produit" [(ngModel)]="demandeProduit.produit">
+            <option *ngFor="let i of  listProduit" [ngValue]="i">{{i.nom}}</option>
+          </select>
+          <label for="produitQuantite" class="form-label fw-semibold">Quantité Produit</label>
+          <input type="number" id="produitQuantite" [(ngModel)]="demandeProduit.quantite">
+        </div>
+      </div>
+      <span class="fa fa-plus-square " (click)="addDemandeProduit()"></span>
+
     </div>
-    <span class="fa fa-plus-square " (click)="addDemandeProduit()"></span>
+    <button class="btn btn-blue align-self-center" (click)="save()">Valider</button>
 
   </div>
-    <button class="btn btn-blue align-self-center" (click)="save()">Valider</button>
+  <div class="tablos shadow rounded-3">
+    <table class="table table-hover text-center table-bordered table-responsive rounded-3">
+      <thead>
+      <tr class="">
+        <th scope="col">Produit</th>
+        <th scope="col">Quantite</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let i of demande.demandeProduits">
+        <td>{{i.produit.nom}}</td>
+        <td>{{i.quantite}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

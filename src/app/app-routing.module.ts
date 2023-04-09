@@ -22,14 +22,17 @@ import {FournisseurCreateComponent} from "./view/fournisseur/fournisseur-create/
 import {
   CategorieProduitCreateComponent
 } from "./view/categorieProduit/categorie-produit-create/categorie-produit-create.component";
-import {
-  HistoriqueAchatListComponent
-} from "./view/historiqueAchats/historique-achat-list/historique-achat-list.component";
+
 import {WhichComponent} from "./view/Which/which/which.component";
 import {ConnexionService} from "./controller/service/connexion/connexion.service";
 import {ConnexionNotService} from "./controller/service/connexionNot/connexion-not.service";
 import {ProduitAjouterCreateComponent} from "./view/produit/produit-ajouter-create/produit-ajouter-create.component";
 import {DemandeListComponent} from "./view/demande/demande-list/demande-list.component";
+import {
+  HistoriqueAchatListComponent
+} from "./view/historiqueAchats/historique-achat-list/historique-achat-list.component";
+import {RemboursementListComponent} from "./view/remboursement/remboursement-list/remboursement-list.component";
+import {ProduitClientListComponent} from "./view/produit/produit-client-list/produit-client-list.component";
 
 
 const appRouteList: Routes = [
@@ -149,12 +152,12 @@ const appRouteList: Routes = [
   },
   {
     path: 'remboursement',
-    component: RemboursementCreateComponent,
+    component: RemboursementListComponent,
     canActivate: [ConnexionService]
   },
   {
     path: 'produits',
-    component: ProduitListComponent,
+    component: ProduitClientListComponent,
     canActivate: [ConnexionNotService]
   },
   {

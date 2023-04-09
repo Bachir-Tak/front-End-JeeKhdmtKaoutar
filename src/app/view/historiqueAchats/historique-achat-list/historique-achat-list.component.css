@@ -1,15 +1,15 @@
 .tablos thead{
   background-color: #6c7ae0;
   color: white;
-  margin-inline: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+
 }
 .tablos{
   width: 1000px;
   max-height: 500px;
   overflow: auto;
-
+  margin-inline: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
 
 }
 ::-webkit-scrollbar {
