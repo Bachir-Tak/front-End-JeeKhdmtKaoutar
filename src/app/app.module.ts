@@ -100,6 +100,7 @@ import {ProduitClientListComponent} from './view/produit/produit-client-list/pro
 import { SearchProduitComponent } from './view/produit/search-produit/search-produit.component';
 import { SearchCategorieComponent } from './view/categorieProduit/search-categorie/search-categorie.component';
 import { SearchFournisseurComponent } from './view/fournisseur/search-fournisseur/search-fournisseur.component';
+import { ProposComponent } from './view/propos/propos.component';
 
 
 
@@ -173,7 +174,8 @@ import { SearchFournisseurComponent } from './view/fournisseur/search-fournisseu
     ProduitClientListComponent,
     SearchProduitComponent,
     SearchCategorieComponent,
-    SearchFournisseurComponent
+    SearchFournisseurComponent,
+    ProposComponent
 
 
 

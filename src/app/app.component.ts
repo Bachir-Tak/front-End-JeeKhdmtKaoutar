@@ -11,7 +11,7 @@ export class AppComponent {
   }
 
   title = 'JEEproject';
-  yaro=true;
+  yaro=false; // true = admin      false = client
 
 
 }

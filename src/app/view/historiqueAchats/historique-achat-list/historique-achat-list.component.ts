@@ -12,6 +12,7 @@ export class HistoriqueAchatListComponent implements OnInit{
   constructor(private historiqueAchatService : HistoriqueAchatService) {
   }
   ngOnInit(): void {
+    this.findAll();
   }
   public findAll(): void{
     this.historiqueAchatService.findAll().subscribe(data => this.historiqueAchats = data);

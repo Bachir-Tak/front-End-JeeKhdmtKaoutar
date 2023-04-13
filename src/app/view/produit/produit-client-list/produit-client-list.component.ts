@@ -37,17 +37,6 @@ export class ProduitClientListComponent implements OnInit {
   set produits(value: Array<Produit>) {
     this.produitService.produits = value;
   }
-  public deleteByRef(produit : Produit, index:number):void {
-    console.log('haaa cin' + produit.ref);
-    this.produitService.deleteByRef(produit.ref.toString()).subscribe(data => {
-      if (data > 0) {
-        this.produits.splice(index, 1);
-      } else {
-        alert('Del Error');
-      }
-
-    });
-  }
 
 
 

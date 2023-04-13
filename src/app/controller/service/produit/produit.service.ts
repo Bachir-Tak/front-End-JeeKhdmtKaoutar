@@ -19,11 +19,11 @@ export class ProduitService  {
 
 
   public save(produit : Produit): Observable<number> {
-    return this._http.post<number>(this.url, produit);
+    return this._http.post<number>(this._url, produit);
   }
 
   public findAll(): Observable<Array<Produit>> {
-    return this._http.get<Array<Produit>>(this.url);
+    return this._http.get<Array<Produit>>(this._url);
   }
   public findByRef(ref:string):Observable<Produit>{
     return this._http.get<Produit>(this._url+'ref/'+ ref);

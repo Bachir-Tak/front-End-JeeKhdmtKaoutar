@@ -45,6 +45,8 @@ import {RemboursementListComponent} from "./view/remboursement/remboursement-lis
 import {
   AvoirLivraisonCreateComponent
 } from "./view/avoirLivraison/avoir-livraison-create/avoir-livraison-create.component";
+import {ProduitClientListComponent} from "./view/produit/produit-client-list/produit-client-list.component";
+import {ProposComponent} from "./view/propos/propos.component";
 
 
 const appRouteList: Routes = [
@@ -152,11 +154,15 @@ const appRouteList: Routes = [
   },
   {
     path: 'accueil-cl/produits',
-    component: ProduitListComponent
+    component: ProduitClientListComponent
   },
   {
     path: 'accueil-cl/historique',
     component: HistoriqueAchatListComponent
+  },
+  {
+    path: 'accueil-cl/apropos',
+    component: ProposComponent
   },
   {
     path: '**',
