@@ -14,7 +14,9 @@ h1{
   align-items: center;
   height: 20vh;
 }
-
+.price{
+  font-size: 20px;
+}
 .image{
   width: 82%;
   height: 30vh;
