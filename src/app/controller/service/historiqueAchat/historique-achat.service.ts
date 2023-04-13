@@ -11,7 +11,7 @@ export class HistoriqueAchatService {
   private _historiqueAchat !: HistoriqueAchat;
   private _historiqueAchats !: Array<HistoriqueAchat>;
 
-  private _url = "http://localhost:8033/GestionCommertiale/HistoriqueAchat";
+  private _url = "http://localhost:8033/GestionCommerciale/HistoriqueAchat/";
 
   constructor(private _http:HttpClient) { }
 

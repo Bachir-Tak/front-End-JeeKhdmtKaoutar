@@ -9,6 +9,14 @@
 
 
 }
+h1{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
 ::-webkit-scrollbar {
   width: 0.5vw;
 }
@@ -28,7 +36,7 @@ tr:hover{
 .btn {
   display: inline-block;
   padding: 10px;
-  background-color: #003459;
+  background-color: #7d55b9;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -37,10 +45,10 @@ tr:hover{
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #003459;
+  background-color: #7d55b9;
 }
 .btn-danger {
-  background-color: #003459;
+  background-color: #7d55b9;
 }
 .btn-danger:hover {
   background-color: #00171F;

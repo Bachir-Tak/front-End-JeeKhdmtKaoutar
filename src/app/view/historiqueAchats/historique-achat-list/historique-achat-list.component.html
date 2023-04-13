@@ -8,10 +8,11 @@
       <th scope="col">Action</th>
     </tr>
     <tr *ngFor="let h of historiqueAchats, index as i">
-      <td>{{historiqueAchat.ref }}</td>
-      <td>{{ historiqueAchat.date }}</td>
-      <td>{{ historiqueAchat.total}}</td>
+      <td>{{h.ref }}</td>
+      <td>{{ h.date }}</td>
+      <td>{{ h.total}}</td>
       <td>
         <button class="btn btn-danger" (click)="deleteByRef(historiqueAchat,i)"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</button>
+      </td>
   </table>
 </div>
