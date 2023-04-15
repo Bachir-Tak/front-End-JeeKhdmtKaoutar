@@ -1,28 +1,54 @@
+<div class="containera">
 <div class="card cardos">
   <div class="card-body">
     <div class="card-title"><h5>Remplir les informations de votre reception</h5></div>
 
     <div class="form-group">
       <label for="libelle" class="form-label fw-semibold">Libelle</label>
-      <input id="libelle" type="text" class="form-control">
+      <input id="libelle" type="text" class="form-control" [(ngModel)]="reception.libelle">
     </div>
     <div class="form-group">
       <label for="ref" class="form-label fw-semibold">Référence</label>
-      <input id="ref" type="text" class="form-control">
+      <input id="ref" type="text" class="form-control" [(ngModel)]="reception.ref">
+    </div>
+    <div class="form-group">
+      <label for="date" class="form-label fw-semibold">Date de réception</label>
+      <input id="date" type="date" class="form-control" [(ngModel)]="reception.dateReception">
     </div>
     <div class="form-group justify-content-around w-100 ">
-      <div [innerHtml]="content | sanitizeHtml" class="demandeProduits">
+      <div class="demandeProduits">
+        <label for="produit" class="form-label fw-semibold">Produit</label>
+        <select name="produit" id="produit" [(ngModel)]="receptionProduit.produit">
+          <option *ngFor="let i of  listProduit"  [ngValue]="i">{{i.nom}}</option>
+        </select>
+        <label for="produitQuantite" class="form-label fw-semibold">Quantité Produit</label>
+        <input type="number" id="produitQuantite" [(ngModel)]="receptionProduit.quantite">
       </div>
     </div>
-    <span class="fa fa-plus-square " (click)="contentAdd()"></span>
+    <span class="fa fa-plus-square " (click)="this.addReceptionProduit()"></span>
     <div class="form-group" class="demandeProduits">
-
-      <label for="stock" class="form-label fw-semibold">Stock</label>
-      <select name="stock" id="stock">
-        <option *ngFor="let i of stocks" value={{i.produit}}></option>
+      <label for="magasin" class="form-label fw-semibold">Magasin</label>
+      <select name="magasin" id="magasin" [(ngModel)]="reception.magasin">
+        <option *ngFor="let i of magasins" [ngValue]="i">{{i.libelle}}</option>
       </select>
     </div>
   </div>
-  <button class="btn btn-blue align-self-center">Valider</button>
-
+  <button class="btn btn-blue align-self-center" (click)="save()">Valider</button>
+</div>
+<div class="tablos shadow rounded-3">
+  <table class="table table-hover text-center table-bordered table-responsive rounded-3">
+    <thead>
+    <tr class="">
+      <th scope="col">Produit</th>
+      <th scope="col">Quantite</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of reception.receptionProduit">
+      <td>{{i.produit.nom}}</td>
+      <td>{{i.quantite}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 </div>

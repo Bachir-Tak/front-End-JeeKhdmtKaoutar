@@ -20,15 +20,15 @@
 
         <div class="inputBox">
           <span>nom :</span>
-          <input type="text" placeholder="john " [(ngModel)]="paiement.achat.client.nom">
+          <input type="text" placeholder="john " [(ngModel)]="paiement.commande.client.nom">
         </div>
         <div class="inputBox">
           <span>prenom :</span>
-          <input type="text" placeholder=" deo" [(ngModel)]="paiement.achat.client.prenom">
+          <input type="text" placeholder=" deo" [(ngModel)]="paiement.commande.client.prenom">
         </div>
         <div class="inputBox">
           <span>cin :</span>
-          <input type="text" placeholder="EE287536"  [(ngModel)]="paiement.achat.client.cin">
+          <input type="text" placeholder="EE287536"  [(ngModel)]="paiement.commande.client.cin">
         </div>
         <div class="inputBox">
           <span>id :</span>
@@ -37,9 +37,9 @@
 
         <div class="flex">
           <div class="inputBox">
-            <app-ville-list [(ngModel)]="paiement.achat.client.ville" ></app-ville-list>
+            <app-ville-list [(ngModel)]="paiement.commande.client.ville" ></app-ville-list>
           <!-- <span>Ville :</span>
-            <input type="text" placeholder="Morocco" [(ngModel)]="paiement.achat.client.ville"> -->
+            <input type="text" placeholder="Morocco" [(ngModel)]="paiement.commande.client.ville"> -->
           </div>
           <div class="inputBox">
             <span>paiementEffectue:</span>
@@ -59,15 +59,15 @@
         </div>
         <div class="inputBox">
           <span>Compte :</span>
-          <input type="text" placeholder="mr. john deo" [(ngModel)]="paiement.achat.client">
+          <input type="text" placeholder="mr. john deo" [(ngModel)]="paiement.commande.client">
         </div>
         <div class="inputBox">
-          <span>Achat :</span>
-          <input type="text" placeholder="EA678T435" [(ngModel)]="paiement.achat.code">
+          <span>Commande :</span>
+          <input type="text" placeholder="EA678T435" [(ngModel)]="paiement.commande.ref">
         </div>
         <div class="inputBox">
           <span>credit card number :</span>
-          <input type="number" placeholder="1111-2222-3333-4444" [(ngModel)]="paiement.achat.client.rib">
+          <input type="number" placeholder="1111-2222-3333-4444" [(ngModel)]="paiement.commande.client.rib">
         </div>
       </div>
     </div>

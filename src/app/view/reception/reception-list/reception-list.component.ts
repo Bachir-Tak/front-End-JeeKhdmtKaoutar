@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ReceptionService} from "../../../controller/service/reception/reception.service";
 import {Reception} from "../../../controller/model/reception/reception";
-import {Fournisseur} from "../../../controller/model/fournisseur/fournisseur.model";
+import { formatDate } from "@angular/common";
 
 @Component({
   selector: 'app-reception-list',
@@ -11,6 +11,11 @@ import {Fournisseur} from "../../../controller/model/fournisseur/fournisseur.mod
 export class ReceptionListComponent implements OnInit{
 
   constructor(private receptionService:ReceptionService) {
+  }
+  format(i:Date):String{
+    const format = 'dd/MM/yyyy';
+    const locale = 'en-US';
+    return formatDate(i, format,locale);
   }
   ngOnInit(): void {
     this.findAll()

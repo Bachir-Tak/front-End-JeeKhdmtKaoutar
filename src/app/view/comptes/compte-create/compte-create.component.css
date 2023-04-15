@@ -6,9 +6,8 @@
   box-sizing: border-box;
   font-family: 'poppins' ,sans-serif;
 }
-.container{
+.containeros{
   background: linear-gradient(173deg, rgb(3, 41, 56) 0%, rgb(53, 140, 225) 49%);
-  width: 93vw;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -35,12 +34,12 @@
   text-align: center;
   padding: 20px 0;
 }
-.center form{
+.center .formus{
   padding: 0 40px;
   box-sizing: border-box;
 }
 
-form  .txt_field {
+.formus .txt_field {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;

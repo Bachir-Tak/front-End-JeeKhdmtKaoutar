@@ -9,7 +9,7 @@ import {Recu} from "../../model/recu/recu.model";
 export class RecuService {
   private _recu!:  Recu;
   private _recus!: Array<Recu>;
-  private _url = "http://localhost:8033/GestionCommertiale/Recu/";
+  private _url = "http://localhost:8033/GestionCommerciale/Recu/";
 
   constructor(private _http:HttpClient) { }
   public findAll():Observable<Array<Recu>>{

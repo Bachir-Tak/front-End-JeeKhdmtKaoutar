@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ConnexionService} from "./controller/service/connexion/connexion.service";
 
 
 @Component({
@@ -6,12 +7,20 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  constructor(/*private clientService:ClientService*/) {
+export class AppComponent implements OnInit{
+  constructor(private connexionService:ConnexionService) {
   }
 
   title = 'JEEproject';
-  yaro=false; // true = admin      false = client
+  signup=false;
+
+  user=this.connexionService.connected[2];
+
+  connected=this.connexionService.connected;
+
+
+  ngOnInit(): void {
+  }
 
 
 }

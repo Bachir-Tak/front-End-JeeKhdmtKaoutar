@@ -14,7 +14,7 @@
     <tbody>
     <tr *ngFor="let liv of livraisons ; index as i">
       <td>{{ liv.ref}}</td>
-      <td>{{ liv.achat.client.compte.email}}</td>
+      <td>{{ liv.commande.client.compte.email}}</td>
       <td>{{ liv.ville}}</td>
       <td>{{ liv.date }}</td>
       <td>

@@ -1,5 +1,5 @@
+import { Client } from "../client/client.model";
 import {CommandeProduit} from "../commandeProduit/commande-produit";
-import {RecapitulatifAchat} from "../recapitulatifAchat/recapitulatifAchat.model";
 
 
 export class Commande {
@@ -8,7 +8,8 @@ export class Commande {
 
   public date !: Date;
 
-  public commandeProduits !: Array<CommandeProduit>;
+  public commandeProduits =new Array<CommandeProduit>;
 
-  public  recapitulatifAchat !: RecapitulatifAchat;
+  public client !: Client;
+
 }

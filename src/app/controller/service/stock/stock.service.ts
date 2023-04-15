@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Stock} from "../../model/stock/stock.model";
+import {ProduitService} from "../produit/produit.service";
+import {MagasinService} from "../magasin/magasin.service";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,7 @@ export class StockService {
   private _stock !: Stock
   private _stocks !: Array<Stock>;
 
-  private _url ="http://localhost:8033/GestionCommertiale/Stock/";
+  private _url ="http://localhost:8033/GestionCommerciale/Stock/";
 
    public save (stock:Stock):Observable<Stock>{
     return this.http.post<Stock>(this._url,stock);
@@ -24,7 +26,7 @@ export class StockService {
     console.log('urrrllll ==>'+ this._url +'code/'+ code);
     return this.http.delete<number>(this._url+ 'code/' + code);
   }
-  constructor(private  http: HttpClient) { }
+  constructor(private  http: HttpClient,private produitService:ProduitService,private magasinService:MagasinService) { }
 
 
 
@@ -32,8 +34,10 @@ export class StockService {
   get stock(): Stock {
     if (this._stock== null)
     {
-      return this._stock=new Stock();
-    }
+      this._stock=new Stock();
+      this._stock.magasin=this.magasinService.magasin;
+      this._stock.produit=this.produitService.produit;
+      return this._stock;    }
     return this._stock;
   }
 

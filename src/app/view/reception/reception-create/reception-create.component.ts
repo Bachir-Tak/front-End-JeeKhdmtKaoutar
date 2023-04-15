@@ -1,8 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Reception} from "../../../controller/model/reception/reception";
 import {ReceptionService} from "../../../controller/service/reception/reception.service";
-import {StockListComponent} from "../../stock/stock-list/stock-list.component";
-import {Stock} from "../../../controller/model/stock/stock.model";
+import {ReceptionProduit} from "../../../controller/model/receptionProduit/reception-produitl";
+import {Produit} from "../../../controller/model/produit/produit";
+import {ProduitService} from "../../../controller/service/produit/produit.service";
+import {MagasinService} from "../../../controller/service/magasin/magasin.service";
+import {Magasin} from "../../../controller/model/magasin/magasin.model";
 
 
 @Component({
@@ -10,25 +13,34 @@ import {Stock} from "../../../controller/model/stock/stock.model";
   templateUrl: './reception-create.component.html',
   styleUrls: ['./reception-create.component.css']
 })
-export class ReceptionCreateComponent implements OnInit{
-  content='<label for="produit" class="form-label fw-semibold">Produit</label> <select name="produit" id="produit"> <option *ngFor="let i of demande.demandeProduits" value={{i.produit}}></option> </select> <div class="form-group" class="demandeProduits"> <label for="quantite" class="form-label fw-semibold">Quantite</label> <input id="quantite" type="number" class="form-control"> </div>';
-  public contentAdd():void{
-    this.content+='<label for="produit" class="form-label fw-semibold">Produit</label> <select name="produit" id="produit"> <option *ngFor="let i of demande.demandeProduits" value={{i.produit}}></option> </select> <div class="form-group" class="demandeProduits"> <label for="quantite" class="form-label fw-semibold">Quantite</label> <input id="quantite" type="number" class="form-control"> </div>';
-  }
-  stockListComponent!:StockListComponent;
-  stocks!:Stock[];
-  public findStocks():void{
-    this.stockListComponent.findAll()
-    this.stocks=this.stockListComponent.stocks;
+export class ReceptionCreateComponent implements OnInit {
+
+
+  constructor(private receptionService: ReceptionService, private magasinService: MagasinService, private produitService: ProduitService) {
   }
 
-  constructor(private receptionService:ReceptionService) {
-  }
+  magasins!: Array<Magasin>;
+  listProduit!: Array<Produit>;
+
+
   ngOnInit() {
+
+    this.magasinService.findAll().subscribe(data => {
+      this.magasins = data
+    });
+    this.produitService.findAll().subscribe(data => {
+      this.listProduit = data
+    });
+
   }
 
-  public save():void {
-    this.receptionService.save(this.reception).subscribe(data=>alert(data))
+  public save(): void {
+
+    this.receptionService.save(this.reception).subscribe(data => {
+      alert(data);
+      this.reception = new Reception();
+      this.receptionProduit = new ReceptionProduit()
+    })
   }
 
   get reception(): Reception {
@@ -40,11 +52,16 @@ export class ReceptionCreateComponent implements OnInit{
     this.receptionService.reception = value;
   }
 
-  get receptions(): Array<Reception> {
-    return this.receptionService.receptions;
+  get receptionProduit(): ReceptionProduit {
+    return this.receptionService.receptionProduit;
   }
 
-  set receptions(value: Array<Reception>) {
-    this.receptionService.receptions = value;
+  set receptionProduit(value: ReceptionProduit) {
+    this.receptionService.receptionProduit = value;
+  }
+
+  public addReceptionProduit() {
+    this.receptionService.addReceptionProduit();
+    this.receptionProduit = new ReceptionProduit();
   }
 }

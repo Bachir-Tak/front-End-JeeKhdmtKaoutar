@@ -10,7 +10,7 @@ import {StockService} from "../stock/stock.service";
 export class PaiementService {
   private _paiement!: Paiement;
   private _paiements!: Array<Paiement>;
-  private _url = "http://localhost:8033/GestionCommertiale/Paiement/";
+  private _url = "http://localhost:8033/GestionCommerciale/Paiement/";
 
 
   constructor(private _http:HttpClient , private stockService: StockService) { }

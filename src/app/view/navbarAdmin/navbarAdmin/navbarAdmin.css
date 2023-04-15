@@ -1,0 +1,40 @@
+.mainDiv{
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-nav a{
+  color:#003459 !important;
+
+}
+.navbar-nav a:hover{
+  color: #2781c1 !important;
+
+}
+i{
+  cursor: pointer;
+}
+a:hover{
+  cursor: pointer;
+}
+img{
+  width:100px;
+}
+.profile{
+  height: 10%;
+  left: auto;
+  right: 0;
+  border: 0;
+  font-size: 20px;
+}
+.contentos{
+  margin: auto;
+}
+.contentosParent{
+  background-color: #f8f8fa;width: 100%;
+  height: 100%;
+  display: flex;
+
+}

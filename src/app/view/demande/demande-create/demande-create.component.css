@@ -28,8 +28,43 @@
 
 }
 .cardos{
+  margin-top: 100px;
+  margin-bottom: 100px;
   width: 500px;
   box-shadow: 2px 2px 10px #003459;
 ;
 
 }
+.containera{
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+}
+
+.tablos thead{
+  background-color: #003459;
+  color: white;
+}
+.tablos{
+  width: 500px;
+  max-height: 700px;
+  overflow: auto;
+
+
+}
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6c7ae0;
+  border-radius: 2px;
+}
+tr:nth-child(even){
+  background-color: #f8f6ff;
+
+}
+tr:hover{
+  background-color: #bfc3ec;
+
+}
+

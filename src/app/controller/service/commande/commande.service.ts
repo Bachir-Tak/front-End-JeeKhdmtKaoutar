@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Commande} from "../../model/commande/commande";
+import {CommandeProduit} from "../../model/commandeProduit/commande-produit";
 
 
 @Injectable({
@@ -9,9 +10,12 @@ import {Commande} from "../../model/commande/commande";
 })
 export class CommandeService {
   private _commande !: Commande;
+  private _commandeProduit!:CommandeProduit;
+
   private _commandes !: Array<Commande>;
 
-  private url="http://localhost:8033/GestionCommertiale/Commande";
+  private url="http://localhost:8033/GestionCommerciale/Commande/";
+
 
   constructor(private http:HttpClient) {
   }
@@ -43,6 +47,21 @@ export class CommandeService {
     return this.http.post<number>(this.url, this.commande);
   }public  findAll(): Observable<Array<CommandeService>>{
     return this.http.get<Array<CommandeService>>(this.url);
+  }
+  get commandeProduit(): CommandeProduit {
+    if (this._commandeProduit==null)
+    {
+      this._commandeProduit=new CommandeProduit();
+    }
+    return this._commandeProduit;
+  }
+
+  set commandeProduit(value: CommandeProduit) {
+    this._commandeProduit = value;
+  }
+
+  public addCommandeProduit(){
+    this.commande.commandeProduits.push(this.commandeProduit)
   }
 
 

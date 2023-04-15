@@ -1,7 +1,8 @@
 <div class="containera">
 <div class="center">
   <form id="signup-form">
-    <h1>Sign Up</h1>
+    <i class="fa fa-arrow-left" (click)="goLogin()"></i><h1>Sign Up</h1>
+    <div class="names">
     <div class="form-group">
       <label for="firstname"><h6>First Name </h6></label>
       <input type="text" id="firstname" name="firstname" [(ngModel)] = "client.nom">
@@ -10,13 +11,14 @@
       <label for="lastname"><h6>last Name </h6></label>
       <input type="text" id="lastname" name="lastname" [(ngModel)] = "client.prenom">
     </div>
+    </div>
     <div class="form-group">
       <label for="cin"> <h6>Cin</h6></label>
-      <input type="text" id="cin" name="cin" [(ngModel)] = "client.cin">
+      <input type="text" id="cin" name="cin" [(ngModel)] = "compte.client.cin">
     </div>
     <div class="form-group">
       <label> <h6>Ville</h6> </label>
-      <select id="ville" class="form-select"   name="ville" [(ngModel)]="client.ville">
+      <select id="ville" class="form-select"   name="ville" [(ngModel)]="compte.client.ville">
         <option selected >--- selecter une ville ---</option>
         <option value="Casablanca">Casablanca</option>
         <option value="Rabat">Rabat</option>
@@ -32,17 +34,17 @@
     </div>
     <div class="form-group">
       <label for="email"><h6>Email</h6></label>
-      <input type="email" id="email" name="email"  [(ngModel)]="client.compte.email">
+      <input type="email" id="email" name="email"  [(ngModel)]="compte.email">
     </div>
     <div class="form-group">
     </div>
     <div class="form-group">
       <label for="password"><h6>Password</h6></label>
-      <input type="password" id="password" name="password" [(ngModel)]="client.compte.motDePasse"  >
+      <input type="password" id="password" name="password" [(ngModel)]="compte.motDePasse"  >
     </div>
     <div class="form-group">
       <label for="confirm-password"><h6>Confirm Password</h6></label>
-      <input type="password" id="confirm-password" name="confirm-password"  [(ngModel)]="client.compte.motDePasse"  >
+      <input type="password" id="confirm-password" name="confirm-password"  [(ngModel)]="compte.motDePasse"  >
     </div>
     <button type="submit" (click)="save()"> sign up</button>
   </form>

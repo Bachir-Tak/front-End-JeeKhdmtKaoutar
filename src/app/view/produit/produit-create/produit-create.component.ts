@@ -1,9 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProduitService} from "../../../controller/service/produit/produit.service";
 import {Produit} from "../../../controller/model/produit/produit";
-import {CommandeProduit} from "../../../controller/model/commandeProduit/commande-produit";
-import {CommandeService} from "../../../controller/service/commande/commande.service";
-import {CommandeProduitService} from "../../../controller/service/commandeProduit/commande-produit.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-produit-create',
@@ -11,23 +9,20 @@ import {CommandeProduitService} from "../../../controller/service/commandeProdui
   styleUrls: ['./produit-create.component.css']
 })
 export class ProduitCreateComponent implements OnInit {
-  commandeProduits!:Array<CommandeProduit>
-  constructor(private produitService: ProduitService , private commandeService: CommandeService, private commandeProduitService: CommandeProduitService) {
+  constructor(private produitService: ProduitService ,private route: ActivatedRoute ) {
   }
 
   ngOnInit(): void {
-    this.findAll();
+this.affiche();  }
+  public affiche(){
+    this.produitService.findByRef(this.route.snapshot.params["ProduitRef"]).subscribe(data => this.produit = data);
   }
   public findAll(): void {
     this.produitService.findAll().subscribe(data => this.produits = data)
 
   }
-  commandeProduit = new CommandeProduit();
-  public addToCard(produit : Produit): Array<CommandeProduit>{
-    this.commandeProduit.produit=produit;
-    this.commandeProduits.push(this.commandeProduit);
-    return this.commandeProduits;
-  }
+
+
   public save(): void {
     this.produitService.save(this.produit).subscribe(data => {
       if (data > 0) {

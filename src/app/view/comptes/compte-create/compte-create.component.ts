@@ -1,31 +1,50 @@
 import {Component, OnInit} from '@angular/core';
 import {CompteService} from "../../../controller/service/compte/compte.service";
 import {Compte} from "../../../controller/model/compte/compte";
-import {Router} from '@angular/router';
+import {ConnexionService} from "../../../controller/service/connexion/connexion.service";
+import {AppComponent} from "../../../app.component";
 
 @Component({
   selector: 'app-compte-create',
   templateUrl: './compte-create.component.html',
   styleUrls: ['./compte-create.component.css']
 })
-export class CompteCreateComponent  implements OnInit{
+export class CompteCreateComponent implements OnInit {
 
-  constructor(private  compteService: CompteService , private router: Router) {}
-
-  goToSignup() {
-    this.router.navigate(['/signup']);
+  constructor(private compteService: CompteService, private connexionService:ConnexionService,private appComponent: AppComponent) {
   }
+  goToSignup() {
+    this.appComponent.signup=true;
+  }
+
   ngOnInit(): void {
   }
-  public save(): void{
-    this.compteService.save(this.compte).subscribe(data =>{
-      if(data != null){
-        alert('SAVE SUCCESS');
-      }else{
-        alert('SAVE ERROR');
+  public findByEmail(): void {
+    this.compteService.findByEmail(this.compte).subscribe(data => {
+      if(data==null){
+        alert("Utilisateur inexistant")
+        this.connexionService.connected[0]=false;
       }
+      else if (this.compte.motDePasse == data.motDePasse) {
+        this.compte = data;
+        if (this.compte.admin==true){
+          this.appComponent.user=true;
+          this.connexionService.connected[2]=true;
+        }
+        else{
+          this.appComponent.user=false;
+          this.connexionService.connected[2]=false;
+        }
+        this.connexionService.connected[0]=true;
+        this.connexionService.connected[1]=this.compte;
+      } else {
+        alert("Mot de passe eronné");
+        this.connexionService.connected[0]=false;
+      }
+      ;
     });
   }
+
   get compte(): Compte {
     return this.compteService.compte;
   }

@@ -2,28 +2,34 @@ import { Injectable } from '@angular/core';
 import {Magasin} from "../../model/magasin/magasin.model";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Stock} from "../../model/stock/stock.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MagasinService {
   private _magasin!:Magasin;
+
+  private _stock!:Stock
   private _magasins!:Array<Magasin>;
 
-  private _url ="http://localhost:8033/GestionCommertiale/Magasin/";
+  private _url ="http://localhost:8033/GestionCommerciale/Magasin/";
 
-   public save(magasin:Magasin):Observable<Magasin>{
+  save(magasin:Magasin):Observable<Magasin>{
     return this.http.post<Magasin>(this._url,magasin);
-  }
-  public findAll(): Observable<Array<Magasin>>{
-    return this.http.get<Array<Magasin>>(this._url);
   }
   public deleteByCode(code:string):Observable<number>{
     console.log('urrrllll ==>'+ this._url +'code/'+ code);
     return this.http.delete<number>(this._url+ 'code/' + code);
   }
-  constructor(private http:HttpClient) { }
+  public findAll(): Observable<Array<Magasin>>{
+    return this.http.get<Array<Magasin>>(this._url);
+  }
 
+  public addStock(){
+    this.magasin.stocks.push(this.stock)
+  }
+  constructor(private http:HttpClient) { }
 
   get magasin(): Magasin {
     if (this._magasin==null)
@@ -32,6 +38,7 @@ export class MagasinService {
     }
     return this._magasin;
   }
+
 
   set magasin(value: Magasin) {
 
@@ -50,4 +57,16 @@ export class MagasinService {
     this._magasins = value;
   }
 
+
+  get stock(): Stock {
+    if (this._stock==null)
+    {
+      this._stock=new Stock();
+    }
+    return this._stock;
+  }
+
+  set stock(value: Stock) {
+    this._stock = value;
+  }
 }

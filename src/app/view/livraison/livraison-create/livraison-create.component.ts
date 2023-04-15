@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LivraisonService} from "../../../controller/service/livraison/livraison.service";
 import {Livraison} from "../../../controller/model/livraison/livraison.model";
+import {ActivatedRoute, Router} from "@angular/router";
 
 
 
@@ -11,9 +12,10 @@ import {Livraison} from "../../../controller/model/livraison/livraison.model";
 })
 export class LivraisonCreateComponent implements OnInit {
 
-  constructor(private livraisonService: LivraisonService) {
+  constructor(private livraisonService: LivraisonService,private route:ActivatedRoute) {
 
   }
+
 
   public save(): void {
     this.livraisonService.save(this.livraison).subscribe(data => {
@@ -48,6 +50,7 @@ export class LivraisonCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.livraison.commande.client=this.route.snapshot.params["Commande"];
   }
 
 }

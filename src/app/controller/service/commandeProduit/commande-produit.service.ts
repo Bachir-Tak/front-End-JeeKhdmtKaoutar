@@ -11,7 +11,7 @@ export class CommandeProduitService {
   private _commandeProduit !: CommandeProduit;
   private _commandeProduits !: Array<CommandeProduit>;
 
-  private url="http://localhost:8033/GestionCommertiale/CommandeProduit";
+  private url="http://localhost:8033/GestionCommerciale/CommandeProduit";
 
   constructor(private http:HttpClient) { }
 

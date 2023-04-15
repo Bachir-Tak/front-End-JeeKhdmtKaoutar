@@ -11,7 +11,7 @@ export class FournisseurProduitService {
 
   private _fournisseurProduits !: Array<FournisseurProduit>;
 
-  private _url ="http://localhost:8033/GestionCommertiale/FournisseurProduit";
+  private _url ="http://localhost:8033/GestionCommerciale/FournisseurProduit";
 
   constructor(private _http:HttpClient) { }
 

@@ -10,7 +10,7 @@ import {Observable} from "rxjs";
 export class AvoirLivraisonService {
   private _avoirLivraison !: AvoirLivraison;
   private _avoirLivraisons !: Array<AvoirLivraison>;
-  private _url ="http://localhost:8033/GestionCommertiale/AvoirLivraison";
+  private _url ="http://localhost:8033/GestionCommerciale/AvoirLivraison";
 
   public save():Observable<number>{
     return this.http.post<number>(this._url,this.avoirLivraison);

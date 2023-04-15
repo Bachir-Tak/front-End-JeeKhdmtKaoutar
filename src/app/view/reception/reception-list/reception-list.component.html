@@ -3,8 +3,9 @@
 <table class="table table-hover text-center table-bordered table-responsive rounded-3">
   <thead>
   <tr class="">
-    <th scope="col">Reference</th>
-    <th scope="col">Stock</th>
+    <th scope="col">Référence</th>
+    <th scope="col">Libelle</th>
+    <th scope="col">Magasin</th>
     <th scope="col">Date Reception</th>
     <th scope="col">Action</th>
   </tr>
@@ -12,8 +13,9 @@
   <tbody>
   <tr *ngFor="let recep of receptions, index as i">
     <td>{{recep.ref}}</td>
-    <td>{{recep.stock.ref}}</td>
-    <td>{{recep.dateReception}}</td>
+    <td>{{recep.libelle}}</td>
+    <td>{{recep.magasin.libelle}}</td>
+    <td>{{format(recep.dateReception)}}</td>
     <td>
       <button class="delete" (click)="deleteByRef(recep,i)"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</button>
     </td>

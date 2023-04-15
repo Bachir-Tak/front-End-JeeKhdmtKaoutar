@@ -1,28 +1,14 @@
-<html>
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xxx" crossorigin="anonymous" />
-</head>
+
 <body>
 <div class="container">
 <section class="flex-box">
   <div class="left">
     <div class="big-img">
-      <img src="assets/images/produit1.png" alt="produit">
-    </div>
-    <div class="images">
-      <div class="img-small" >
-        <img src="assets/images/produit2.jpg" onclick="showImg(this.src);">
-      </div>
-      <div class="img-small">
-        <img src="assets/images/produit3.jpg" onclick="showImg(this.src);" >
-      </div>
-      <div class="img-small">
-        <img src="assets/images/produit4.jpg"  onclick="showImg(this.src);">
-      </div>
+      <img src="{{produit.image}}" alt="produit">
     </div>
   </div>
   <div class="product-details">
-    <h2 class="product-name" name="nom">Product Name</h2>
+    <h2 class="product-name" name="nom">{{produit.nom}}</h2>
     <div class="product-rating">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffbf00" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -45,30 +31,21 @@
         <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
       </svg>
     </div>
-    <p class="product-description" name="description">Description  du produit.</p>
+    <p class="product-description" name="description">{{produit.description}}</p>
     <ul class="product-features" >
-      <li >Categorie Product : XXXXXXXX </li>
+      <li >Categorie Product : {{produit.categorieProduit}} </li>
 
     </ul>
     <div class="product-price">
-      <span class="product-price" > Prix : $XX.XXX</span>
+      <span class="product-price" > Prix : ${{produit.prixVente}}</span>
     </div>
     <div class="size">
     </div>
-    <button class="btn-acheter" (click)="addToCard(this.produit)">
-      <i class="fa fa-credit-card"></i>  Add To Card
-    </button>
-    <button class="favorite"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pinned" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <path d="M9 4v6l-2 4v2h10v-2l-2 -4v-6" />
-      <line x1="12" y1="16" x2="12" y2="21" />
-      <line x1="8" y1="4" x2="16" y2="4" />
-    </svg>Favorite</button>
+    <app-commande-create [produit]="produit" ></app-commande-create>
   </div>
 </section>
 </div>
-</body>
-</html>
+
 
 
 
