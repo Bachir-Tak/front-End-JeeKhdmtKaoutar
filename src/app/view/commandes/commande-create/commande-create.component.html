@@ -1,7 +1,7 @@
-<label for="commande" class="form-label fw-semibold" required>Quantité : </label>
-<input id="commande" type="number" class="form-control" [(ngModel)]="commandeProduit.quantite">
+<label for="commande" class="form-label fw-semibold" >Quantité : </label>
+<input id="commande" type="number" class="form-control"  name="quantite" [(ngModel)]="commandeProduit.quantite">
 <label for="commandeRef" class="form-label fw-semibold">Ref </label>
-<input id="commandeRef" type="text" class="form-control" [(ngModel)]="commande.ref" required>
+<input id="commandeRef" type="text" class="form-control" name="ref" [(ngModel)]="commande.ref" >
 <button class="btn-acheter" (click)="addToCart(this.produit)">
   <i class="fa fa-shopping-cart"></i>  Add To Card
 </button>

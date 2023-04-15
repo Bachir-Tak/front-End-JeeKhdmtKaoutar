@@ -37,7 +37,7 @@ export class CommandeCreateComponent implements OnInit{
     this.commandeService.save(this.commande).subscribe(data => {
       if(data != null){
         alert('SAVE SUCCESS');
-        this.router.navigate(['/livraison', this.commande.ref])
+         this.router.navigate(['/livraison', this.commande.ref])
 
       }else{
         alert('SAVE ERROR');
