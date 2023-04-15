@@ -3,16 +3,16 @@
     <h1>Livraison Formulaire</h1>
     <div class="mycla">
       <div class="form-group">
+        <label for="ref"><i class="fa fa-pencil" aria-hidden="true"></i> Livraison ref: </label>
+        <input type="text" class="form-control" id="ref" name="name"  [(ngModel)]="livraison.ref">
+      </div>
+      <div class="form-group">
         <label for="name"><i class="fa fa-pencil" aria-hidden="true"></i> Nom:</label>
         <input type="text" class="form-control" id="name" name="name"  [(ngModel)]="livraison.commande.client.nom">
       </div>
       <div class="form-group">
         <label for="first-name"><i class="fa fa-pencil" aria-hidden="true"></i> Prénom:</label>
         <input type="text" class="form-control" id="first-name" name="first-name" [(ngModel)]="livraison.commande.client.prenom">
-      </div>
-      <div class="form-group">
-        <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i> Email:</label>
-        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="livraison.commande.client.compte.email">
       </div>
       <div class="form-group">
         <label for="address"><i class="fa fa-address-book" aria-hidden="true"></i> Address:</label>

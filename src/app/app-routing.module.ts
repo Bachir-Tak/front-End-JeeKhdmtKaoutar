@@ -33,6 +33,7 @@ import {ConnexionNotService} from "./controller/service/connexionNot/connexion-n
 import {ProposComponent} from "./view/propos/propos.component";
 import {ProduitCreateComponent} from "./view/produit/produit-create/produit-create.component";
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
+import {PaiementCreateComponent} from "./view/paiement/paiement-create/paiement-create.component";
 
 
 const appRouteList: Routes = [
@@ -177,8 +178,13 @@ const appRouteList: Routes = [
     canActivate: [ConnexionNotService]
   },
   {
-    path: 'livraison/:Commande',
+    path: 'livraison/:CommandeRef',
     component: LivraisonCreateComponent,
+    canActivate: [ConnexionNotService]
+  },
+  {
+    path: 'paiement/:CommandeRef',
+    component: PaiementCreateComponent,
     canActivate: [ConnexionNotService]
   },
   {

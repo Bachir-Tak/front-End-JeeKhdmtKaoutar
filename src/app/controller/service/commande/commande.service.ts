@@ -52,6 +52,9 @@ export class CommandeService {
   public findByClientCin(cin: string): Observable<Array<Commande>> {
     return this._http.get<Array<Commande>>(this._url + 'cin/' + cin);
   }
+  public  findByRef(ref:string): Observable<Commande>{
+    return this.http.get<Commande>(this.url+'ref/' + ref);
+  }
   get commandeProduit(): CommandeProduit {
     if (this._commandeProduit==null)
     {
