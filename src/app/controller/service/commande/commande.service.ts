@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Commande} from "../../model/commande/commande";
 import {CommandeProduit} from "../../model/commandeProduit/commande-produit";
+import {Client} from "../../model/client/client.model";
 
 
 @Injectable({
@@ -14,10 +15,10 @@ export class CommandeService {
 
   private _commandes !: Array<Commande>;
 
-  private url="http://localhost:8033/GestionCommerciale/Commande/";
+  private _url="http://localhost:8033/GestionCommerciale/Commande/";
 
 
-  constructor(private http:HttpClient) {
+  constructor(private _http:HttpClient) {
   }
 
 
@@ -44,9 +45,12 @@ export class CommandeService {
   }
 
   public  save(commandeService: Commande):Observable<number>{
-    return this.http.post<number>(this.url, this.commande);
-  }public  findAll(): Observable<Array<CommandeService>>{
-    return this.http.get<Array<CommandeService>>(this.url);
+    return this._http.post<number>(this._url, this.commande);
+  }public  findAll(): Observable<Array<Commande>>{
+    return this._http.get<Array<Commande>>(this._url);
+  }
+  public findByClientCin(cin: string): Observable<Array<Commande>> {
+    return this._http.get<Array<Commande>>(this._url + 'cin/' + cin);
   }
   public  findByRef(ref:string): Observable<Commande>{
     return this.http.get<Commande>(this.url+'ref/' + ref);
@@ -66,7 +70,26 @@ export class CommandeService {
   public addCommandeProduit(){
     this.commande.commandeProduits.push(this.commandeProduit)
   }
+  public deleteByRef(ref: string): Observable<number> {
+    console.log('urrrllll ==>' + this._url + 'ref/' + ref);
+    return this._http.delete<number>(this._url + 'ref/' + ref);
+  }
 
+  get url(): string {
+    return this._url;
+  }
+
+  set url(value: string) {
+    this._url = value;
+  }
+
+  get http(): HttpClient {
+    return this._http;
+  }
+
+  set http(value: HttpClient) {
+    this._http = value;
+  }
 
 
 }

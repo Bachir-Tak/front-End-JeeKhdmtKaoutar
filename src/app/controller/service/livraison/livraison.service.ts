@@ -32,7 +32,7 @@ export class LivraisonService {
   get livraison(): Livraison {
     if (this._livraison == null)
     {
-      return this._livraison = new Livraison();
+      this._livraison = new Livraison();
     }
     return this._livraison;
   }
@@ -45,7 +45,7 @@ export class LivraisonService {
   get livraisons(): Array<Livraison> {
     if (this._livraisons == null)
     {
-      return this._livraisons = new Array<Livraison>();
+      this._livraisons = new Array<Livraison>();
     }
     return this._livraisons;
   }

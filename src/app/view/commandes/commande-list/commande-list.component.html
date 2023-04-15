@@ -1,1 +1,21 @@
-<p>commande-list works!</p>
+<div  style="margin-left: 150px" class="tablos shadow rounded-3">
+  <h1>Historique Commandes</h1>
+  <table  class="table table-hover text-center table-bordered table-responsive rounded-3">
+    <tr>
+      <th scope="col">Référence</th>
+      <th scope="col">Date</th>
+      <th scope="col">Total</th>
+      <th scope="col">Action</th>
+    </tr>
+    <tr *ngFor="let commande of commandes, index as i">
+      <tr *ngFor="let c of commandeProduits, index as i">
+    <td>{{c.commande.ref }}</td>
+    <td>{{ c.commande.date }}</td>
+    <td>{{ c.prixTotale}}</td>
+    <td>
+      <button class="btn btn-danger" (click)="deleteByRef(commande,i)"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</button>
+    </td>
+  </tr>
+
+  </table>
+</div>
