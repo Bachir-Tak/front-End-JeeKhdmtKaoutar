@@ -41,8 +41,9 @@ export class LivraisonService {
     this._livraison = value;
   }
 
+
   get livraisons(): Array<Livraison> {
-    if (this._livraison == null)
+    if (this._livraisons == null)
     {
       return this._livraisons = new Array<Livraison>();
     }
@@ -52,5 +53,4 @@ export class LivraisonService {
   set livraisons(value: Array<Livraison>) {
     this._livraisons = value;
   }
-
 }

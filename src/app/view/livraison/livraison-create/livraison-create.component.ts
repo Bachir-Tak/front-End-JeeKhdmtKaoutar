@@ -43,13 +43,7 @@ export class LivraisonCreateComponent implements OnInit {
     this.livraisonService.livraison = value;
   }
 
-  get livraisons(): Array<Livraison> {
-    return this.livraisonService.livraisons;
-  }
 
-  set livraisons(value: Array<Livraison>) {
-    this.livraisonService.livraisons = value;
-  }
 
   ngOnInit(): void {
     this.commandeSerivce.findByRef(this.route.snapshot.params["CommandeRef"]).subscribe(data=>{console.log(data);this.livraison.commande=data});

@@ -153,6 +153,11 @@ const appRouteList: Routes = [
     canActivate: [ConnexionService]
   },
   {
+    path: 'livraisonAdmin',
+    component: LivraisonListComponent,
+    canActivate: [ConnexionService]
+  },
+  {
     path: 'produits',
     component: ProduitClientListComponent,
     canActivate: [ConnexionNotService]

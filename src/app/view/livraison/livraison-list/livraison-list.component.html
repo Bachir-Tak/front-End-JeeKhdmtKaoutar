@@ -6,7 +6,7 @@
     <thead>
 
       <th scope="col">Ref</th>
-      <th scope="col">Email</th>
+      <th scope="col">Commande</th>
       <th scope="col">Ville</th>
       <th scope="col">Date</th>
     <th scope="col">Action</th>
@@ -14,7 +14,7 @@
     <tbody>
     <tr *ngFor="let liv of livraisons ; index as i">
       <td>{{ liv.ref}}</td>
-      <td>{{ liv.commande.client.compte.email}}</td>
+      <td>{{ liv.commande.ref}}</td>
       <td>{{ liv.ville}}</td>
       <td>{{ liv.date }}</td>
       <td>

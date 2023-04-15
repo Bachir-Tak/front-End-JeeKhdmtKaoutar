@@ -27,7 +27,7 @@
 
             <p>Mode de paiement: <span>{{ avoirLivraison.livraison.commande.client.rib }}</span></p>
 
-            <p>Numéro de commande: <span>{{ avoirLivraison.livraison.livraisonCommande.commande.id }}</span></p>
+            <p>Numéro de commande: <span>{{ avoirLivraison.livraison.commande.id }}</span></p>
           </div>
           <div class="col-5">
             <p>Date de livraison: <span>{{ avoirLivraison.livraison.date }}</span></p>
@@ -47,7 +47,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let pr of avoirLivraison.livraison.livraisonCommande.commande.commandeProduits">
+        <tr *ngFor="let pr of avoirLivraison.livraison.commande.commandeProduits">
           <td>
             <div class="media">
               <p>{{ pr.produit.id }}</p>
@@ -64,7 +64,7 @@
       </table>
     </section>
 
-    <section class="balance-info" *ngFor="let pr of avoirLivraison.livraison.livraisonCommande.commande.commandeProduits">
+    <section class="balance-info" *ngFor="let pr of avoirLivraison.livraison.commande.commandeProduits">
       <div class="row">
         <div class="col-4">
           <table class="table border-0 table-hover">
