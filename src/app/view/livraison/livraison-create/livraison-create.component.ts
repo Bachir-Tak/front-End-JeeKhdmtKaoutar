@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {LivraisonService} from "../../../controller/service/livraison/livraison.service";
 import {Livraison} from "../../../controller/model/livraison/livraison.model";
 import {ActivatedRoute, Router} from "@angular/router";
+import {CommandeService} from "../../../controller/service/commande/commande.service";
 
 
 
@@ -12,17 +13,18 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class LivraisonCreateComponent implements OnInit {
 
-  constructor(private livraisonService: LivraisonService,private route:ActivatedRoute) {
+  constructor(private livraisonService: LivraisonService,private route:ActivatedRoute, private commandeSerivce:CommandeService, private router:Router) {
 
   }
 
 
   public save(): void {
     this.livraisonService.save(this.livraison).subscribe(data => {
-        if (data < 0) {
+        if (data != null) {
         // this.livraisons.push({...this.livraison});
         // this.livraisonService.livraison == null;
           alert('Save Success');
+          this.router.navigate(['/paiement', this.livraison.commande.ref])
         } else {
           alert('Save Error ::: Ref Exist');
         }
@@ -50,7 +52,7 @@ export class LivraisonCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.livraison.commande.client=this.route.snapshot.params["Commande"];
+    this.commandeSerivce.findByRef(this.route.snapshot.params["CommandeRef"]).subscribe(data=>{console.log(data);this.livraison.commande=data});
   }
 
 }

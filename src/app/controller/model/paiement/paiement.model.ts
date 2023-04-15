@@ -4,7 +4,7 @@ import {Compte} from "../compte/compte";
 export class Paiement {
   public id!: number;
   public code!: string;
-  public paiementEffectue!: number;
+  public paiementEffectue!: boolean;
   public commande!: Commande;
   public compte!: Compte;
 }

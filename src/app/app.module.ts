@@ -54,6 +54,7 @@ import {RemboursementListComponent} from "./view/remboursement/remboursement-lis
 import {PiechartComponent} from "./view/accueil/piechart/piechart.component";
 import {CourbeComponent} from "./view/accueil/courbe/courbe.component";
 import {ListComponent} from "./view/accueil/list/list.component";
+import {PaiementCreateComponent} from "./view/paiement/paiement-create/paiement-create.component";
 
 @NgModule({
   declarations: [
@@ -104,7 +105,8 @@ import {ListComponent} from "./view/accueil/list/list.component";
     PiechartComponent,
     CourbeComponent,
     ListComponent,
-    CommandeCreateComponent
+    CommandeCreateComponent,
+    PaiementCreateComponent
 
   ],
   imports: [

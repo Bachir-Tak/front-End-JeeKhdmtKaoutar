@@ -48,6 +48,9 @@ export class CommandeService {
   }public  findAll(): Observable<Array<CommandeService>>{
     return this.http.get<Array<CommandeService>>(this.url);
   }
+  public  findByRef(ref:string): Observable<Commande>{
+    return this.http.get<Commande>(this.url+'ref/' + ref);
+  }
   get commandeProduit(): CommandeProduit {
     if (this._commandeProduit==null)
     {

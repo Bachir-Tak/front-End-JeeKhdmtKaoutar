@@ -28,14 +28,21 @@ export class CommandeCreateComponent implements OnInit{
     this.commandeProduit.prixUnitaire=produit.prixVente;
     this.commandeService.addCommandeProduit();
     this.commandeProduit = new CommandeProduit();
+  }
+  ngOnInit(): void {
     // @ts-ignore
     this.commande.client=this.appComponent.connected[1]["client"];
   }
-  ngOnInit(): void {
-  }
   public save(): void{
-    this.router.navigate(['livraison', this.commande.client])
+    this.commandeService.save(this.commande).subscribe(data => {
+      if(data != null){
+        alert('SAVE SUCCESS');
+        this.router.navigate(['/livraison', this.commande.ref])
 
+      }else{
+        alert('SAVE ERROR');
+      }
+    });
   }
   get commande(): Commande {
     return this.commandeService.commande;
