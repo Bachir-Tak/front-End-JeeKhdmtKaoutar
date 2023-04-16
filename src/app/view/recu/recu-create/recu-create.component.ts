@@ -11,6 +11,7 @@ import {PaiementService} from "../../../controller/service/paiement/paiement.ser
   styleUrls: ['./recu-create.component.css']
 })
 export class RecuCreateComponent implements OnInit{
+  savedRecu!: Recu;
   ngOnInit(): void {
     this.paiementSerivce.findByCode(this.route.snapshot.params["PaiementCode"]).subscribe(data=>{this.recu.paiement=data});
 
@@ -21,7 +22,7 @@ export class RecuCreateComponent implements OnInit{
         if (data == null) {
           alert('failure : code exist')
         }else{
-          //this.recu = null;
+          this.savedRecu = data;
           alert('success : recu sav')
         }
       }
