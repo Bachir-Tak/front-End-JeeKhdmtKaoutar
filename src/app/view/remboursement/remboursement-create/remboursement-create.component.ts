@@ -15,9 +15,12 @@ export class RemboursementCreateComponent implements OnInit{
   ngOnInit(): void {
   }
 
+  show=false;
+
   public save():void{
     // @ts-ignore
     this.remboursement.client=this.appComponent.connected[1]["client"];
+    this.show=true;
     this.commandeSerivce.findByRef(this.commande.ref).subscribe(data=>{this.remboursement.commande=data;
       this.remboursementService.save(this.remboursement).subscribe(
         data=>{

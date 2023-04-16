@@ -46,7 +46,7 @@ export class LivraisonCreateComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.commandeSerivce.findByRef(this.route.snapshot.params["CommandeRef"]).subscribe(data=>{console.log(data);this.livraison.commande=data});
+    this.commandeSerivce.findByRef(this.route.snapshot.params["CommandeRef"]).subscribe(data=>{this.livraison.commande=data});
   }
 
 }

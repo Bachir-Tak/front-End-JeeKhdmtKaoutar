@@ -55,6 +55,7 @@ import {PiechartComponent} from "./view/accueil/piechart/piechart.component";
 import {CourbeComponent} from "./view/accueil/courbe/courbe.component";
 import {ListComponent} from "./view/accueil/list/list.component";
 import {PaiementCreateComponent} from "./view/paiement/paiement-create/paiement-create.component";
+import {RecuCreateComponent} from "./view/recu/recu-create/recu-create.component";
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import {PaiementCreateComponent} from "./view/paiement/paiement-create/paiement-
     CourbeComponent,
     ListComponent,
     CommandeCreateComponent,
-    PaiementCreateComponent
+    PaiementCreateComponent,
+    RecuCreateComponent
 
   ],
   imports: [

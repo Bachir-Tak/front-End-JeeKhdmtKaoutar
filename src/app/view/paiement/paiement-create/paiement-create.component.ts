@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {Paiement} from "src/app/controller/model/paiement/paiement.model";
 import {PaiementService} from "src/app/controller/service/paiement/paiement.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {CommandeService} from "../../../controller/service/commande/commande.service";
 
 @Component({
@@ -12,7 +12,7 @@ import {CommandeService} from "../../../controller/service/commande/commande.ser
 })
 export class PaiementCreateComponent implements OnInit{
   ngOnInit(): void {
-    this.commandeSerivce.findByRef(this.route.snapshot.params["CommandeRef"]).subscribe(data=>{console.log(data);this.paiement.commande=data});
+    this.commandeSerivce.findByRef(this.route.snapshot.params["CommandeRef"]).subscribe(data=>{this.paiement.commande=data});
 
   }
 
@@ -24,12 +24,14 @@ export class PaiementCreateComponent implements OnInit{
           alert('failure : code exist')
         }else{
           alert('success : paiement sav')
+          this.router.navigate(['/recuPaiement', this.paiement.code])
+
         }
       }
     );
   }
 
-  constructor(private paiementService: PaiementService,private route:ActivatedRoute,private commandeSerivce:CommandeService,) {
+  constructor(private paiementService: PaiementService,private route:ActivatedRoute,private commandeSerivce:CommandeService, private router:Router) {
   }
 
 

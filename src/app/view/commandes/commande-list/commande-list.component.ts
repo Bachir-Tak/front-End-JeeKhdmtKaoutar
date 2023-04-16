@@ -4,6 +4,7 @@ import {CommandeProduit} from "../../../controller/model/commandeProduit/command
 import {Commande} from "../../../controller/model/commande/commande";
 import {CommandeProduitService} from "../../../controller/service/commandeProduit/commande-produit.service";
 import {AppComponent} from "../../../app.component";
+import {formatDate} from "@angular/common";
 
 @Component({
   selector: 'app-commande-list',
@@ -11,6 +12,11 @@ import {AppComponent} from "../../../app.component";
   styleUrls: ['./commande-list.component.css']
 })
 export class CommandeListComponent implements OnInit {
+  format(i:Date):String{
+    const format = 'dd/MM/yyyy hh:mm';
+    const locale = 'en-US';
+    return formatDate(i, format,locale);
+  }
   private _commandeProduits!: Array<CommandeProduit>;
   constructor(private commandeService: CommandeService , private commandeProduitService : CommandeProduitService, private appComponent:AppComponent) {
   }

@@ -13,7 +13,7 @@ export class ReceptionListComponent implements OnInit{
   constructor(private receptionService:ReceptionService) {
   }
   format(i:Date):String{
-    const format = 'dd/MM/yyyy';
+    const format = 'dd/MM/yyyy hh:mm';
     const locale = 'en-US';
     return formatDate(i, format,locale);
   }

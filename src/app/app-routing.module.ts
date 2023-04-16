@@ -34,6 +34,7 @@ import {ProposComponent} from "./view/propos/propos.component";
 import {ProduitCreateComponent} from "./view/produit/produit-create/produit-create.component";
 import {LivraisonCreateComponent} from "./view/livraison/livraison-create/livraison-create.component";
 import {PaiementCreateComponent} from "./view/paiement/paiement-create/paiement-create.component";
+import {RecuCreateComponent} from "./view/recu/recu-create/recu-create.component";
 
 
 const appRouteList: Routes = [
@@ -157,6 +158,7 @@ const appRouteList: Routes = [
     component: RemboursementCreateComponent,
     canActivate: [ConnexionNotService]
   },
+
   {
     path: 'livraisonAdmin',
     component: LivraisonListComponent,
@@ -195,6 +197,11 @@ const appRouteList: Routes = [
   {
     path: 'paiement/:CommandeRef',
     component: PaiementCreateComponent,
+    canActivate: [ConnexionNotService]
+  },
+  {
+    path: 'recuPaiement/:PaiementCode',
+    component: RecuCreateComponent,
     canActivate: [ConnexionNotService]
   },
   {

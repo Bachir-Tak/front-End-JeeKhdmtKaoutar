@@ -1,29 +1,29 @@
-
 <main>
   <h2>Recu</h2>
   <p><time>Envoyer le 04/03/2023</time></p>
   <table class="client">
     <tr>
       <th>Recu pour</th>
-
       <th>N° de facture</th>
     </tr>
     <tr>
-
       <td rowspan="2">Nom</td>
-
     </tr>
-
   </table>
   <hr size="1">
-
   <table class="description">
     <tbody>
     <tr>
-      <th [(ngModel)]="recu.produit.description">Description</th>
-      <th [(ngModel)]="recu.libelle">Libelle</th>
-      <th [(ngModel)]="recu.paiement.paiementEffectue">PaiementEffectue</th>
-      <th [(ngModel)]="recu.commandeProduit.prixTotale">Prix total</th>
+      <th>Description</th>
+      <th>Libelle</th>
+      <th>PaiementEffectue</th>
+      <th>Prix total</th>
+    </tr>
+    <tr *ngIf="savedRecu">
+      <td>{{ savedRecu.produit.description }}</td>
+      <td>{{ savedRecu.libelle }}</td>
+      <td>{{ savedRecu.paiement.paiementEffectue }}</td>
+      <td>{{ savedRecu.commandeProduit.prixTotale }}</td>
     </tr>
     </tbody>
   </table>
