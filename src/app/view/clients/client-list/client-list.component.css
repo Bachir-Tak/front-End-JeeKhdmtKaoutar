@@ -41,12 +41,7 @@ button {
    background-color: blueviolet;
  }
 
- .admin {
-   background-color: #003459;
- }
- .admin:hover{
-   background-color:#2691d9;
- }
+
 
  .fa {
    font-size: 20px;

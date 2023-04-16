@@ -1,17 +1,22 @@
 <div class="tablos shadow rounded-3">
+  <h1>La liste des Demandes</h1>
   <table class="table table-hover text-center table-bordered table-responsive rounded-3">
   <thead>
   <tr>
     <th scope="col">Libelle</th>
     <th scope="col">Code</th>
     <th scope="col">Client</th>
+    <th scope="col">Action</th>
   </tr>
   </thead>
     <tbody>
-    <tr *ngFor="let dem of demandes">
+    <tr *ngFor="let dem of demandes, index as i">
       <td>{{dem.libelle}}</td>
       <td>{{dem.code}}</td>
       <td>{{dem.client.cin}}</td>
+      <td>
+        <button class="delete" (click)="deleteByCode(dem,i)"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</button>
+      </td>
     </tr>
     </tbody>
   </table>

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DemandeService} from "../../../controller/service/demande/demande.service";
 import {Demande} from "../../../controller/model/demande/demande.model";
+import {Fournisseur} from "../../../controller/model/fournisseur/fournisseur.model";
 
 
 @Component({
@@ -17,6 +18,16 @@ export class DemandeListComponent implements OnInit{
 
   public findAll(): void{
     this.demandeService.findAll().subscribe(data => this.demandes = data);
+  }
+  public deleteByCode(demande: Demande, index: number): void {
+    console.log('haaa code' + demande.code);
+    this.demandeService.deleteByCode(demande.code.toString()).subscribe(data => {
+      if (data > 0) {
+        this.demandes.splice(index, 1);
+      } else {
+        alert('Del Error');
+      }
+    });
   }
   get demande(): Demande {
 

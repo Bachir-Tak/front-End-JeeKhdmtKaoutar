@@ -16,12 +16,12 @@ export class DemandeService {
   private _url ="http://localhost:8033/GestionCommerciale/Demande/";
 
   save(demande:Demande):Observable<number>{
-    return this.http.post<number>(this._url,demande);
+    return this._http.post<number>(this._url,demande);
   }
   public findAll(): Observable<Array<Demande>>{
-    return this.http.get<Array<Demande>>(this._url);
+    return this._http.get<Array<Demande>>(this._url);
   }
-  constructor(private  http: HttpClient) { }
+  constructor(private  _http: HttpClient) { }
 
 
   get demande(): Demande {
@@ -65,7 +65,26 @@ export class DemandeService {
   public addDemandeProduit(){
     this.demande.demandeProduits.push(this.demandeProduit)
   }
+  public deleteByCode(code:string):Observable<number>{
+    console.log('urrrllll ==>'+ this._url +'code/'+ code);
+    return this._http.delete<number>(this._url+ 'code/' + code);
+  }
 
+  get http(): HttpClient {
+    return this._http;
+  }
+
+  set http(value: HttpClient) {
+    this._http = value;
+  }
+
+  get url(): string {
+    return this._url;
+  }
+
+  set url(value: string) {
+    this._url = value;
+  }
 
 
 
