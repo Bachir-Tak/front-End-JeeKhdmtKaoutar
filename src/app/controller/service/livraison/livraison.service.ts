@@ -18,16 +18,16 @@ export class LivraisonService {
   }
 
   public deleteByRef(ref:string):Observable<number>{
-    return this._http.delete<number>(this._url + 'livraison/' + ref);
+    console.log('urrrllll ==>' + this._url + 'ref/' + ref);
+    return this._http.delete<number>(this._url + 'ref/' + ref);
   }
 
 
 
   public findAll():Observable<Array<Livraison>>{
-    return this._http.get<Array<Livraison>>(this._url);
+    return this._http.get<Array<Livraison>>(this.url);
   }
   constructor(private _http: HttpClient) { }
-
 
   get livraison(): Livraison {
     if (this._livraison == null)
@@ -41,7 +41,6 @@ export class LivraisonService {
     this._livraison = value;
   }
 
-
   get livraisons(): Array<Livraison> {
     if (this._livraisons == null)
     {
@@ -53,4 +52,21 @@ export class LivraisonService {
   set livraisons(value: Array<Livraison>) {
     this._livraisons = value;
   }
+
+  get url(): string {
+    return this._url;
+  }
+
+  set url(value: string) {
+    this._url = value;
+  }
+
+  get http(): HttpClient {
+    return this._http;
+  }
+
+  set http(value: HttpClient) {
+    this._http = value;
+  }
+
 }

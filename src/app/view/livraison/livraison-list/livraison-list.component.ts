@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Livraison} from "../../../controller/model/livraison/livraison.model";
 import {LivraisonService} from "../../../controller/service/livraison/livraison.service";
+import {Client} from "../../../controller/model/client/client.model";
 
 @Component({
   selector: 'app-livraison-list',
@@ -15,21 +16,20 @@ export class LivraisonListComponent implements OnInit{
     this.findAll();
   }
 
-  public deleteByRef(livraison:Livraison, index:number):void {
-    this.livraisonService.deleteByRef(livraison.ref.toString()).subscribe(data => {
+
+  public findAll():void{
+    this.livraisonService.findAll().subscribe(data => this.livraisons = data);
+  }
+  public deleteByRef(livraison: Livraison, index:number):void {
+    console.log('haaa ref' + livraison.ref);
+    this.livraisonService.deleteByRef(livraison.ref.toString()).subscribe(data =>{
       if (data > 0) {
         this.livraisons.splice(index, 1);
       } else {
         alert('Del Error');
       }
-
     });
   }
-
-  public findAll():void{
-    this.livraisonService.findAll().subscribe(data => {this.livraisons=data});
-  }
-
   get livraison(): Livraison {
     return this.livraisonService.livraison;
   }
