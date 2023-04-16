@@ -27,7 +27,7 @@ export class LivraisonListComponent implements OnInit{
   }
 
   public findAll():void{
-    this.livraisonService.findAll().subscribe(data => {this.livraisons=data;console.log(this.livraisons)});
+    this.livraisonService.findAll().subscribe(data => {this.livraisons=data});
   }
 
   get livraison(): Livraison {

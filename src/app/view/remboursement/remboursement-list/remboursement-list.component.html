@@ -12,9 +12,9 @@
     </thead>
     <tbody>
     <tr *ngFor="let r of remboursements , index as i">
-      <td>{{ remboursement.code }}</td>
-      <td>{{ remboursement.avoirLivraison.code }}</td>
-      <td>{{ remboursement.avoirLivraison.livraison}}</td>
+      <td>{{ r.code }}</td>
+      <td>{{ r.client.nom }}</td>
+      <td>{{ r.commande.ref}}</td>
 
       <td>
         <button class="delete" (click)="deleteByCode(r,i)"><i class="fa fa-trash"></i> Supprimer</button>

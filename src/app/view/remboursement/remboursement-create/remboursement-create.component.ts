@@ -1,6 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {RemboursementService} from "../../../controller/service/remboursement/remboursement.service";
 import {Remboursement} from "../../../controller/model/remboursement/remboursement.model";
+import {AppComponent} from "../../../app.component";
+import {CommandeService} from "../../../controller/service/commande/commande.service";
+import {Commande} from "../../../controller/model/commande/commande";
+
 
 @Component({
   selector: 'app-remboursement-create',
@@ -12,36 +16,46 @@ export class RemboursementCreateComponent implements OnInit{
   }
 
   public save():void{
-    this.remboursementService.save(this.remboursement).subscribe(
-      data=>{
-        if(data==null){
-          alert('code exist')
-        }
-        else{
-          alert('success: remboursement save')
-        }
+    // @ts-ignore
+    this.remboursement.client=this.appComponent.connected[1]["client"];
+    this.commandeSerivce.findByRef(this.commande.ref).subscribe(data=>{this.remboursement.commande=data;
+      this.remboursementService.save(this.remboursement).subscribe(
+        data=>{
+          if(data==null){
+            alert('code exist')
+          }
+          else{
+            alert('success: remboursement save')
+          }
 
-      }
-    );
+        }
+      );})
+
   }
-  constructor(private remboursementService: RemboursementService) {
+  constructor(private remboursementService: RemboursementService,private appComponent:AppComponent,private commandeSerivce:CommandeService) {
   }
   get remboursement(): Remboursement {
-
-    return this.remboursement;
+    return this.remboursementService.remboursement;
   }
 
   set remboursement(value: Remboursement) {
-    this.remboursement = value;
+    this.remboursementService.remboursement = value;
   }
 
   get remboursements(): Array<Remboursement> {
 
-    return this.remboursements;
+    return this.remboursementService.remboursements;
   }
 
   set remboursements(value: Array<Remboursement>) {
-    this.remboursements = value;
+    this.remboursementService.remboursements = value;
+  }
+  get commande(): Commande {
+    return this.remboursementService.commande;
+  }
+
+  set commande(value: Commande) {
+    this.remboursementService.commande = value;
   }
 
 }

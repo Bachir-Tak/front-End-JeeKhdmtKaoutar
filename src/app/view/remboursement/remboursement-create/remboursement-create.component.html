@@ -9,16 +9,12 @@
         <hr>
         <table>
           <tr>
-            <td><label for="id">ID :</label></td>
-            <td><input type="text" id="id" name="id" required [(ngModel)]="remboursement.id"></td>
-          </tr>
-          <tr>
             <td> <label for="code">Code :</label></td>
             <td><input type="text" id="code" name="code" required  [(ngModel)]="remboursement.code"></td>
           </tr>
           <tr>
             <td><label for="Article">Article :</label></td>
-            <td><input type="text" id="Article" name="Article" [(ngModel)]="remboursement.avoirLivraison.id"></td>
+            <td><input type="text" id="Article" name="Article" [(ngModel)]="commande.ref"></td>
           </tr>
           <tr>
             <td><label for="capture">Capture d'écran :</label></td>

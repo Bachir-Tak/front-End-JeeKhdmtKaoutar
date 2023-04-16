@@ -3,6 +3,7 @@ import {CommandeService} from "../../../controller/service/commande/commande.ser
 import {CommandeProduit} from "../../../controller/model/commandeProduit/commande-produit";
 import {Commande} from "../../../controller/model/commande/commande";
 import {CommandeProduitService} from "../../../controller/service/commandeProduit/commande-produit.service";
+import {AppComponent} from "../../../app.component";
 
 @Component({
   selector: 'app-commande-list',
@@ -11,15 +12,17 @@ import {CommandeProduitService} from "../../../controller/service/commandeProdui
 })
 export class CommandeListComponent implements OnInit {
   private _commandeProduits!: Array<CommandeProduit>;
-  constructor(private commandeService: CommandeService , private commandeProduitService : CommandeProduitService) {
+  constructor(private commandeService: CommandeService , private commandeProduitService : CommandeProduitService, private appComponent:AppComponent) {
   }
   ngOnInit(): void {
+    this.findByClientCin();
   }
   public findAll(): void{
-    this.commandeService.findAll().subscribe(data => this.commandes = data);
+    this.commandeService.findAll().subscribe(data => {this.commandes = data});
   }
   public findByClientCin(){
-    return this.commandeService.findByClientCin(this.commande.client.cin).subscribe(data => this.commandes = data)
+    // @ts-ignore
+    return this.commandeService.findByClientCin(this.appComponent.connected[1]["client"]["cin"]).subscribe(data => this.commandes = data)
   }
   get commande(): Commande {
     return this.commandeService.commande;
