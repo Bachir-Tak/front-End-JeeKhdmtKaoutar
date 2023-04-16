@@ -34,7 +34,6 @@ export class CommandeCreateComponent implements OnInit{
     this.commande.client=this.appComponent.connected[1]["client"];
   }
   public save(): void{
-    console.log(this.commande)
     this.commandeService.save(this.commande).subscribe(data => {
       if(data != null){
         alert('SAVE SUCCESS');

@@ -1,10 +1,6 @@
 
 
-    <header>
-      <img src="image/simo.jpg" alt="Logo">
-    </header>
-    <main>
-      <form>
+      <form *ngIf="!show">
         <h1>Demande de remboursement</h1>
         <hr>
         <table>
@@ -25,8 +21,5 @@
           </tr>
         </table>
       </form>
-    </main>
-    <footer>
-      <a href="recu.html">Voir le reçu de remboursement</a>
-    </footer>
+      <app-recuRemboursement-create [remboursement]="remboursement" *ngIf="show">Voir le reçu de remboursement</app-recuRemboursement-create>
 

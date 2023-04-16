@@ -18,6 +18,9 @@ export class PaiementService {
   public findAll():Observable<Array<Paiement>>{
     return this._http.get<Array<Paiement>>(this.url);
   }
+  public findByCode(code: string): Observable<Paiement> {
+    return this._http.get<Paiement>(this._url + 'code/' + code);
+  }
   public save(paiement: Paiement):Observable<Paiement>{
     return this._http.post<Paiement>(this.url , this.paiement);
   }

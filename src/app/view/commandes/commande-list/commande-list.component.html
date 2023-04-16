@@ -4,12 +4,12 @@
     <tr>
       <th scope="col">Référence</th>
       <th scope="col">Date</th>
-      <th scope="col">Total</th>
+      <th scope="col">Client</th>
       <th scope="col">Action</th>
     </tr>
     <tr *ngFor="let commande of commandes, index as i">
         <td>{{commande.ref }}</td>
-        <td>{{ commande.date }}</td>
+        <td>{{ format(commande.date) }}</td>
         <td>{{ commande.client.nom}}</td>
         <td>
           <button class="button" (click)="deleteByRef(commande,i)"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer

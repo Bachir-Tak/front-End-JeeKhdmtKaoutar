@@ -22,6 +22,10 @@
           <span>cin :</span>
           <input type="text" placeholder="EE287536" name="cin" [(ngModel)]="paiement.commande.client.cin">
         </div>
+        <div class="inputBox">
+          <span>Paiement Code :</span>
+          <input type="text"  name="code" [(ngModel)]="paiement.code">
+        </div>
 
 
       </div>
@@ -35,7 +39,7 @@
           <img src="assets/images/card_img.png" alt="">
         </div>
         <div class="inputBox">
-          <span>credit card number :</span>d
+          <span>credit card number :</span>
           <input type="number" placeholder="1111-2222-3333-4444" name="rib"[(ngModel)]="paiement.commande.client.rib">
         </div>
       </div>

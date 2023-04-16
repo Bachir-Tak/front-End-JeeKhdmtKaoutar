@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {RecuRemboursementService} from "../../../controller/service/recuRemboursement/recu-remboursement.service";
 import {RecuRemboursement} from "../../../controller/model/recuRemboursement/recu-remboursement";
+import {Remboursement} from "../../../controller/model/remboursement/remboursement.model";
 
 @Component({
   selector: 'app-recuRemboursement-create',
@@ -8,6 +9,11 @@ import {RecuRemboursement} from "../../../controller/model/recuRemboursement/rec
   styleUrls: ['./recu-remboursement-create.component.css']
 })
 export class RecuRemboursementCreateComponent implements OnInit{
+
+  @Input()
+  remboursement!:Remboursement
+
+
   ngOnInit(): void {
   }
 

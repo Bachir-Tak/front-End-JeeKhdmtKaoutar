@@ -8,8 +8,8 @@
     <a [routerLink]="['/demande', client['cin'] ]">Demande</a>
     <a routerLink="/apropos">A propos</a>
 
-    <div class="profile_client">
-      <span class="fa fa-sign-out" (click)="signout()"></span> Welcome, {{nom}}
+    <div class="profile">
+      <div class="card-body "> <span class="fa fa-sign-out" (click)="signout()"></span> Welcome, {{nom}}</div>
     </div>
 
   </nav>

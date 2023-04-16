@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Recu} from "src/app/controller/model/recu/recu.model";
 import {RecuService} from "src/app/controller/service/recu/recu.service";
+import {ActivatedRoute} from "@angular/router";
+import {PaiementService} from "../../../controller/service/paiement/paiement.service";
 
 
 @Component({
@@ -10,6 +12,8 @@ import {RecuService} from "src/app/controller/service/recu/recu.service";
 })
 export class RecuCreateComponent implements OnInit{
   ngOnInit(): void {
+    this.paiementSerivce.findByCode(this.route.snapshot.params["PaiementCode"]).subscribe(data=>{this.recu.paiement=data});
+
   }
   public save(): void{
     this.recuService.save(this.recu).subscribe(
@@ -23,7 +27,7 @@ export class RecuCreateComponent implements OnInit{
       }
     );
   }
-  constructor(private recuService: RecuService) {
+  constructor(private recuService: RecuService,private route:ActivatedRoute,private paiementSerivce:PaiementService) {
   }
 
   get recu(): Recu {
