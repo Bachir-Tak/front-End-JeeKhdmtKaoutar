@@ -23,7 +23,7 @@ export class LivraisonListComponent implements OnInit{
   public deleteByRef(livraison: Livraison, index:number):void {
     console.log('haaa ref' + livraison.ref);
     this.livraisonService.deleteByRef(livraison.ref.toString()).subscribe(data =>{
-      if (data > 0) {
+      if (data < 0) {
         this.livraisons.splice(index, 1);
       } else {
         alert('Del Error');
