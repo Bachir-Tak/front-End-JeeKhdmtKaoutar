@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Livraison} from "../../../controller/model/livraison/livraison.model";
 import {LivraisonService} from "../../../controller/service/livraison/livraison.service";
 import {Client} from "../../../controller/model/client/client.model";
+import {AvoirLivraison} from "../../../controller/model/avoirLivraison/avoir-livraison.model";
 
 @Component({
   selector: 'app-livraison-list',
@@ -12,9 +13,23 @@ export class LivraisonListComponent implements OnInit{
   constructor(private livraisonService: LivraisonService) {
 
   }
+
+  telechargerAvoirLivraison(livraison: any) {
+    const avoirlivraisonContent = ``;
+    const avoirlivraisonFileName = `avoir-livraison-${livraison.id}.pdf`;
+    const blob = new Blob([avoirlivraisonContent], { type: 'pdf' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = avoirlivraisonFileName;
+    link.click();
+    window.URL.revokeObjectURL(url);
+  }
+
   ngOnInit(): void {
     this.findAll();
   }
+
 
 
   public findAll():void{

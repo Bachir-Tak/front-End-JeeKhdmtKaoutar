@@ -13,6 +13,8 @@ export class LivraisonService {
   private _livraisons !: Array<Livraison>;
   private _url="http://localhost:8033/GestionCommerciale/Livraison/";
 
+
+
   public save(livraison : Livraison):Observable<number>{
     return this._http.post<number>(this._url,livraison);
   }

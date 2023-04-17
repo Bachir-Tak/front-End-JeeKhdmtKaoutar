@@ -56,6 +56,7 @@ import {CourbeComponent} from "./view/accueil/courbe/courbe.component";
 import {ListComponent} from "./view/accueil/list/list.component";
 import {PaiementCreateComponent} from "./view/paiement/paiement-create/paiement-create.component";
 import {RecuCreateComponent} from "./view/recu/recu-create/recu-create.component";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -111,15 +112,16 @@ import {RecuCreateComponent} from "./view/recu/recu-create/recu-create.component
     RecuCreateComponent
 
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    RouterOutlet,
-    BrowserModule,
-    AppRoutingModule,
-    RouterLink
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        FormsModule,
+        RouterOutlet,
+        BrowserModule,
+        AppRoutingModule,
+        RouterLink,
+        MatIconModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,6 +25,7 @@ export class AvoirLivraisonService {
     return this.http.get<Array<AvoirLivraison>>(this._url);
   }
   constructor(private http: HttpClient) { }
+
 
   get avoirLivraison(): AvoirLivraison {
     if (this._avoirLivraison== null)

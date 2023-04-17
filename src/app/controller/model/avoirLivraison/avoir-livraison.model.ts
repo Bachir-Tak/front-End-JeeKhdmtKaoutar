@@ -6,5 +6,6 @@ export class AvoirLivraison {
   public code !: string;
   public livraison !: Livraison;
 
-
 }
+
+
