@@ -11,24 +11,36 @@ import {PaiementService} from "../../../controller/service/paiement/paiement.ser
   styleUrls: ['./recu-create.component.css']
 })
 export class RecuCreateComponent implements OnInit{
-  savedRecu!: Recu;
-  ngOnInit(): void {
-    this.paiementSerivce.findByCode(this.route.snapshot.params["PaiementCode"]).subscribe(data=>{this.recu.paiement=data});
 
-  }
-  public save(): void{
-    this.recuService.save(this.recu).subscribe(
-      data => {
-        if (data == null) {
-          alert('failure : code exist')
-        }else{
-          this.savedRecu = data;
-          alert('success : recu sav')
-        }
+  savedRecu!: Recu;
+
+  constructor(private recuService: RecuService, private route: ActivatedRoute, private paiementSerivce: PaiementService) { }
+
+  ngOnInit(): void {
+    const paiementCode = this.route.snapshot.params['PaiementCode'];
+    this.paiementSerivce.findByCode(paiementCode).subscribe(
+      (paiement) => {
+        this.recu.paiement = paiement;
+        this.recuService.save(this.recu).subscribe(
+          (savedRecu) => {
+            if (savedRecu) {
+              this.savedRecu = savedRecu;
+              alert('Success : recu saved');
+            } else {
+              alert('Failure : code exist');
+            }
+          },
+          (error) => {
+            console.log(error);
+            alert('Error : failed to save recu');
+          }
+        );
+      },
+      (error) => {
+        console.log(error);
+        alert('Error : failed to load paiement');
       }
     );
-  }
-  constructor(private recuService: RecuService,private route:ActivatedRoute,private paiementSerivce:PaiementService) {
   }
 
   get recu(): Recu {
@@ -39,14 +51,23 @@ export class RecuCreateComponent implements OnInit{
     this.recuService.recu = value;
   }
 
-  get recus(): Array<Recu> {
-    return this.recuService.recus;
+  public save(): void {
+    if (!this.savedRecu) {
+      this.recuService.save(this.recu).subscribe(
+        (data) => {
+          if (data) {
+            this.savedRecu = data;
+            alert('Success : recu saved');
+          } else {
+            alert('Failure : code exist');
+          }
+        },
+        (error) => {
+          console.log(error);
+          alert('Error : failed to save recu');
+        }
+      );
+    }
   }
-
-  set recus(value: Array<Recu>) {
-    this.recuService.recus = value;
-  }
-
-
 
 }
