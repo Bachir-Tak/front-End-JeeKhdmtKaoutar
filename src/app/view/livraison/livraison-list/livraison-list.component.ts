@@ -23,7 +23,7 @@ export class LivraisonListComponent implements OnInit{
   public deleteByRef(livraison: Livraison, index:number):void {
     console.log('haaa ref' + livraison.ref);
     this.livraisonService.deleteByRef(livraison.ref.toString()).subscribe(data =>{
-      if (data < 0) {
+      if (data > 0) {
         this.livraisons.splice(index, 1);
       } else {
         alert('Del Error');
@@ -46,4 +46,15 @@ export class LivraisonListComponent implements OnInit{
     this.livraisonService.livraisons = value;
   }
 
+  telechargerAvoirLivraison(livraison: any) {
+    const avoirlivraisonContent = ``;
+    const avoirlivraisonFileName = `avoir-livraison-${livraison.id}.pdf`;
+    const blob = new Blob([avoirlivraisonContent], { type: 'pdf' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = avoirlivraisonFileName;
+    link.click();
+    window.URL.revokeObjectURL(url);
+  }
 }
