@@ -26,7 +26,7 @@ export class LivraisonListComponent implements OnInit{
       if (data > 0) {
         this.livraisons.splice(index, 1);
       } else {
-        alert('Del Error');
+        alert('Dele Error');
       }
     });
   }
