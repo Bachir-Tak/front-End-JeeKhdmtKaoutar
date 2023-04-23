@@ -17,7 +17,7 @@ export class LivraisonListComponent implements OnInit{
   }
 
 
-  public findAll():void{
+  public findAll(): void{
     this.livraisonService.findAll().subscribe(data => this.livraisons = data);
   }
   public deleteByRef(livraison: Livraison, index:number):void {
@@ -46,15 +46,5 @@ export class LivraisonListComponent implements OnInit{
     this.livraisonService.livraisons = value;
   }
 
-  telechargerAvoirLivraison(livraison: any) {
-    const avoirlivraisonContent = ``;
-    const avoirlivraisonFileName = `avoir-livraison-${livraison.id}.pdf`;
-    const blob = new Blob([avoirlivraisonContent], { type: 'pdf' });
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = avoirlivraisonFileName;
-    link.click();
-    window.URL.revokeObjectURL(url);
-  }
+
 }

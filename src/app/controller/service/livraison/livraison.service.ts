@@ -24,8 +24,8 @@ export class LivraisonService {
 
 
 
-  public findAll():Observable<Array<Livraison>>{
-    return this._http.get<Array<Livraison>>(this.url);
+  public findAll(): Observable<Array<Livraison>>{
+    return this._http.get<Array<Livraison>>(this._url);
   }
   constructor(private _http: HttpClient) { }
 

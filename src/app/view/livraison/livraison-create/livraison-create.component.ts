@@ -48,5 +48,16 @@ export class LivraisonCreateComponent implements OnInit {
   ngOnInit(): void {
     this.commandeSerivce.findByRef(this.route.snapshot.params["CommandeRef"]).subscribe(data=>{this.livraison.commande=data});
   }
+  telechargerAvoirLivraison(livraison: any) {
+    const avoirlivraisonContent = ``;
+    const avoirlivraisonFileName = `avoir-livraison-${livraison.id}.pdf`;
+    const blob = new Blob([avoirlivraisonContent], { type: 'pdf' });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = avoirlivraisonFileName;
+    link.click();
+    window.URL.revokeObjectURL(url);
+  }
 
 }

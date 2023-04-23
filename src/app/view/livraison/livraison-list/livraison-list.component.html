@@ -4,7 +4,6 @@
   <h1>La Listes Des Livraisons</h1>
 <table class="table table-hover text-center table-bordered table-responsive rounded-3" >
     <thead>
-
       <th scope="col">Ref</th>
       <th scope="col">Commande</th>
       <th scope="col">Ville</th>
@@ -12,16 +11,13 @@
     <th scope="col">Action</th>
     </thead>
     <tbody>
-    <tr *ngFor="let liv of livraisons ; index as i">
+    <tr *ngFor="let liv of livraisons , index as i">
       <td>{{ liv.ref}}</td>
       <td>{{ liv.commande.ref}}</td>
       <td>{{ liv.ville}}</td>
       <td>{{ liv.date }}</td>
       <td>
         <button class="delete" (click)="deleteByRef(liv,i)"><i class="fa fa-trash" aria-hidden="true"></i> Supprimer</button>
-        <button (click)="telechargerAvoirLivraison(livraison)">
-          View
-        </button>
       </td>
     </tr>
     </tbody>
