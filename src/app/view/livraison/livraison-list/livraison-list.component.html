@@ -18,7 +18,10 @@
       <td>{{ liv.ville}}</td>
       <td>{{ liv.date }}</td>
       <td>
-        <button class="delete" (click)="deleteByRef(liv,i)"><i class="fa fa-trash"></i> Supprimer</button>
+        <button class="delete" (click)="deleteByRef(liv,i)"><i class="fa fa-trash" aria-hidden="true"></i> Supprimer</button>
+        <button (click)="telechargerAvoirLivraison(livraison)">
+          View
+        </button>
       </td>
     </tr>
     </tbody>
